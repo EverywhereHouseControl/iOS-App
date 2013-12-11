@@ -11,7 +11,7 @@
 #import "AFHTTPClient.h"
 
 @interface InitialView : UIViewController{
-    AppDelegate *appDelegate;
+    //AppDelegate *appDelegate;
 }
 
 @property(nonatomic,strong)IBOutlet UIActivityIndicatorView *activity;

@@ -20,7 +20,7 @@
     //the login form fields
     IBOutlet UITextField* fldUsername;
     IBOutlet UITextField* fldPassword;
-    AppDelegate *appDelegate;
+    //AppDelegate *appDelegate;
 }
 @property(nonatomic,strong)IBOutlet UIView *cargando;
 @property(nonatomic,strong)IBOutlet UIActivityIndicatorView *activity;

@@ -7,6 +7,7 @@
 //
 
 #import "FristViewController.h"
+#import "SetRoomsViewController.h"
 
 @interface FristViewController ()
 
@@ -58,6 +59,8 @@
     [self.view addSubview:gestionButton];
     [self.view addSubview:configButton];
     
+    self.navigationItem.title = @"Panel de Control";
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -75,7 +78,8 @@
 }
 
 - (void) openGestion:(UIButton*)button{
-    
+    SetRoomsViewController *roomsController = (SetRoomsViewController *) [self.storyboard instantiateViewControllerWithIdentifier:@"roomsView"];
+    [self.navigationController pushViewController:roomsController animated:YES];
 }
 
 - (void) openConfig:(UIButton*)button{

@@ -37,7 +37,7 @@
     
     //_client = [AFHTTPClient clientWithBaseURL:[NSURL URLWithString:ServerApiURL]];
     
-    appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    //appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     nameUser = @"";
     pwd = @"";
 }

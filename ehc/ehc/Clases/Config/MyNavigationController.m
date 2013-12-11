@@ -19,7 +19,7 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"UserScreen5"]];// initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"InitViewController"]];// initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
     }
@@ -29,14 +29,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    //appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [self customizeAppearance];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-    if (![self.slidingViewController.underLeftViewController isKindOfClass:[MenuViewController class]]) {
+    /*if (![self.slidingViewController.underLeftViewController isKindOfClass:[MenuViewController class]]) {
         
         if (appDelegate.window.frame.size.height == 1024){
             self.slidingViewController.underLeftViewController  = [self.storyboard instantiateViewControllerWithIdentifier:@"MenuIpad"];
@@ -49,7 +49,7 @@
         }
         
     }
-    [self.view addGestureRecognizer:self.slidingViewController.panGesture];
+    [self.view addGestureRecognizer:self.slidingViewController.panGesture];*/
 }
 
 - (void)didReceiveMemoryWarning

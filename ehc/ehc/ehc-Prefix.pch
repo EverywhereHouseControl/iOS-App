@@ -14,3 +14,26 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #endif
+
+/* appDelegate quick reference */
+#import "AppDelegate.h"
+#define appDelegate ((AppDelegate *)[[UIApplication sharedApplication] delegate])
+
+#define isIOS7	([[UIDevice currentDevice].systemVersion floatValue] >= 7.0)
+
+#define isIpad ([[UIScreen mainScreen] bounds].size.height == 1024)
+#define isIphone5 ([[UIScreen mainScreen] bounds].size.height == 568)
+#define isIphone4 ([[UIScreen mainScreen] bounds].size.height == 480)
+
+#define ponerCargando [self cargarVistaCargando];
+#define quitarCargando [self quitarVistaCargando];
+#define bloquearPantalla [self.view setUserInteractionEnabled:NO];
+#define desbloquearPantalla [self.view setUserInteractionEnabled:YES];
+
+/*NSLog le aparece al usuario si lo mira en consola, DLog no*/
+#ifdef DEBUG
+#define DLog(s, ...)            NSLog(@"%@", [NSString stringWithFormat:@"[%@] %@", NSStringFromClass([self class]), [NSString stringWithFormat:s, ##__VA_ARGS__]]);
+
+#else
+#define DLog(s, ...)
+#endif

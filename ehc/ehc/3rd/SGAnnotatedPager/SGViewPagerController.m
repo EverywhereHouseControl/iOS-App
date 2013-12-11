@@ -31,7 +31,7 @@
 
 - (void)loadView {
     [super loadView];
-    self.view.backgroundColor = [UIColor scrollViewTexturedBackgroundColor];
+    self.view.backgroundColor = [UIColor lightGrayColor];
     
     CGRect frame = CGRectMake(0, self.view.bounds.size.height - PAGE_CONTROL_HEIGHT,
                                      self.view.bounds.size.width, PAGE_CONTROL_HEIGHT);

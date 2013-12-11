@@ -10,7 +10,7 @@
 #import "AppDelegate.h"
 
 @interface MenuViewController : UITableViewController<UIActionSheetDelegate>{
-    AppDelegate *appDelegate;
+    //AppDelegate *appDelegate;
 }
 
 -(void)llamarAperfil;

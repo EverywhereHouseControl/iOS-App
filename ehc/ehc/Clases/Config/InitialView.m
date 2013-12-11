@@ -39,7 +39,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    //appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
 	// Do any additional setup after loading the view.
     appDelegate.recienLogeado = NO;
     if (appDelegate.window.frame.size.height == 568) {
@@ -182,7 +182,8 @@
     }
     else if (appDelegate.window.frame.size.height == 568){
         InitViewController *userController = (InitViewController *) [self.storyboard instantiateViewControllerWithIdentifier:@"firstView"];
-        [self presentViewController:userController animated:YES completion:nil];
+        [self.navigationController pushViewController:userController animated:YES];
+        //[self presentViewController:userController animated:YES completion:nil];
     }
     else{
         InitViewController *userController = (InitViewController *) [self.storyboard instantiateViewControllerWithIdentifier:@"firstView"];

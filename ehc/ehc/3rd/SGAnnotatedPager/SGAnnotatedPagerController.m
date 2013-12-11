@@ -20,6 +20,7 @@
 #import "SGAnnotatedPagerController.h"
 
 #define TITLE_CONTROL_HEIGHT 25.0
+#define STATUSBAR_HEIGHT 66.0
 
 @interface SGAnnotatedPagerController ()
 
@@ -31,9 +32,9 @@
 
 - (void)loadView {
     [super loadView];
-    self.view.backgroundColor = [UIColor scrollViewTexturedBackgroundColor];
+    //self.view.backgroundColor = [UIColor lightGrayColor];//[UIColor scrollViewTexturedBackgroundColor];
     
-    CGRect frame = CGRectMake(0, 0, self.view.bounds.size.width, TITLE_CONTROL_HEIGHT);
+    CGRect frame = CGRectMake(0, STATUSBAR_HEIGHT, self.view.bounds.size.width, TITLE_CONTROL_HEIGHT);
     titleScrollView = [[UIScrollView alloc] initWithFrame:frame];
     titleScrollView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
     titleScrollView.backgroundColor = [UIColor lightGrayColor];
@@ -43,8 +44,8 @@
     titleScrollView.scrollEnabled = YES;
     titleScrollView.userInteractionEnabled = NO;
     
-    frame = CGRectMake(0, TITLE_CONTROL_HEIGHT, self.view.bounds.size.width,
-                                    self.view.bounds.size.height - TITLE_CONTROL_HEIGHT);
+    frame = CGRectMake(0, 0, self.view.bounds.size.width,
+                                    self.view.bounds.size.height+STATUSBAR_HEIGHT);
     scrollView = [[UIScrollView alloc] initWithFrame:frame];
     scrollView.delegate = self;
     scrollView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight |

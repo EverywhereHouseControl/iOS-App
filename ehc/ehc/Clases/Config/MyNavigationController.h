@@ -10,7 +10,7 @@
 #import "AppDelegate.h"
 
 @interface MyNavigationController : UINavigationController{
-    AppDelegate *appDelegate;
+    //AppDelegate *appDelegate;
 }
 
 @end

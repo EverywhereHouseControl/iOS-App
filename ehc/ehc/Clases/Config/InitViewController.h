@@ -10,7 +10,7 @@
 #import "AppDelegate.h"
 
 @interface InitViewController : ECSlidingViewController{
-    AppDelegate *appDelegate;
+    //AppDelegate *appDelegate;
 }
 
 @property(nonatomic,strong)IBOutlet UIActivityIndicatorView *activity;

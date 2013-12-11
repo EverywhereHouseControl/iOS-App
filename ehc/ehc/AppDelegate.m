@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "InitialView.h"
 
 @implementation AppDelegate
 @synthesize recienLogeado;

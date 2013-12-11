@@ -28,8 +28,8 @@
     [super viewDidLoad];
     [[self activity] startAnimating];
 	// Do any additional setup after loading the view.
-    appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    
+    //appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    self.navigationItem.title = @"Bienvenido!";
     [self userDidJoin];
 }
 
