@@ -10,9 +10,7 @@
 #import "AppDelegate.h"
 #import "AFHTTPClient.h"
 
-@interface InitialView : UIViewController{
-    //AppDelegate *appDelegate;
-}
+@interface InitialView : UIViewController
 
 @property(nonatomic,strong)IBOutlet UIActivityIndicatorView *activity;
 @property(nonatomic,strong)IBOutlet UILabel *labelCargando;

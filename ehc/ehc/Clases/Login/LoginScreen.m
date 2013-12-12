@@ -98,7 +98,7 @@
     NSMutableDictionary* params =[NSMutableDictionary dictionaryWithObjectsAndKeys:
                                   command, @"command",
                                   fldUsername.text, @"username",
-                                  hashedPassword, @"password",
+                                  fldUsername.text, @"password",
                                   nil];
     //make the call to the web API
     [[API sharedInstance] commandWithParams:params

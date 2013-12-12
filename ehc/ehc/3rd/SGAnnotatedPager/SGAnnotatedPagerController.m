@@ -20,7 +20,7 @@
 #import "SGAnnotatedPagerController.h"
 
 #define TITLE_CONTROL_HEIGHT 25.0
-#define STATUSBAR_HEIGHT 66.0
+#define STATUSBAR_HEIGHT 64.0
 
 @interface SGAnnotatedPagerController ()
 

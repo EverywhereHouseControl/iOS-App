@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RoomsViewController.h"
 
-@interface SetRoomsViewController : UIViewController<UICollectionViewDataSource,UICollectionViewDelegate,UIScrollViewDelegate>
+@interface SetRoomsViewController : UIViewController<UICollectionViewDataSource,UICollectionViewDelegate,UIScrollViewDelegate,protocolItemsDelegate>
 
 @property (nonatomic, strong)IBOutlet UICollectionView *collectionRooms;
 
 @end
+

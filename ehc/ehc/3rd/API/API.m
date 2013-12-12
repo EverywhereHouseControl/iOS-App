@@ -9,7 +9,7 @@
 #import "API.h"
 
 //the web location of the service
-#define kAPIHost @"http://50.116.10.55"
+#define kAPIHost @"http://5.231.69.226"
 #define kAPIPath @"iReporter/"
 
 @implementation API

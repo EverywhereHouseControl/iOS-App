@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BA1F65341857E3AA00883571 /* ItemsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA1F65331857E3AA00883571 /* ItemsCell.xib */; };
-		BA1F65371857E3C300883571 /* ItemsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA1F65361857E3C300883571 /* ItemsCell.m */; };
 		BA891396183D6F3100F97172 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA891395183D6F3100F97172 /* Foundation.framework */; };
 		BA891398183D6F3100F97172 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA891397183D6F3100F97172 /* CoreGraphics.framework */; };
 		BA89139A183D6F3100F97172 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA891399183D6F3100F97172 /* UIKit.framework */; };
@@ -44,16 +42,19 @@
 		BAA9E9DE1846DA4100E55969 /* MenuHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA9E9DC1846DA4100E55969 /* MenuHeaderCell.m */; };
 		BAA9E9E01846DA7D00E55969 /* celdaMenuiPh.png in Resources */ = {isa = PBXBuildFile; fileRef = BAA9E9DF1846DA7D00E55969 /* celdaMenuiPh.png */; };
 		BAA9E9E31846DBF300E55969 /* UIAlertView+error.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA9E9E21846DBF300E55969 /* UIAlertView+error.m */; };
+		BAA9EFBD185934A8006FD3F8 /* ItemsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA9EFB9185934A8006FD3F8 /* ItemsCell.m */; };
+		BAA9EFBE185934A8006FD3F8 /* ItemsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAA9EFBA185934A8006FD3F8 /* ItemsCell.xib */; };
+		BAA9EFBF185934A8006FD3F8 /* RoomsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA9EFBC185934A8006FD3F8 /* RoomsViewController.m */; };
+		BAA9EFC6185934D2006FD3F8 /* RoomsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA9EFC2185934D2006FD3F8 /* RoomsCell.m */; };
+		BAA9EFC7185934D2006FD3F8 /* RoomsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAA9EFC3185934D2006FD3F8 /* RoomsCell.xib */; };
+		BAA9EFC8185934D2006FD3F8 /* SetRoomsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA9EFC5185934D2006FD3F8 /* SetRoomsViewController.m */; };
+		BAA9EFD71859398F006FD3F8 /* TvItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA9EFD61859398F006FD3F8 /* TvItemViewController.m */; };
 		BAB0C1E01846C91D00B48692 /* LogoEHC.png in Resources */ = {isa = PBXBuildFile; fileRef = BAB0C1DF1846C91D00B48692 /* LogoEHC.png */; };
-		BAC408011857C53600AB189B /* RoomsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC408001857C53600AB189B /* RoomsViewController.m */; };
 		BAC408031857D8FD00AB189B /* SGAnnotatedPagerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAC408021857D8FD00AB189B /* SGAnnotatedPagerController.xib */; };
 		BAD46B351856AF76006F0930 /* FristViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD46B341856AF75006F0930 /* FristViewController.m */; };
 		BAD46B381856B4C5006F0930 /* logLogin.png in Resources */ = {isa = PBXBuildFile; fileRef = BAD46B371856B4C5006F0930 /* logLogin.png */; };
 		BAD46B3E1856B767006F0930 /* SGAnnotatedPagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD46B3B1856B767006F0930 /* SGAnnotatedPagerController.m */; };
 		BAD46B3F1856B767006F0930 /* SGViewPagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD46B3D1856B767006F0930 /* SGViewPagerController.m */; };
-		BAD46B431856B9E8006F0930 /* SetRoomsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD46B421856B9E8006F0930 /* SetRoomsViewController.m */; };
-		BAD46B461856BBB8006F0930 /* RoomsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD46B451856BBB8006F0930 /* RoomsCell.m */; };
-		BAD46B481856BE85006F0930 /* RoomsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAD46B471856BE85006F0930 /* RoomsCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,9 +68,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BA1F65331857E3AA00883571 /* ItemsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemsCell.xib; sourceTree = "<group>"; };
-		BA1F65351857E3C300883571 /* ItemsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemsCell.h; sourceTree = "<group>"; };
-		BA1F65361857E3C300883571 /* ItemsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemsCell.m; sourceTree = "<group>"; };
 		BA891392183D6F3100F97172 /* ehc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ehc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA891395183D6F3100F97172 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BA891397183D6F3100F97172 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -131,9 +129,19 @@
 		BAA9E9DF1846DA7D00E55969 /* celdaMenuiPh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = celdaMenuiPh.png; sourceTree = "<group>"; };
 		BAA9E9E11846DBF300E55969 /* UIAlertView+error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+error.h"; sourceTree = "<group>"; };
 		BAA9E9E21846DBF300E55969 /* UIAlertView+error.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+error.m"; sourceTree = "<group>"; };
+		BAA9EFB8185934A8006FD3F8 /* ItemsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemsCell.h; sourceTree = "<group>"; };
+		BAA9EFB9185934A8006FD3F8 /* ItemsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemsCell.m; sourceTree = "<group>"; };
+		BAA9EFBA185934A8006FD3F8 /* ItemsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemsCell.xib; sourceTree = "<group>"; };
+		BAA9EFBB185934A8006FD3F8 /* RoomsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomsViewController.h; sourceTree = "<group>"; };
+		BAA9EFBC185934A8006FD3F8 /* RoomsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomsViewController.m; sourceTree = "<group>"; };
+		BAA9EFC1185934D2006FD3F8 /* RoomsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomsCell.h; sourceTree = "<group>"; };
+		BAA9EFC2185934D2006FD3F8 /* RoomsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomsCell.m; sourceTree = "<group>"; };
+		BAA9EFC3185934D2006FD3F8 /* RoomsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoomsCell.xib; sourceTree = "<group>"; };
+		BAA9EFC4185934D2006FD3F8 /* SetRoomsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetRoomsViewController.h; sourceTree = "<group>"; };
+		BAA9EFC5185934D2006FD3F8 /* SetRoomsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetRoomsViewController.m; sourceTree = "<group>"; };
+		BAA9EFD51859398F006FD3F8 /* TvItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TvItemViewController.h; sourceTree = "<group>"; };
+		BAA9EFD61859398F006FD3F8 /* TvItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TvItemViewController.m; sourceTree = "<group>"; };
 		BAB0C1DF1846C91D00B48692 /* LogoEHC.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogoEHC.png; sourceTree = "<group>"; };
-		BAC407FF1857C53600AB189B /* RoomsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomsViewController.h; sourceTree = "<group>"; };
-		BAC408001857C53600AB189B /* RoomsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomsViewController.m; sourceTree = "<group>"; };
 		BAC408021857D8FD00AB189B /* SGAnnotatedPagerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGAnnotatedPagerController.xib; sourceTree = "<group>"; };
 		BAD46B331856AF75006F0930 /* FristViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FristViewController.h; sourceTree = "<group>"; };
 		BAD46B341856AF75006F0930 /* FristViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FristViewController.m; sourceTree = "<group>"; };
@@ -142,11 +150,6 @@
 		BAD46B3B1856B767006F0930 /* SGAnnotatedPagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGAnnotatedPagerController.m; sourceTree = "<group>"; };
 		BAD46B3C1856B767006F0930 /* SGViewPagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGViewPagerController.h; sourceTree = "<group>"; };
 		BAD46B3D1856B767006F0930 /* SGViewPagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGViewPagerController.m; sourceTree = "<group>"; };
-		BAD46B411856B9E8006F0930 /* SetRoomsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetRoomsViewController.h; sourceTree = "<group>"; };
-		BAD46B421856B9E8006F0930 /* SetRoomsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetRoomsViewController.m; sourceTree = "<group>"; };
-		BAD46B441856BBB8006F0930 /* RoomsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomsCell.h; sourceTree = "<group>"; };
-		BAD46B451856BBB8006F0930 /* RoomsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomsCell.m; sourceTree = "<group>"; };
-		BAD46B471856BE85006F0930 /* RoomsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoomsCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -299,8 +302,9 @@
 		BAA9E9C11846D24100E55969 /* Clases */ = {
 			isa = PBXGroup;
 			children = (
-				BAC407FD1857B82000AB189B /* Rooms */,
-				BAD46B401856B9DA006F0930 /* SetRoomsView */,
+				BAA9EFD418593979006FD3F8 /* TVitem */,
+				BAA9EFB7185934A8006FD3F8 /* Rooms */,
+				BAA9EFC0185934D2006FD3F8 /* SetRoomsView */,
 				BAD46B361856AF7E006F0930 /* FirstView */,
 				BAA9E9D81846D9FF00E55969 /* Menu */,
 				BAA9E9C21846D24100E55969 /* Config */,
@@ -356,6 +360,39 @@
 			path = Menu;
 			sourceTree = "<group>";
 		};
+		BAA9EFB7185934A8006FD3F8 /* Rooms */ = {
+			isa = PBXGroup;
+			children = (
+				BAA9EFB8185934A8006FD3F8 /* ItemsCell.h */,
+				BAA9EFB9185934A8006FD3F8 /* ItemsCell.m */,
+				BAA9EFBA185934A8006FD3F8 /* ItemsCell.xib */,
+				BAA9EFBB185934A8006FD3F8 /* RoomsViewController.h */,
+				BAA9EFBC185934A8006FD3F8 /* RoomsViewController.m */,
+			);
+			path = Rooms;
+			sourceTree = "<group>";
+		};
+		BAA9EFC0185934D2006FD3F8 /* SetRoomsView */ = {
+			isa = PBXGroup;
+			children = (
+				BAA9EFC1185934D2006FD3F8 /* RoomsCell.h */,
+				BAA9EFC2185934D2006FD3F8 /* RoomsCell.m */,
+				BAA9EFC3185934D2006FD3F8 /* RoomsCell.xib */,
+				BAA9EFC4185934D2006FD3F8 /* SetRoomsViewController.h */,
+				BAA9EFC5185934D2006FD3F8 /* SetRoomsViewController.m */,
+			);
+			path = SetRoomsView;
+			sourceTree = "<group>";
+		};
+		BAA9EFD418593979006FD3F8 /* TVitem */ = {
+			isa = PBXGroup;
+			children = (
+				BAA9EFD51859398F006FD3F8 /* TvItemViewController.h */,
+				BAA9EFD61859398F006FD3F8 /* TvItemViewController.m */,
+			);
+			path = TVitem;
+			sourceTree = "<group>";
+		};
 		BAB0C1DE1846C90500B48692 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -364,19 +401,6 @@
 				BAB0C1DF1846C91D00B48692 /* LogoEHC.png */,
 			);
 			path = Images;
-			sourceTree = "<group>";
-		};
-		BAC407FD1857B82000AB189B /* Rooms */ = {
-			isa = PBXGroup;
-			children = (
-				BAC407FF1857C53600AB189B /* RoomsViewController.h */,
-				BAC408001857C53600AB189B /* RoomsViewController.m */,
-				BA1F65331857E3AA00883571 /* ItemsCell.xib */,
-				BA1F65351857E3C300883571 /* ItemsCell.h */,
-				BA1F65361857E3C300883571 /* ItemsCell.m */,
-			);
-			name = Rooms;
-			path = LivingRoom;
 			sourceTree = "<group>";
 		};
 		BAD46B361856AF7E006F0930 /* FirstView */ = {
@@ -398,19 +422,6 @@
 				BAC408021857D8FD00AB189B /* SGAnnotatedPagerController.xib */,
 			);
 			path = SGAnnotatedPager;
-			sourceTree = "<group>";
-		};
-		BAD46B401856B9DA006F0930 /* SetRoomsView */ = {
-			isa = PBXGroup;
-			children = (
-				BAD46B411856B9E8006F0930 /* SetRoomsViewController.h */,
-				BAD46B421856B9E8006F0930 /* SetRoomsViewController.m */,
-				BAD46B441856BBB8006F0930 /* RoomsCell.h */,
-				BAD46B451856BBB8006F0930 /* RoomsCell.m */,
-				BAD46B471856BE85006F0930 /* RoomsCell.xib */,
-			);
-			name = SetRoomsView;
-			path = RoomsView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -493,10 +504,10 @@
 				BA8913AC183D6F3100F97172 /* Main_iPad.storyboard in Resources */,
 				BA8913B1183D6F3100F97172 /* Images.xcassets in Resources */,
 				BA8913A9183D6F3100F97172 /* Main_iPhone.storyboard in Resources */,
-				BA1F65341857E3AA00883571 /* ItemsCell.xib in Resources */,
+				BAA9EFBE185934A8006FD3F8 /* ItemsCell.xib in Resources */,
 				BAA9E9E01846DA7D00E55969 /* celdaMenuiPh.png in Resources */,
+				BAA9EFC7185934D2006FD3F8 /* RoomsCell.xib in Resources */,
 				BAD46B381856B4C5006F0930 /* logLogin.png in Resources */,
-				BAD46B481856BE85006F0930 /* RoomsCell.xib in Resources */,
 				BA8913A0183D6F3100F97172 /* InfoPlist.strings in Resources */,
 				BAC408031857D8FD00AB189B /* SGAnnotatedPagerController.xib in Resources */,
 			);
@@ -517,25 +528,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAA9EFBD185934A8006FD3F8 /* ItemsCell.m in Sources */,
 				BAA9E9B81846D22400E55969 /* AFImageRequestOperation.m in Sources */,
 				BAD46B3F1856B767006F0930 /* SGViewPagerController.m in Sources */,
 				BAA9E9D01846D24100E55969 /* MenuViewController.m in Sources */,
 				BAA9E9D11846D24100E55969 /* MyNavigationController.m in Sources */,
+				BAA9EFD71859398F006FD3F8 /* TvItemViewController.m in Sources */,
 				BAA9E9CF1846D24100E55969 /* InitViewController.m in Sources */,
-				BAD46B431856B9E8006F0930 /* SetRoomsViewController.m in Sources */,
 				BAA9E9BB1846D22400E55969 /* AFPropertyListRequestOperation.m in Sources */,
 				BA8913A6183D6F3100F97172 /* AppDelegate.m in Sources */,
+				BAA9EFC8185934D2006FD3F8 /* SetRoomsViewController.m in Sources */,
 				BAA9E9DE1846DA4100E55969 /* MenuHeaderCell.m in Sources */,
+				BAA9EFBF185934A8006FD3F8 /* RoomsViewController.m in Sources */,
 				BAA9E9BF1846D22400E55969 /* ECSlidingViewController.m in Sources */,
-				BAC408011857C53600AB189B /* RoomsViewController.m in Sources */,
 				BAA9E9DD1846DA4100E55969 /* MenuCell.m in Sources */,
-				BAD46B461856BBB8006F0930 /* RoomsCell.m in Sources */,
 				BAA9E9E31846DBF300E55969 /* UIAlertView+error.m in Sources */,
 				BAA9E9BC1846D22400E55969 /* AFURLConnectionOperation.m in Sources */,
 				BAA9E9C01846D22400E55969 /* UIImage+ImageWithUIView.m in Sources */,
 				BAA9E9BD1846D22400E55969 /* AFXMLRequestOperation.m in Sources */,
 				BAA9E9B91846D22400E55969 /* AFJSONRequestOperation.m in Sources */,
 				BAD46B351856AF76006F0930 /* FristViewController.m in Sources */,
+				BAA9EFC6185934D2006FD3F8 /* RoomsCell.m in Sources */,
 				BAA9E9BE1846D22400E55969 /* UIImageView+AFNetworking.m in Sources */,
 				BAA9E9D21846D24100E55969 /* LoginScreen.m in Sources */,
 				BAA9E9D61846D4FA00E55969 /* API.m in Sources */,
@@ -545,7 +558,6 @@
 				BA8913A2183D6F3100F97172 /* main.m in Sources */,
 				BAA9E9B61846D22400E55969 /* AFHTTPClient.m in Sources */,
 				BAA9E9CE1846D24100E55969 /* InitialView.m in Sources */,
-				BA1F65371857E3C300883571 /* ItemsCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,6 +12,7 @@
 #import "SGAnnotatedPagerController.h"
 #import "RoomsViewController.h"
 #import "AppDelegate.h"
+#import "TvItemViewController.h"
 
 @interface SetRoomsViewController (){
     NSArray *roomsArray;
@@ -143,7 +144,7 @@
     NSMutableArray *array = [NSMutableArray arrayWithCapacity:5];
     for (int i = 0; i < [roomsArray count]; i++) {
         
-        RoomsViewController *room = [[RoomsViewController alloc] initWithFrame:CGRectMake(0, 0, 320, 568) withNameOfRoom:roomsArray[i] numberOfRoom:i andNumberOfItems:dictionaryForItemsInRooms[roomsArray[i]]];
+        RoomsViewController *room = [[RoomsViewController alloc] initWithFrame:CGRectMake(0, 0, 320, 568) withNameOfRoom:roomsArray[i] numberOfRoom:i andNumberOfItems:dictionaryForItemsInRooms[roomsArray[i]] andDelegate:self];
         room.title = roomsArray[i];
         [array addObject:room];
     }
@@ -174,5 +175,12 @@
     return UIEdgeInsetsMake(50, 20, 50, 20);
 }
 
+
+#pragma mark - Methods Protocol Items
+
+- (void)sacarTV{
+    TvItemViewController *roomsController = (TvItemViewController *) [self.storyboard instantiateViewControllerWithIdentifier:@"tvController"];
+    [self.navigationController pushViewController:roomsController animated:YES];
+}
 
 @end

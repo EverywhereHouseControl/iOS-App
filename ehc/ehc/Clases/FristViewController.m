@@ -60,6 +60,7 @@
     [self.view addSubview:configButton];
     
     self.navigationItem.title = @"Panel de Control";
+    self.navigationItem.hidesBackButton = YES;
     
 }
 

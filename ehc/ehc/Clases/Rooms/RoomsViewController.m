@@ -10,6 +10,8 @@
 #import "ItemsCell.h"
 #import "SGViewPagerController.h"
 #import "SGAnnotatedPagerController.h"
+#import "TvItemViewController.h"
+#import "SetRoomsViewController.h"
 
 #define kNameOfLivingRoom 0
 #define kNameOfKitchenRoom 1
@@ -28,7 +30,8 @@
 @end
 
 @implementation RoomsViewController
-@synthesize collectionItems;
+@synthesize collectionItems = _collectionItems;
+@synthesize delegate = _delegate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -39,10 +42,11 @@
     return self;
 }
 
-- (id)initWithFrame:(CGRect)frame withNameOfRoom:(NSString*)roomName numberOfRoom:(int)roomNumber andNumberOfItems:(NSArray*)arrayOfItems{
+- (id)initWithFrame:(CGRect)frame withNameOfRoom:(NSString*)roomName numberOfRoom:(int)roomNumber andNumberOfItems:(NSArray*)arrayOfItems andDelegate:(id<protocolItemsDelegate>)delegate{
     self = [super init];
     if (self) {
         [self.view setFrame:frame];
+        _delegate = delegate;
         switch (roomNumber) {
             case kNameOfLivingRoom:
                 [self.view setBackgroundColor:[UIColor brownColor]];
@@ -69,14 +73,14 @@
         }
         
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-        collectionItems = [[UICollectionView alloc] initWithFrame:CGRectMake(0, STATUSBAR_HEIGHT + TITLE_CONTROL_HEIGHT, 320, 568 - STATUSBAR_HEIGHT - TITLE_CONTROL_HEIGHT) collectionViewLayout:layout];
-        [collectionItems setDataSource:self];
-        [collectionItems setDelegate:self];
+        _collectionItems = [[UICollectionView alloc] initWithFrame:CGRectMake(0, STATUSBAR_HEIGHT + TITLE_CONTROL_HEIGHT, 320, 568 - STATUSBAR_HEIGHT - TITLE_CONTROL_HEIGHT) collectionViewLayout:layout];
+        [_collectionItems setDataSource:self];
+        [_collectionItems setDelegate:self];
         
-        [collectionItems registerClass:[ItemsCell class] forCellWithReuseIdentifier:@"ItemsCellID"];
-        [collectionItems setBackgroundColor:[UIColor clearColor]];
+        [_collectionItems registerClass:[ItemsCell class] forCellWithReuseIdentifier:@"ItemsCellID"];
+        [_collectionItems setBackgroundColor:[UIColor clearColor]];
         
-        [self.view addSubview:collectionItems];
+        [self.view addSubview:_collectionItems];
         
         UILabel *labelTitle = [[UILabel alloc] initWithFrame:CGRectMake(0, STATUSBAR_HEIGHT, 320, 50)];
         [labelTitle setText:roomName];
@@ -170,12 +174,16 @@
     //    UITabBarController *tabC = [[UITabBarController alloc] init];
     //    [tabC setViewControllers:[NSArray arrayWithObjects:pager, annotatedPager, nil] animated:NO];
     
+    if (indexPath.row == 0) {
+        [self llamarAsacarTv];
+    }
+    
 }
 - (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
     // TODO: Deselect item
     //int fichaSeleccionada = indexPath.row;
     //fichaSeleccionada = -1;
-    [[collectionItems cellForItemAtIndexPath:indexPath] setSelected:YES];
+    [[_collectionItems cellForItemAtIndexPath:indexPath] setSelected:YES];
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -202,6 +210,14 @@
 
 - (NSString *)title {
     return [NSString stringWithFormat:@"%@", super.title];
+}
+
+#pragma mark - Metodos de llamada a delegate
+
+- (void)llamarAsacarTv{
+    if ([_delegate conformsToProtocol:@protocol(protocolItemsDelegate)] && [_delegate respondsToSelector:@selector(sacarTV)]) {
+        [_delegate sacarTV];
+    }
 }
 
 

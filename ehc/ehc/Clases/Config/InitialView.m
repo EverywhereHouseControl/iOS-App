@@ -69,6 +69,7 @@
         [self entrar];
     }
     [[self activity] startAnimating];
+    [[self labelCargando] setText:@"Cargando..."];
 }
 
 #pragma mark - Metodos Login
