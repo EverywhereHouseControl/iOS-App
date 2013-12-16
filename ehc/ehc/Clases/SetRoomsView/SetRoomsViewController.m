@@ -15,14 +15,8 @@
 #import "TvItemViewController.h"
 
 @interface SetRoomsViewController (){
-    NSArray *roomsArray;
-    NSArray *itemsForLiving;
-    NSArray *itemsForKitchen;
-    NSArray *itemsForGarage;
-    NSArray *itemsForBathRoom;
-    NSArray *itemsForSingleRoom;
-    NSArray *itemsForGarden;
-    NSDictionary *dictionaryForItemsInRooms;
+    int numberOfRooms;
+    NSDictionary *dictionaryForRooms;
 }
 
 @end
@@ -44,14 +38,9 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     [self.collectionRooms registerNib:[UINib nibWithNibName:@"RoomsCell" bundle:nil] forCellWithReuseIdentifier:@"RoomsCellID"];
-    roomsArray = [[NSArray alloc] initWithObjects:@"Salón",@"Cocina",@"Garage",@"Baño",@"Habitación",@"Jardín", nil];
-    itemsForLiving = [[NSArray alloc] initWithObjects:@"TV",@"DVD",@"Minicadena",@"Aire",@"Calefacción",@"Luces", nil];
-    itemsForKitchen = [[NSArray alloc] initWithObjects:@"TV",@"Microhondas",@"Minicadena",@"Aire",@"Calefacción",@"Luces", nil];
-    itemsForGarage = [[NSArray alloc] initWithObjects:@"Puerta",@"Minicadena",@"Aire",@"Calefacción",@"Luces", nil];
-    itemsForBathRoom = [[NSArray alloc] initWithObjects:@"Calefacción",@"Luces", nil];
-    itemsForSingleRoom = [[NSArray alloc] initWithObjects:@"TV",@"Minicadena",@"Aire",@"Calefacción",@"Luces", nil];
-    itemsForGarden = [[NSArray alloc] initWithObjects:@"Luces",@"Video", nil];
-    dictionaryForItemsInRooms = [NSDictionary dictionaryWithObjectsAndKeys:itemsForLiving,roomsArray[0],itemsForKitchen,roomsArray[1],itemsForGarage,roomsArray[2],itemsForBathRoom,roomsArray[3],itemsForSingleRoom,roomsArray[4],itemsForGarden,roomsArray[5], nil];
+    
+    numberOfRooms = ((NSString*)[appDelegate.jsonArray objectForKey:@"numerosH"]).intValue;
+    dictionaryForRooms = [appDelegate.jsonArray objectForKey:@"Habitaciones"];
     
     self.navigationItem.title = @"Rooms";
 }
@@ -65,7 +54,7 @@
 #pragma mark - UICollectionView Datasource
 //
 - (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section {
-    return 6;
+    return numberOfRooms;
 }
 //
 - (NSInteger)numberOfSectionsInCollectionView: (UICollectionView *)collectionView {
@@ -82,41 +71,11 @@
         cell = [[RoomsCell alloc] initWithFrame:CGRectMake(0, 0, 130, 130)];
     }
     
-    switch (indexPath.row) {
-        case 0:
-            [cell.roomName setText:@"Salón"];
-            [cell.roomName setTextColor:[UIColor whiteColor]];
-            [cell setBackgroundColor:[UIColor clearColor]];
-            break;
-        case 1:
-            [cell.roomName setText:@"Terraza"];
-            [cell.roomName setTextColor:[UIColor whiteColor]];
-            [cell setBackgroundColor:[UIColor clearColor]];
-            break;
-        case 2:
-            [cell.roomName setText:@"Cocina"];
-            [cell.roomName setTextColor:[UIColor whiteColor]];
-            [cell setBackgroundColor:[UIColor clearColor]];
-            break;
-        case 3:
-            [cell.roomName setText:@"Garage"];
-            [cell.roomName setTextColor:[UIColor whiteColor]];
-            [cell setBackgroundColor:[UIColor clearColor]];
-            break;
-        case 4:
-            [cell.roomName setText:@"Habitación 1"];
-            [cell.roomName setTextColor:[UIColor whiteColor]];
-            [cell setBackgroundColor:[UIColor clearColor]];
-            break;
-        case 5:
-            [cell.roomName setText:@"Habitación 2"];
-            [cell.roomName setTextColor:[UIColor whiteColor]];
-            [cell setBackgroundColor:[UIColor clearColor]];
-            break;
-            
-        default:
-            break;
-    }
+    NSArray *arrayRooms = [dictionaryForRooms objectForKey:[NSString stringWithFormat:@"H%d",indexPath.row+1]];
+    
+    [cell.roomName setText:[arrayRooms objectAtIndex:0]];
+    [cell.roomName setTextColor:[UIColor whiteColor]];
+    [cell setBackgroundColor:[UIColor clearColor]];
         
     return cell;
 }
@@ -142,10 +101,11 @@
     annotatedPager.title = @"Items";
     
     NSMutableArray *array = [NSMutableArray arrayWithCapacity:5];
-    for (int i = 0; i < [roomsArray count]; i++) {
-        
-        RoomsViewController *room = [[RoomsViewController alloc] initWithFrame:CGRectMake(0, 0, 320, 568) withNameOfRoom:roomsArray[i] numberOfRoom:i andNumberOfItems:dictionaryForItemsInRooms[roomsArray[i]] andDelegate:self];
-        room.title = roomsArray[i];
+    for (int i = 0; i < numberOfRooms; i++) {
+        NSArray *arrayRooms = [dictionaryForRooms objectForKey:[NSString stringWithFormat:@"H%d",i+1]];
+
+        RoomsViewController *room = [[RoomsViewController alloc] initWithFrame:CGRectMake(0, 0, 320, 568) withNameOfRoom:[arrayRooms objectAtIndex:0] numberOfRoom:i andNumberOfItems:[arrayRooms objectAtIndex:1] andDelegate:self];
+        room.title = [arrayRooms objectAtIndex:0];
         [array addObject:room];
     }
     [annotatedPager setViewControllers:array animated:NO];

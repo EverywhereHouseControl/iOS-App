@@ -15,6 +15,7 @@
     NSString *pwd;
     NSString *pwdHashed;
     NSString *idUs;
+    NSArray *jsonParse;
 }
 @end
 
@@ -115,10 +116,15 @@
                                        
                                        idUs = [res objectForKey:@"IdUser"];
                                        nameUser = [res objectForKey:@"username"];
+                                       
+                                       NSString *filePath = [[NSBundle mainBundle] pathForResource:@"config" ofType:@"json"];
+                                       NSData *data = [NSData dataWithContentsOfFile:filePath];
+                                       jsonParse= [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
                                    
                                        NSString *b = pwdHashed;
                                        NSString *c = nameUser;
-                                      
+                                       appDelegate.jsonArray = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+                                       
                                        NSMutableDictionary *dic = [[NSMutableDictionary alloc] initWithObjectsAndKeys:b,KEY_PWD,c,KEY_USER,nil];
                                        [dic writeToFile:[self rutaFicheroVar] atomically:YES];
                                        

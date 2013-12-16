@@ -47,7 +47,7 @@
     if (self) {
         [self.view setFrame:frame];
         _delegate = delegate;
-        switch (roomNumber) {
+        /*switch (roomNumber) {
             case kNameOfLivingRoom:
                 [self.view setBackgroundColor:[UIColor brownColor]];
                 break;
@@ -70,8 +70,8 @@
             default:
                 [self.view setBackgroundColor:[UIColor brownColor]];
                 break;
-        }
-        
+        }*/
+        [self.view setBackgroundColor:[UIColor brownColor]];
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
         _collectionItems = [[UICollectionView alloc] initWithFrame:CGRectMake(0, STATUSBAR_HEIGHT + TITLE_CONTROL_HEIGHT, 320, 568 - STATUSBAR_HEIGHT - TITLE_CONTROL_HEIGHT) collectionViewLayout:layout];
         [_collectionItems setDataSource:self];
@@ -82,12 +82,12 @@
         
         [self.view addSubview:_collectionItems];
         
-        UILabel *labelTitle = [[UILabel alloc] initWithFrame:CGRectMake(0, STATUSBAR_HEIGHT, 320, 50)];
+       /* UILabel *labelTitle = [[UILabel alloc] initWithFrame:CGRectMake(0, STATUSBAR_HEIGHT, 320, 50)];
         [labelTitle setText:roomName];
         [labelTitle setTextAlignment:NSTextAlignmentCenter];
         [labelTitle setFont:[UIFont fontWithName:@"Noteworthy-Bold" size:25]];
         [labelTitle setTextColor:[UIColor whiteColor]];
-        [self.view addSubview:labelTitle];
+        [self.view addSubview:labelTitle];*/
         
         itemsNamesArray = [NSArray arrayWithArray:arrayOfItems];
         

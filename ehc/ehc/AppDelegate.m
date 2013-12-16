@@ -10,7 +10,7 @@
 #import "InitialView.h"
 
 @implementation AppDelegate
-@synthesize recienLogeado;
+@synthesize recienLogeado,jsonArray;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

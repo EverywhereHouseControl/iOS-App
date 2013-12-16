@@ -257,186 +257,226 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9VX-g1-Xu6">
-                                <rect key="frame" x="217" y="172" width="45" height="45"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fondoMando.png" translatesAutoresizingMaskIntoConstraints="NO" id="FHh-dF-SPp">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.66353175951086962" green="0.66353175951086962" blue="0.66353175951086962" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9VX-g1-Xu6">
+                                <rect key="frame" x="208" y="271" width="45" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="29"/>
-                                <state key="normal" title="3">
+                                <state key="normal" image="tres.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="pulsadoBoton:" destination="MLs-lu-By9" eventType="touchUpInside" id="e1f-Jp-tGX"/>
+                                    <action selector="pulsadoBoton:" destination="MLs-lu-By9" eventType="touchUpInside" id="N2R-rP-X20"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KHo-vW-grU">
-                                <rect key="frame" x="57" y="172" width="45" height="45"/>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KHo-vW-grU">
+                                <rect key="frame" x="67" y="271" width="45" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.66353175951086962" green="0.66353175951086962" blue="0.66353175951086962" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="29"/>
-                                <state key="normal" title="1">
+                                <state key="normal" image="uno.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="pulsadoBoton:" destination="MLs-lu-By9" eventType="touchUpInside" id="Ggv-aw-4xS"/>
+                                    <action selector="pulsadoBoton:" destination="MLs-lu-By9" eventType="touchUpInside" id="UFe-bs-yb9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywD-0s-oFy">
-                                <rect key="frame" x="138" y="172" width="45" height="45"/>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywD-0s-oFy">
+                                <rect key="frame" x="138" y="271" width="45" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.66353175951086962" green="0.66353175951086962" blue="0.66353175951086962" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="29"/>
-                                <state key="normal" title="2">
+                                <state key="normal" image="dos.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="pulsadoBoton:" destination="MLs-lu-By9" eventType="touchUpInside" id="ix1-0E-8uz"/>
+                                    <action selector="pulsadoBoton:" destination="MLs-lu-By9" eventType="touchUpInside" id="NAg-3S-pc9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QBr-gS-oNn">
-                                <rect key="frame" x="137" y="234" width="45" height="45"/>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QBr-gS-oNn">
+                                <rect key="frame" x="137" y="333" width="45" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.66353175951086962" green="0.66353175951086962" blue="0.66353175951086962" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="29"/>
-                                <state key="normal" title="5">
+                                <state key="normal" image="cinco.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="pulsadoBoton:" destination="MLs-lu-By9" eventType="touchUpInside" id="IZf-uM-iXe"/>
+                                    <action selector="pulsadoBoton:" destination="MLs-lu-By9" eventType="touchUpInside" id="Z27-n3-rsf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBR-ZA-4Ch">
-                                <rect key="frame" x="57" y="234" width="45" height="45"/>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBR-ZA-4Ch">
+                                <rect key="frame" x="67" y="333" width="45" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.66353175951086962" green="0.66353175951086962" blue="0.66353175951086962" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="29"/>
-                                <state key="normal" title="4">
+                                <state key="normal" image="cuatro.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="pulsadoBoton:" destination="MLs-lu-By9" eventType="touchUpInside" id="ZzE-PY-3MR"/>
+                                    <action selector="pulsadoBoton:" destination="MLs-lu-By9" eventType="touchUpInside" id="G5l-VC-ct8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpm-WA-SI1">
-                                <rect key="frame" x="137" y="296" width="45" height="45"/>
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpm-WA-SI1">
+                                <rect key="frame" x="137" y="395" width="45" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.66353175951086962" green="0.66353175951086962" blue="0.66353175951086962" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="29"/>
-                                <state key="normal" title="8">
+                                <state key="normal" image="ocho.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="pulsadoBoton:" destination="MLs-lu-By9" eventType="touchUpInside" id="c9u-1E-Ius"/>
+                                    <action selector="pulsadoBoton:" destination="MLs-lu-By9" eventType="touchUpInside" id="u8C-Jf-CPi"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IyL-iH-B2i">
-                                <rect key="frame" x="57" y="296" width="45" height="45"/>
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IyL-iH-B2i">
+                                <rect key="frame" x="67" y="395" width="45" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.66353175951086962" green="0.66353175951086962" blue="0.66353175951086962" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="29"/>
-                                <state key="normal" title="7">
+                                <state key="normal" image="siete.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="pulsadoBoton:" destination="MLs-lu-By9" eventType="touchUpInside" id="2kv-Rq-R4i"/>
+                                    <action selector="pulsadoBoton:" destination="MLs-lu-By9" eventType="touchUpInside" id="Oj3-9U-tEi"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Lu-7a-SxT">
-                                <rect key="frame" x="217" y="363" width="45" height="45"/>
+                            <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Lu-7a-SxT">
+                                <rect key="frame" x="208" y="462" width="45" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.66353175949999998" green="0.66353175949999998" blue="0.66353175949999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
-                                <state key="normal" title="Guide">
+                                <state key="normal" image="Ajustes.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="pulsadoBoton:" destination="MLs-lu-By9" eventType="touchUpInside" id="JES-yx-1g3"/>
+                                    <action selector="pulsadoBoton:" destination="MLs-lu-By9" eventType="touchUpInside" id="zXh-1u-sMz"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XMe-Yt-BnT">
-                                <rect key="frame" x="137" y="361" width="45" height="45"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XMe-Yt-BnT">
+                                <rect key="frame" x="137" y="460" width="45" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.66353175949999998" green="0.66353175949999998" blue="0.66353175949999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="21"/>
-                                <state key="normal" title="0">
+                                <state key="normal" image="cero.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="pulsadoBoton:" destination="MLs-lu-By9" eventType="touchUpInside" id="1ol-Qb-cIZ"/>
+                                    <action selector="pulsadoBoton:" destination="MLs-lu-By9" eventType="touchUpInside" id="ptq-la-u9y"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WiT-7X-mRG">
-                                <rect key="frame" x="57" y="361" width="45" height="45"/>
+                            <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WiT-7X-mRG">
+                                <rect key="frame" x="67" y="460" width="45" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.66353175949999998" green="0.66353175949999998" blue="0.66353175949999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="21"/>
-                                <state key="normal" title="../..">
+                                <state key="normal" image="Estrella.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="pulsadoBoton:" destination="MLs-lu-By9" eventType="touchUpInside" id="xAD-px-yhR"/>
+                                    <action selector="pulsadoBoton:" destination="MLs-lu-By9" eventType="touchUpInside" id="U6b-rh-41K"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vha-Za-Y0f">
-                                <rect key="frame" x="20" y="78" width="151" height="30"/>
+                            <button opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vha-Za-Y0f">
+                                <rect key="frame" x="20" y="80" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.47898267663043481" green="0.47898267663043481" blue="0.47898267663043481" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
-                                <state key="normal" title="Cambio pantallas">
+                                <state key="normal" image="Apagar.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="pulsadoBoton:" destination="MLs-lu-By9" eventType="touchUpInside" id="t3S-Za-Acs"/>
+                                    <action selector="pulsadoBoton:" destination="MLs-lu-By9" eventType="touchUpInside" id="S1R-DO-uaH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9d-Pv-JjT">
-                                <rect key="frame" x="217" y="296" width="45" height="45"/>
+                            <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9d-Pv-JjT">
+                                <rect key="frame" x="208" y="395" width="45" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.66353175951086962" green="0.66353175951086962" blue="0.66353175951086962" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="29"/>
-                                <state key="normal" title="9">
+                                <state key="normal" image="nueve.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="pulsadoBoton:" destination="MLs-lu-By9" eventType="touchUpInside" id="JDw-84-UrY"/>
+                                    <action selector="pulsadoBoton:" destination="MLs-lu-By9" eventType="touchUpInside" id="Gqq-as-RA6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCM-Aj-ucD">
-                                <rect key="frame" x="217" y="234" width="45" height="45"/>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCM-Aj-ucD">
+                                <rect key="frame" x="208" y="333" width="45" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.66353175951086962" green="0.66353175951086962" blue="0.66353175951086962" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="29"/>
-                                <state key="normal" title="6">
+                                <state key="normal" image="seis.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="pulsadoBoton:" destination="MLs-lu-By9" eventType="touchUpInside" id="Lr6-t6-ONz"/>
+                                    <action selector="pulsadoBoton:" destination="MLs-lu-By9" eventType="touchUpInside" id="9Lg-K5-jWv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="19" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1D4-Bl-CWl">
-                                <rect key="frame" x="234" y="78" width="66" height="52"/>
+                            <button opaque="NO" tag="19" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1D4-Bl-CWl">
+                                <rect key="frame" x="250" y="80" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.73414147418478259" green="0.13976493139905724" blue="0.086925485642872016" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
-                                <state key="normal" title="On/Off">
+                                <state key="normal" image="Mute.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="pulsadoBoton:" destination="MLs-lu-By9" eventType="touchUpInside" id="w95-KG-pvX"/>
+                                    <action selector="pulsadoBoton:" destination="MLs-lu-By9" eventType="touchUpInside" id="MgZ-MK-ZQD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="16" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B24-4W-zFo">
+                                <rect key="frame" x="124" y="208" width="74" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="flechaAbajo.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pulsadoBoton:" destination="MLs-lu-By9" eventType="touchUpInside" id="FO4-Qh-sfq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="14" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4os-16-hhH">
+                                <rect key="frame" x="124" y="106" width="74" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="flechaArriba.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pulsadoBoton:" destination="MLs-lu-By9" eventType="touchUpInside" id="vcy-t2-427"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="15" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pw7-VV-LaB">
+                                <rect key="frame" x="192" y="137" width="35" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="flechaDerecha.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pulsadoBoton:" destination="MLs-lu-By9" eventType="touchUpInside" id="njC-3l-z7Y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="17" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFl-bm-LLQ">
+                                <rect key="frame" x="94" y="137" width="35" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="flechaIzquierda.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pulsadoBoton:" destination="MLs-lu-By9" eventType="touchUpInside" id="U9M-Ql-svg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="18" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fds-qF-vde">
+                                <rect key="frame" x="131" y="143" width="60" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="play.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pulsadoBoton:" destination="MLs-lu-By9" eventType="touchUpInside" id="gLH-Kw-XCP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -451,7 +491,27 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Ajustes.png" width="55" height="55"/>
+        <image name="Apagar.png" width="65" height="65"/>
+        <image name="Estrella.png" width="65" height="65"/>
         <image name="LogoEHC.png" width="200" height="200"/>
+        <image name="Mute.png" width="55" height="55"/>
+        <image name="cero.png" width="55" height="55"/>
+        <image name="cinco.png" width="55" height="55"/>
+        <image name="cuatro.png" width="55" height="55"/>
+        <image name="dos.png" width="55" height="55"/>
+        <image name="flechaAbajo.png" width="149" height="70"/>
+        <image name="flechaArriba.png" width="149" height="70"/>
+        <image name="flechaDerecha.png" width="70" height="149"/>
+        <image name="flechaIzquierda.png" width="70" height="149"/>
+        <image name="fondoMando.png" width="640" height="1136"/>
+        <image name="nueve.png" width="55" height="55"/>
+        <image name="ocho.png" width="55" height="55"/>
+        <image name="play.png" width="120" height="122"/>
+        <image name="seis.png" width="55" height="55"/>
+        <image name="siete.png" width="55" height="55"/>
+        <image name="tres.png" width="55" height="55"/>
+        <image name="uno.png" width="55" height="55"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
