@@ -84,11 +84,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ehc/Clases/Login/LoginScreen.m"
-            timestampString = "408842350.577865"
+            timestampString = "408935150.620113"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
             landmarkName = "-btnLoginRegisterTapped:"
             landmarkType = "5">
          </BreakpointContent>
@@ -100,12 +100,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ehc/Clases/Login/LoginScreen.m"
-            timestampString = "408844187.275559"
+            timestampString = "408935150.620113"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
             landmarkName = "-btnLoginRegisterTapped:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ehc/Clases/TVitem/TvItemViewController.m"
+            timestampString = "408934779.920797"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "-sendData:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ehc/Clases/TVitem/TvItemViewController.m"
+            timestampString = "408934781.834035"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "-sendData:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
