@@ -71,6 +71,8 @@
                 [self.view setBackgroundColor:[UIColor brownColor]];
                 break;
         }*/
+        [_collectionItems registerNib:[UINib nibWithNibName:@"ItemsCell" bundle:nil] forCellWithReuseIdentifier:@"ItemsCellID"];
+        
         [self.view setBackgroundColor:[UIColor brownColor]];
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
         _collectionItems = [[UICollectionView alloc] initWithFrame:CGRectMake(0, STATUSBAR_HEIGHT + TITLE_CONTROL_HEIGHT, 320, 568 - STATUSBAR_HEIGHT - TITLE_CONTROL_HEIGHT) collectionViewLayout:layout];
@@ -129,9 +131,19 @@
         cell = [[ItemsCell alloc] initWithFrame:CGRectMake(0, 0, 130, 130)];
     }
     
-    [cell setBackgroundColor:[UIColor blackColor]];
+    [cell setBackgroundColor:[UIColor clearColor]];
+    UIImageView *img = [self devolverImagenItem:itemsNamesArray[indexPath.row]];
+    [cell addSubview:img];
     
     UILabel *labelTitle = [[UILabel alloc] initWithFrame:CGRectMake(0, 90, 130, 60)];
+    
+    if ([itemsNamesArray[indexPath.row] isEqualToString:@"Aire Acondicionado"]) {
+        labelTitle = [[UILabel alloc] initWithFrame:CGRectMake(0, 65, 130, 60)];
+    }
+    else{
+        labelTitle = [[UILabel alloc] initWithFrame:CGRectMake(0, 90, 130, 60)];
+    }
+    
     [labelTitle setText:itemsNamesArray[indexPath.row]];
     [labelTitle setTextAlignment:NSTextAlignmentCenter];
     [labelTitle setTextColor:[UIColor whiteColor]];
@@ -220,6 +232,46 @@
     }
 }
 
+#pragma mark - Metodos de clase
+
+- (UIImageView*)devolverImagenItem:(NSString*)item{
+    UIImageView *img;
+    
+    if ([item isEqualToString:@"TV"]) {
+        img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Tele"]];
+        [img setFrame:CGRectMake(10, 10, 100, 90)];
+    }
+    else if ([item isEqualToString:@"DVD"]) {
+        img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"DVD"]];
+        [img setFrame:CGRectMake(10, 10, 100, 90)];
+    }
+    else if ([item isEqualToString:@"Minicadena"]) {
+        img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Minicadena"]];
+        [img setFrame:CGRectMake(10, 10, 100, 90)];
+    }
+    else if ([item isEqualToString:@"Aire Acondicionado"]) {
+        img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Aire"]];
+        [img setFrame:CGRectMake(10, 10, 61, 99)];
+    }
+    else if ([item isEqualToString:@"Luces"]) {
+        img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Bombilla"]];
+        [img setFrame:CGRectMake(10, 10, 100, 90)];
+    }
+    else if ([item isEqualToString:@"Calefaccion"]) {
+        img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Pantalla"]];
+        [img setFrame:CGRectMake(10, 10, 100, 90)];
+    }
+    else if ([item isEqualToString:@"Microhondas"]) {
+        img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Microhondas"]];
+        [img setFrame:CGRectMake(10, 10, 100, 90)];
+    }
+    else if ([item isEqualToString:@"Proyector"]) {
+        img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Proyector"]];
+        [img setFrame:CGRectMake(10, 10, 100, 90)];
+    }
+    
+    return img;
+}
 
 
 @end

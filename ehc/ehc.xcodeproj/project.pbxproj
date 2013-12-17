@@ -70,6 +70,14 @@
 		BAA9EFC7185934D2006FD3F8 /* RoomsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAA9EFC3185934D2006FD3F8 /* RoomsCell.xib */; };
 		BAA9EFC8185934D2006FD3F8 /* SetRoomsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA9EFC5185934D2006FD3F8 /* SetRoomsViewController.m */; };
 		BAA9EFD71859398F006FD3F8 /* TvItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA9EFD61859398F006FD3F8 /* TvItemViewController.m */; };
+		BAAECBB1185FE37100A0D463 /* Aire.png in Resources */ = {isa = PBXBuildFile; fileRef = BAAECBAA185FE37100A0D463 /* Aire.png */; };
+		BAAECBB2185FE37100A0D463 /* DVD.png in Resources */ = {isa = PBXBuildFile; fileRef = BAAECBAB185FE37100A0D463 /* DVD.png */; };
+		BAAECBB3185FE37100A0D463 /* Microhondas.png in Resources */ = {isa = PBXBuildFile; fileRef = BAAECBAC185FE37100A0D463 /* Microhondas.png */; };
+		BAAECBB4185FE37100A0D463 /* Minicadena.png in Resources */ = {isa = PBXBuildFile; fileRef = BAAECBAD185FE37100A0D463 /* Minicadena.png */; };
+		BAAECBB5185FE37100A0D463 /* Pantalla.png in Resources */ = {isa = PBXBuildFile; fileRef = BAAECBAE185FE37100A0D463 /* Pantalla.png */; };
+		BAAECBB6185FE37100A0D463 /* Proyector.png in Resources */ = {isa = PBXBuildFile; fileRef = BAAECBAF185FE37100A0D463 /* Proyector.png */; };
+		BAAECBB7185FE37100A0D463 /* Tele.png in Resources */ = {isa = PBXBuildFile; fileRef = BAAECBB0185FE37100A0D463 /* Tele.png */; };
+		BAAECBB9185FEAEA00A0D463 /* Bombilla.png in Resources */ = {isa = PBXBuildFile; fileRef = BAAECBB8185FEAEA00A0D463 /* Bombilla.png */; };
 		BAB0C1E01846C91D00B48692 /* LogoEHC.png in Resources */ = {isa = PBXBuildFile; fileRef = BAB0C1DF1846C91D00B48692 /* LogoEHC.png */; };
 		BAC408031857D8FD00AB189B /* SGAnnotatedPagerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAC408021857D8FD00AB189B /* SGAnnotatedPagerController.xib */; };
 		BAD46B351856AF76006F0930 /* FristViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD46B341856AF75006F0930 /* FristViewController.m */; };
@@ -183,6 +191,14 @@
 		BAA9EFC5185934D2006FD3F8 /* SetRoomsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetRoomsViewController.m; sourceTree = "<group>"; };
 		BAA9EFD51859398F006FD3F8 /* TvItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TvItemViewController.h; sourceTree = "<group>"; };
 		BAA9EFD61859398F006FD3F8 /* TvItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TvItemViewController.m; sourceTree = "<group>"; };
+		BAAECBAA185FE37100A0D463 /* Aire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Aire.png; sourceTree = "<group>"; };
+		BAAECBAB185FE37100A0D463 /* DVD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DVD.png; sourceTree = "<group>"; };
+		BAAECBAC185FE37100A0D463 /* Microhondas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Microhondas.png; sourceTree = "<group>"; };
+		BAAECBAD185FE37100A0D463 /* Minicadena.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Minicadena.png; sourceTree = "<group>"; };
+		BAAECBAE185FE37100A0D463 /* Pantalla.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pantalla.png; sourceTree = "<group>"; };
+		BAAECBAF185FE37100A0D463 /* Proyector.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Proyector.png; sourceTree = "<group>"; };
+		BAAECBB0185FE37100A0D463 /* Tele.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tele.png; sourceTree = "<group>"; };
+		BAAECBB8185FEAEA00A0D463 /* Bombilla.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bombilla.png; sourceTree = "<group>"; };
 		BAB0C1DF1846C91D00B48692 /* LogoEHC.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogoEHC.png; sourceTree = "<group>"; };
 		BAC408021857D8FD00AB189B /* SGAnnotatedPagerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGAnnotatedPagerController.xib; sourceTree = "<group>"; };
 		BAD46B331856AF75006F0930 /* FristViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FristViewController.h; sourceTree = "<group>"; };
@@ -471,9 +487,25 @@
 			path = TVitem;
 			sourceTree = "<group>";
 		};
+		BAAECBA9185FE37100A0D463 /* IcosApp */ = {
+			isa = PBXGroup;
+			children = (
+				BAAECBB8185FEAEA00A0D463 /* Bombilla.png */,
+				BAAECBAA185FE37100A0D463 /* Aire.png */,
+				BAAECBAB185FE37100A0D463 /* DVD.png */,
+				BAAECBAC185FE37100A0D463 /* Microhondas.png */,
+				BAAECBAD185FE37100A0D463 /* Minicadena.png */,
+				BAAECBAE185FE37100A0D463 /* Pantalla.png */,
+				BAAECBAF185FE37100A0D463 /* Proyector.png */,
+				BAAECBB0185FE37100A0D463 /* Tele.png */,
+			);
+			path = IcosApp;
+			sourceTree = "<group>";
+		};
 		BAB0C1DE1846C90500B48692 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				BAAECBA9185FE37100A0D463 /* IcosApp */,
 				BAA9A787185E4D8600DB748B /* Mando */,
 				BAD46B371856B4C5006F0930 /* logLogin.png */,
 				BAA9E9DF1846DA7D00E55969 /* celdaMenuiPh.png */,
@@ -582,6 +614,7 @@
 				BAB0C1E01846C91D00B48692 /* LogoEHC.png in Resources */,
 				BAA9A7A6185E4D8600DB748B /* flechaIzquierda@2x.png in Resources */,
 				BAA9A7AB185E4D8600DB748B /* play@2x.png in Resources */,
+				BAAECBB4185FE37100A0D463 /* Minicadena.png in Resources */,
 				BAA9A7AD185E4D8600DB748B /* siete@2x.png in Resources */,
 				BAA9A7AC185E4D8600DB748B /* seis@2x.png in Resources */,
 				BA8913AC183D6F3100F97172 /* Main_iPad.storyboard in Resources */,
@@ -602,11 +635,18 @@
 				BAA9A7A3185E4D8600DB748B /* flechaAbajo@2x.png in Resources */,
 				BAA9E9E01846DA7D00E55969 /* celdaMenuiPh.png in Resources */,
 				BAA9EFC7185934D2006FD3F8 /* RoomsCell.xib in Resources */,
+				BAAECBB3185FE37100A0D463 /* Microhondas.png in Resources */,
 				BAA9A79C185E4D8600DB748B /* Ajustes@2x.png in Resources */,
+				BAAECBB2185FE37100A0D463 /* DVD.png in Resources */,
+				BAAECBB6185FE37100A0D463 /* Proyector.png in Resources */,
 				BAD46B381856B4C5006F0930 /* logLogin.png in Resources */,
+				BAAECBB7185FE37100A0D463 /* Tele.png in Resources */,
 				BAA9A7A8185E4D8600DB748B /* Mute@2x.png in Resources */,
+				BAAECBB9185FEAEA00A0D463 /* Bombilla.png in Resources */,
 				BA8913A0183D6F3100F97172 /* InfoPlist.strings in Resources */,
 				BAA9A7A1185E4D8600DB748B /* dos@2x.png in Resources */,
+				BAAECBB1185FE37100A0D463 /* Aire.png in Resources */,
+				BAAECBB5185FE37100A0D463 /* Pantalla.png in Resources */,
 				BAA9A7A0185E4D8600DB748B /* cuatro@2x.png in Resources */,
 				BAA9A7A7185E4D8600DB748B /* fondoMando.png in Resources */,
 				BAC408031857D8FD00AB189B /* SGAnnotatedPagerController.xib in Resources */,
