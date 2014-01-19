@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA7F31ED188C6A7800E0CC1E /* LightItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7F31EC188C6A7800E0CC1E /* LightItemViewController.m */; };
 		BA891396183D6F3100F97172 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA891395183D6F3100F97172 /* Foundation.framework */; };
 		BA891398183D6F3100F97172 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA891397183D6F3100F97172 /* CoreGraphics.framework */; };
 		BA89139A183D6F3100F97172 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA891399183D6F3100F97172 /* UIKit.framework */; };
@@ -97,6 +98,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA7F31EB188C6A7800E0CC1E /* LightItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LightItemViewController.h; sourceTree = "<group>"; };
+		BA7F31EC188C6A7800E0CC1E /* LightItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LightItemViewController.m; sourceTree = "<group>"; };
 		BA891392183D6F3100F97172 /* ehc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ehc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA891395183D6F3100F97172 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BA891397183D6F3100F97172 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -234,6 +237,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA7F31EA188C6A3C00E0CC1E /* LightsItem */ = {
+			isa = PBXGroup;
+			children = (
+				BA7F31EB188C6A7800E0CC1E /* LightItemViewController.h */,
+				BA7F31EC188C6A7800E0CC1E /* LightItemViewController.m */,
+			);
+			path = LightsItem;
+			sourceTree = "<group>";
+		};
 		BA891389183D6F3100F97172 = {
 			isa = PBXGroup;
 			children = (
@@ -396,6 +408,7 @@
 		BAA9E9C11846D24100E55969 /* Clases */ = {
 			isa = PBXGroup;
 			children = (
+				BA7F31EA188C6A3C00E0CC1E /* LightsItem */,
 				BAA9EFD418593979006FD3F8 /* TVitem */,
 				BAA9EFB7185934A8006FD3F8 /* Rooms */,
 				BAA9EFC0185934D2006FD3F8 /* SetRoomsView */,
@@ -691,6 +704,7 @@
 				BAA9EFC6185934D2006FD3F8 /* RoomsCell.m in Sources */,
 				BAA9E9BE1846D22400E55969 /* UIImageView+AFNetworking.m in Sources */,
 				BAA9E9D21846D24100E55969 /* LoginScreen.m in Sources */,
+				BA7F31ED188C6A7800E0CC1E /* LightItemViewController.m in Sources */,
 				BAA9E9D61846D4FA00E55969 /* API.m in Sources */,
 				BAD46B3E1856B767006F0930 /* SGAnnotatedPagerController.m in Sources */,
 				BAA9E9BA1846D22400E55969 /* AFNetworkActivityIndicatorManager.m in Sources */,
