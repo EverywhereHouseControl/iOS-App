@@ -13,6 +13,7 @@
 #import "RoomsViewController.h"
 #import "AppDelegate.h"
 #import "TvItemViewController.h"
+#import "LightItemViewController.h"
 
 @interface SetRoomsViewController (){
     int numberOfRooms;
@@ -109,6 +110,9 @@
         [array addObject:room];
     }
     [annotatedPager setViewControllers:array animated:NO];
+    NSLog(@"Row:%d",indexPath.row);
+    [annotatedPager loadView];
+    [annotatedPager setPageIndex:indexPath.row animated:YES];
     [self.navigationController pushViewController:annotatedPager animated:YES];
 //    app.window.rootViewController = annotatedPager;
 //    [self presentViewController:annotatedPager animated:YES completion:nil];
@@ -140,6 +144,11 @@
 
 - (void)sacarTV{
     TvItemViewController *roomsController = (TvItemViewController *) [self.storyboard instantiateViewControllerWithIdentifier:@"tvController"];
+    [self.navigationController pushViewController:roomsController animated:YES];
+}
+
+- (void)sacarLight{
+    LightItemViewController *roomsController = (LightItemViewController *) [self.storyboard instantiateViewControllerWithIdentifier:@"lightController"];
     [self.navigationController pushViewController:roomsController animated:YES];
 }
 

@@ -11,6 +11,7 @@
 @protocol protocolItemsDelegate <NSObject>
 
 - (void)sacarTV;
+- (void)sacarLight;
 
 @end
 

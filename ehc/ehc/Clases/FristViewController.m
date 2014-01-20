@@ -8,6 +8,7 @@
 
 #import "FristViewController.h"
 #import "SetRoomsViewController.h"
+#import "ProfileViewController.h"
 
 @interface FristViewController ()
 
@@ -71,7 +72,8 @@
 }
 
 - (void) openProfile:(UIButton*)button{
-    
+    ProfileViewController *roomsController = (ProfileViewController *) [self.storyboard instantiateViewControllerWithIdentifier:@"profileView"];
+    [self.navigationController pushViewController:roomsController animated:YES];
 }
 
 - (void) openEvent:(UIButton*)button{

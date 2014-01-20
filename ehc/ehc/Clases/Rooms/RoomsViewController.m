@@ -71,13 +71,17 @@
                 [self.view setBackgroundColor:[UIColor brownColor]];
                 break;
         }*/
+        
+        [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Background.png"]]];
+        
         [_collectionItems registerNib:[UINib nibWithNibName:@"ItemsCell" bundle:nil] forCellWithReuseIdentifier:@"ItemsCellID"];
         
-        [self.view setBackgroundColor:[UIColor brownColor]];
+        //[self.view setBackgroundColor:[UIColor brownColor]];
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-        _collectionItems = [[UICollectionView alloc] initWithFrame:CGRectMake(0, STATUSBAR_HEIGHT + TITLE_CONTROL_HEIGHT, 320, 568 - STATUSBAR_HEIGHT - TITLE_CONTROL_HEIGHT) collectionViewLayout:layout];
+        _collectionItems = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, 320, 568) collectionViewLayout:layout];
         [_collectionItems setDataSource:self];
         [_collectionItems setDelegate:self];
+        [_collectionItems setScrollEnabled:YES];
         
         [_collectionItems registerClass:[ItemsCell class] forCellWithReuseIdentifier:@"ItemsCellID"];
         [_collectionItems setBackgroundColor:[UIColor clearColor]];
@@ -186,8 +190,11 @@
     //    UITabBarController *tabC = [[UITabBarController alloc] init];
     //    [tabC setViewControllers:[NSArray arrayWithObjects:pager, annotatedPager, nil] animated:NO];
     
-    if (indexPath.row == 0) {
+    if ([itemsNamesArray[indexPath.row] isEqualToString:@"TV"]) {
         [self llamarAsacarTv];
+    }
+    else if ([itemsNamesArray[indexPath.row] isEqualToString:@"Luces"]) {
+        [self llamarAsacarLuces];
     }
     
 }
@@ -232,6 +239,12 @@
     }
 }
 
+- (void)llamarAsacarLuces{
+    if ([_delegate conformsToProtocol:@protocol(protocolItemsDelegate)] && [_delegate respondsToSelector:@selector(sacarLight)]) {
+        [_delegate sacarLight];
+    }
+}
+
 #pragma mark - Metodos de clase
 
 - (UIImageView*)devolverImagenItem:(NSString*)item{
@@ -251,11 +264,11 @@
     }
     else if ([item isEqualToString:@"Aire Acondicionado"]) {
         img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Aire"]];
-        [img setFrame:CGRectMake(10, 10, 61, 99)];
+        [img setFrame:CGRectMake(10, 10, 100, 99)];
     }
     else if ([item isEqualToString:@"Luces"]) {
         img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Bombilla"]];
-        [img setFrame:CGRectMake(10, 10, 100, 90)];
+        [img setFrame:CGRectMake(30, 10, 61, 90)];
     }
     else if ([item isEqualToString:@"Calefaccion"]) {
         img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Pantalla"]];

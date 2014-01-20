@@ -10,4 +10,12 @@
 
 @interface LightItemViewController : UIViewController
 
+@property(nonatomic,strong) IBOutlet UISlider *sliderOpacity;
+@property(nonatomic,strong) IBOutlet UISwitch *onOff;
+@property(nonatomic,strong) IBOutlet UIImageView *lightImage;
+@property(nonatomic,strong) IBOutlet UILabel *labelOnOff;
+
+- (IBAction) sliderValueChanged:(id)sender;
+- (IBAction) changeButtonPressed:(id)sender;
+
 @end
