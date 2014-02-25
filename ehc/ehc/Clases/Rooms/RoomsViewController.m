@@ -109,6 +109,12 @@
     //[self.collectionItems registerNib:[UINib nibWithNibName:@"ItemsCell" bundle:nil] forCellWithReuseIdentifier:@"ItemsCellID"];
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+	[super viewWillAppear:animated];
+	
+	[self.navigationController.navigationBar setHidden:NO];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

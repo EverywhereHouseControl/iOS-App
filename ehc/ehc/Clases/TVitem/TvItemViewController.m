@@ -36,7 +36,9 @@
     isTVon = NO;
     isSoundOn = NO;
     [self.navigationItem setTitle:@"TV"];
-    [self.navigationController.navigationBar setHidden:YES];
+	
+	[self.navigationController.navigationBar setHidden:YES];
+	[[UIApplication sharedApplication] setStatusBarHidden:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -119,6 +121,10 @@
             break;
     }
     [self.labelState setText:text];
+}
+
+- (IBAction)pulsadoBotonBack:(id)sender{
+	[self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

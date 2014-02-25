@@ -14,4 +14,6 @@
 
 - (IBAction)pulsadoBoton:(id)sender;
 
+- (IBAction)pulsadoBotonBack:(id)sender;
+
 @end
