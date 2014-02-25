@@ -39,9 +39,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.navigationController.navigationBar setBarStyle:UIBarStyleBlackOpaque];
+    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:0.000 green:0.777 blue:0.777 alpha:1.000]];
+    self.navigationController.navigationBar.tintColor =  [UIColor whiteColor];
+    [self.navigationController.navigationBar setTranslucent:YES];
+    
     //appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
 	// Do any additional setup after loading the view.
     appDelegate.recienLogeado = NO;
+    appDelegate.exit = NO;
     if (appDelegate.window.frame.size.height == 568) {
        //[self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Default-568h@2x"]]];
     }
@@ -49,10 +55,11 @@
       // [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Default"]]];
     }
     
-    if (![self comprobarAutoLogin] || [self isUserExit]) {
+    if ([self comprobarAutoLogin] || [self isUserExit]) {
         [self loginGame];
     }
     else{
+//        [self entrar];
         [self sacarModalLogin];
     }
 

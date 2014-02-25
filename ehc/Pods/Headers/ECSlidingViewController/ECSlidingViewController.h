@@ -1,1 +1,1 @@
-../../ECSlidingViewController/ECSlidingViewController/ECSlidingViewController.h
+../../ECSlidingViewController/ECSlidingViewController/Vendor/ECSlidingViewController/ECSlidingViewController.h

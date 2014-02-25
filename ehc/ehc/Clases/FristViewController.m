@@ -31,29 +31,46 @@
 	// Do any additional setup after loading the view.
     
     UIButton *profileButton = [[UIButton alloc] initWithFrame:CGRectMake(20, 150, 130, 130)];
-    UIButton *eventButton = [[UIButton alloc] initWithFrame:CGRectMake(170, 150, 130, 130)];
-    UIButton *gestionButton = [[UIButton alloc] initWithFrame:CGRectMake(20, 320, 130, 130)];
-    UIButton *configButton = [[UIButton alloc] initWithFrame:CGRectMake(170, 320, 130, 130)];
+    UIView *profileView = [[UIView alloc] initWithFrame:CGRectMake(18, 148, 134, 134)];
     
-    [profileButton setBackgroundColor:[UIColor darkGrayColor]];
-    [eventButton setBackgroundColor:[UIColor darkGrayColor]];
-    [gestionButton setBackgroundColor:[UIColor darkGrayColor]];
-    [configButton setBackgroundColor:[UIColor darkGrayColor]];
+    UIButton *eventButton = [[UIButton alloc] initWithFrame:CGRectMake(170, 150, 130, 130)];
+    UIView *eventView = [[UIView alloc] initWithFrame:CGRectMake(168, 148, 134, 134)];
+    
+    UIButton *gestionButton = [[UIButton alloc] initWithFrame:CGRectMake(20, 320, 130, 130)];
+    UIView *gestionView = [[UIView alloc] initWithFrame:CGRectMake(18, 318, 134, 134)];
+    
+    UIButton *configButton = [[UIButton alloc] initWithFrame:CGRectMake(170, 320, 130, 130)];
+    UIView *configView = [[UIView alloc] initWithFrame:CGRectMake(168, 318, 134, 134)];
+    
+    [profileButton setBackgroundColor:[UIColor whiteColor]];
+    [eventButton setBackgroundColor:[UIColor whiteColor]];
+    [gestionButton setBackgroundColor:[UIColor whiteColor]];
+    [configButton setBackgroundColor:[UIColor whiteColor]];
+    
+    [profileView setBackgroundColor:[UIColor colorWithRed:0.000 green:0.777 blue:0.777 alpha:1.000]];
+    [eventView setBackgroundColor:[UIColor colorWithRed:0.000 green:0.777 blue:0.777 alpha:1.000]];
+    [gestionView setBackgroundColor:[UIColor colorWithRed:0.000 green:0.777 blue:0.777 alpha:1.000]];
+    [configView setBackgroundColor:[UIColor colorWithRed:0.000 green:0.777 blue:0.777 alpha:1.000]];
     
     [profileButton setTitle:@"Perfil" forState:UIControlStateNormal];
     [eventButton setTitle:@"Eventos" forState:UIControlStateNormal];
     [gestionButton setTitle:@"Gestión" forState:UIControlStateNormal];
     [configButton setTitle:@"Configuración" forState:UIControlStateNormal];
     
-    [profileButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [eventButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [gestionButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [configButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [profileButton setTitleColor:[UIColor colorWithRed:0.000 green:0.777 blue:0.777 alpha:1.000] forState:UIControlStateNormal];
+    [eventButton setTitleColor:[UIColor colorWithRed:0.000 green:0.777 blue:0.777 alpha:1.000] forState:UIControlStateNormal];
+    [gestionButton setTitleColor:[UIColor colorWithRed:0.000 green:0.777 blue:0.777 alpha:1.000] forState:UIControlStateNormal];
+    [configButton setTitleColor:[UIColor colorWithRed:0.000 green:0.777 blue:0.777 alpha:1.000] forState:UIControlStateNormal];
     
     [profileButton addTarget:self action:@selector(openProfile:) forControlEvents:UIControlEventTouchUpInside];
     [eventButton addTarget:self action:@selector(openEvent:) forControlEvents:UIControlEventTouchUpInside];
     [gestionButton addTarget:self action:@selector(openGestion:) forControlEvents:UIControlEventTouchUpInside];
     [configButton addTarget:self action:@selector(openConfig:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:profileView];
+    [self.view addSubview:eventView];
+    [self.view addSubview:gestionView];
+    [self.view addSubview:configView];
     
     [self.view addSubview:profileButton];
     [self.view addSubview:eventButton];
