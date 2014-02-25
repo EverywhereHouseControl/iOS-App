@@ -1,13 +1,21 @@
 PODS:
   - AFNetworking (1.3.3)
-  - ECSlidingViewController (1.3.3)
+  - ECSlidingViewController (2.0.1)
+  - MHVideoPhotoGallery (1.4):
+    - SDWebImage (~> 3.5.2)
+  - SDWebImage (3.5.2):
+    - SDWebImage/Core
+  - SDWebImage/Core (3.5.2)
 
 DEPENDENCIES:
   - AFNetworking (~> 1.3.3)
-  - ECSlidingViewController (~> 1.3.3)
+  - ECSlidingViewController
+  - MHVideoPhotoGallery
 
 SPEC CHECKSUMS:
   AFNetworking: 61fdd49e2ffe6380378df37b3b6e70630bb9dd66
-  ECSlidingViewController: 3ca3141b843b5425b57c054db09d7dfd04a7ff85
+  ECSlidingViewController: d7bb96ee5bbe261ed80ee16a513f94b9fd3c9767
+  MHVideoPhotoGallery: d15648db241c385250b2f683a03e50ba9934e31a
+  SDWebImage: fe7ce01ae4e0a884d168f59c9dd82d35baf8429e
 
 COCOAPODS: 0.29.0

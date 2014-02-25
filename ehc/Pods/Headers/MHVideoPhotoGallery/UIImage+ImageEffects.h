@@ -1,0 +1,1 @@
+../../MHVideoPhotoGallery/MHVideoPhotoGallery/MMHVideoPhotoGallery/UIImage+ImageEffects/UIImage+ImageEffects.h
