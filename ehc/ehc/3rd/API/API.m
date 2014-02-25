@@ -9,8 +9,8 @@
 #import "API.h"
 
 //the web location of the service
-//#define kAPIHost @"http://ehcontrol.net"
-#define kAPIHost @"http://192.168.2.14:8888"
+#define kAPIHost @"http://ehcontrol.net"
+//#define kAPIHost @"http://192.168.2.14:8888"
 #define kAPIPath @"iReporter/"
 
 @implementation API
