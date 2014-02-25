@@ -49,7 +49,7 @@
       // [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Default"]]];
     }
     
-    if (![self comprobarAutoLogin]) {
+    if (![self comprobarAutoLogin] || [self isUserExit]) {
         [self loginGame];
     }
     else{
@@ -67,6 +67,9 @@
 -(void)viewDidAppear:(BOOL)animated{
     if (appDelegate.recienLogeado) {
         [self entrar];
+    }
+    else if ([self isUserExit]){
+        [self sacarModalLogin];
     }
     [[self activity] startAnimating];
     [[self labelCargando] setText:@"Cargando..."];
@@ -196,6 +199,10 @@
 
 - (void)recienLogeadoEnVistaLogin{
     [self entrar];
+}
+
+- (BOOL)isUserExit{
+    return appDelegate.exit;
 }
 
 

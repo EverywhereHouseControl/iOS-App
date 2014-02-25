@@ -10,7 +10,10 @@
 #import "API.h"
 #import "UIAlertView+error.h"
 
-@interface TvItemViewController ()
+@interface TvItemViewController (){
+    BOOL isTVon;
+    BOOL isSoundOn;
+}
 
 @end
 
@@ -29,7 +32,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    isTVon = NO;
+    isSoundOn = NO;
     [self.navigationItem setTitle:@"TV"];
+    [self.navigationController.navigationBar setHidden:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -76,7 +83,7 @@
                                    if ([json objectForKey:@"error"]==nil) {
                                        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Pulsado" message:[NSString stringWithFormat:@"Enviado pulsación de boton %d",button] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
                                        [alert show];
-                                       
+                                       [self updateLabelState:[NSString stringWithFormat:@"%d",button]];
                                    } else {
                                        //error
                                        [UIAlertView error:[json objectForKey:@"error"]];
@@ -84,6 +91,34 @@
                                }];
     
     
+}
+
+-(void)updateLabelState:(NSString*)textoLabel{
+    int valor = [textoLabel intValue];
+    NSString *text;
+    switch (valor) {
+        case 19:
+            if (isSoundOn)
+                text = @"Sound ON";
+            else
+                text = @"Sound OFF";
+            isSoundOn = !isSoundOn;
+            break;
+        case 12:
+            if (!isTVon)
+                text = @"ON";
+            else
+                text = @"OFF";
+            isTVon = !isTVon;
+            break;
+        case 18:
+            text = @"Play";
+            break;
+        default:
+            text = textoLabel;
+            break;
+    }
+    [self.labelState setText:text];
 }
 
 @end

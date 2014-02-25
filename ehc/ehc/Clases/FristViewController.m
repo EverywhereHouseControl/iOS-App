@@ -65,6 +65,11 @@
     
 }
 
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    appDelegate.recienLogeado = NO;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -87,6 +92,13 @@
 
 - (void) openConfig:(UIButton*)button{
     
+}
+
+#pragma mark - Methods exit
+
+- (IBAction)buttonExitTouch:(id)sender{
+    [self.navigationController popViewControllerAnimated:YES];
+    appDelegate.exit = YES;
 }
 
 @end

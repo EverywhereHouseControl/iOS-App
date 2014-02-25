@@ -622,6 +622,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = EHC;
 				TargetAttributes = {
+					BA891391183D6F3100F97172 = {
+						DevelopmentTeam = 2QH2U923HT;
+					};
 					BA8913B5183D6F3100F97172 = {
 						TestTargetID = BA891391183D6F3100F97172;
 					};
@@ -878,6 +881,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ehc/ehc-Prefix.pch";
 				INFOPLIST_FILE = "ehc/ehc-Info.plist";
@@ -891,6 +895,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ehc/ehc-Prefix.pch";
 				INFOPLIST_FILE = "ehc/ehc-Info.plist";

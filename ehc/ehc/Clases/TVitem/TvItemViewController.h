@@ -10,6 +10,8 @@
 
 @interface TvItemViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *labelState;
+
 - (IBAction)pulsadoBoton:(id)sender;
 
 @end
