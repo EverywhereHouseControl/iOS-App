@@ -68,11 +68,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ehc/Clases/Config/InitialView.m"
-            timestampString = "408417777.920274"
+            timestampString = "415075818.283194"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "-initWithNibName:bundle:"
             landmarkType = "5">
          </BreakpointContent>
@@ -180,11 +180,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ehc/Clases/Rooms/RoomsViewController.m"
-            timestampString = "411866809.651374"
+            timestampString = "415067013.411597"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "193"
-            endingLineNumber = "193"
+            startingLineNumber = "186"
+            endingLineNumber = "186"
             landmarkName = "-collectionView:didSelectItemAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -244,11 +244,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ehc/Clases/Perfil/ProfileViewController.m"
-            timestampString = "411870252.56948"
+            timestampString = "415075985.5639"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
             landmarkName = "-initWithNibName:bundle:"
             landmarkType = "5">
          </BreakpointContent>
@@ -260,11 +260,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ehc/Clases/Perfil/ProfileViewController.m"
-            timestampString = "411870257.813461"
+            timestampString = "415075985.5639"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "-didReceiveMemoryWarning"
             landmarkType = "5">
          </BreakpointContent>
@@ -276,11 +276,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ehc/Clases/Config/InitialView.m"
-            timestampString = "415042281.689837"
+            timestampString = "415075818.283194"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -292,11 +292,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ehc/Clases/Config/InitialView.m"
-            timestampString = "415042281.689837"
+            timestampString = "415076520.704526"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "-viewDidAppear:"
             landmarkType = "5">
          </BreakpointContent>
@@ -322,13 +322,13 @@
                   continueAfterRunningActions = "No"
                   symbolName = "-[LoginScreen btnLoginRegisterTapped:]"
                   moduleName = "ehc"
-                  urlString = "file:///Users/KINKI/Documents/ISProject/ehc/ehc/Clases/Login/LoginScreen.m"
-                  timestampString = "415042624.703683"
+                  urlString = "file:///Users/KINKI/Documents/EHControl/iOS/ehc/ehc/Clases/Login/LoginScreen.m"
+                  timestampString = "415076715.923558"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "120"
                   endingLineNumber = "120"
-                  offsetFromSymbolStart = "1519">
+                  offsetFromSymbolStart = "1734">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -336,13 +336,13 @@
                   continueAfterRunningActions = "No"
                   symbolName = "-[LoginScreen btnLoginRegisterTapped:]"
                   moduleName = "ehc"
-                  urlString = "file:///Users/KINKI/Documents/ISProject/ehc/ehc/Clases/Login/LoginScreen.m"
-                  timestampString = "415042624.70392"
+                  urlString = "file:///Users/KINKI/Documents/EHControl/iOS/ehc/ehc/Clases/Login/LoginScreen.m"
+                  timestampString = "415076715.923814"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "120"
                   endingLineNumber = "120"
-                  offsetFromSymbolStart = "1869">
+                  offsetFromSymbolStart = "1974">
                </Location>
             </Locations>
          </BreakpointContent>

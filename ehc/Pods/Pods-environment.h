@@ -12,6 +12,18 @@
 #define COCOAPODS_VERSION_MINOR_AFNetworking 3
 #define COCOAPODS_VERSION_PATCH_AFNetworking 3
 
+// DBCamera
+#define COCOAPODS_POD_AVAILABLE_DBCamera
+#define COCOAPODS_VERSION_MAJOR_DBCamera 1
+#define COCOAPODS_VERSION_MINOR_DBCamera 0
+#define COCOAPODS_VERSION_PATCH_DBCamera 0
+
+// DropdownMenu
+#define COCOAPODS_POD_AVAILABLE_DropdownMenu
+#define COCOAPODS_VERSION_MAJOR_DropdownMenu 1
+#define COCOAPODS_VERSION_MINOR_DropdownMenu 0
+#define COCOAPODS_VERSION_PATCH_DropdownMenu 0
+
 // ECSlidingViewController
 #define COCOAPODS_POD_AVAILABLE_ECSlidingViewController
 #define COCOAPODS_VERSION_MAJOR_ECSlidingViewController 1
@@ -35,4 +47,10 @@
 #define COCOAPODS_VERSION_MAJOR_SDWebImage_Core 3
 #define COCOAPODS_VERSION_MINOR_SDWebImage_Core 5
 #define COCOAPODS_VERSION_PATCH_SDWebImage_Core 2
+
+// ionicons
+#define COCOAPODS_POD_AVAILABLE_ionicons
+#define COCOAPODS_VERSION_MAJOR_ionicons 1
+#define COCOAPODS_VERSION_MINOR_ionicons 1
+#define COCOAPODS_VERSION_PATCH_ionicons 0
 

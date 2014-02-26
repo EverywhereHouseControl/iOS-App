@@ -46,6 +46,12 @@
     self.navigationItem.title = @"Rooms";
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    [self.navigationController.navigationBar setHidden:NO];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -75,10 +81,10 @@
     NSArray *arrayRooms = [dictionaryForRooms objectForKey:[NSString stringWithFormat:@"H%d",indexPath.row+1]];
     
     [cell.roomName setText:[arrayRooms objectAtIndex:0]];
-    [cell.roomName setTextColor:[UIColor colorWithRed:0.000 green:0.777 blue:0.777 alpha:1.000]];
+    [cell.roomName setTextColor:[UIColor whiteColor]];
     [cell setBackgroundColor:[UIColor lightGrayColor]];
-    //[cell.layer setCornerRadius:0.5];
-        
+    [cell.layer setCornerRadius:0.5];
+
     return cell;
 }
 

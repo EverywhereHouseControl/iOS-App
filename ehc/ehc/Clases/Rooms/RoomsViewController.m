@@ -72,7 +72,7 @@
                 break;
         }*/
         
-        [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Background.png"]]];
+        [self.view setBackgroundColor:[UIColor whiteColor]];
         
         [_collectionItems registerNib:[UINib nibWithNibName:@"ItemsCell" bundle:nil] forCellWithReuseIdentifier:@"ItemsCellID"];
         
@@ -145,20 +145,13 @@
     UIImageView *img = [self devolverImagenItem:itemsNamesArray[indexPath.row]];
     [cell addSubview:img];
     
-    UILabel *labelTitle = [[UILabel alloc] initWithFrame:CGRectMake(0, 90, 130, 60)];
-    
-    if ([itemsNamesArray[indexPath.row] isEqualToString:@"Aire Acondicionado"]) {
-        labelTitle = [[UILabel alloc] initWithFrame:CGRectMake(0, 65, 130, 60)];
-    }
-    else{
-        labelTitle = [[UILabel alloc] initWithFrame:CGRectMake(0, 90, 130, 60)];
-    }
+    UILabel *labelTitle = [[UILabel alloc] initWithFrame:CGRectMake(0, 70, 130, 60)];
     
     [labelTitle setText:itemsNamesArray[indexPath.row]];
     [labelTitle setTextAlignment:NSTextAlignmentCenter];
-    [labelTitle setTextColor:[UIColor whiteColor]];
+    [labelTitle setTextColor:[UIColor colorWithRed:0.000 green:0.777 blue:0.777 alpha:1.000]];
     [labelTitle setNumberOfLines:3];
-    [labelTitle setFont:[UIFont fontWithName:@"Noteworthy-Bold" size:17]];
+    [labelTitle setFont:[UIFont fontWithName:@"Futura-CondensedMedium" size:17]];
     [cell addSubview:labelTitle];
     
     return cell;
@@ -257,37 +250,54 @@
     UIImageView *img;
     
     if ([item isEqualToString:@"TV"]) {
-        img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Tele"]];
-        [img setFrame:CGRectMake(10, 10, 100, 90)];
+        img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"retro_tv-50"]];
     }
     else if ([item isEqualToString:@"DVD"]) {
-        img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"DVD"]];
-        [img setFrame:CGRectMake(10, 10, 100, 90)];
+        img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"dvdIco"]];
     }
     else if ([item isEqualToString:@"Minicadena"]) {
-        img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Minicadena"]];
-        [img setFrame:CGRectMake(10, 10, 100, 90)];
+        img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"table_radio-50"]];
     }
     else if ([item isEqualToString:@"Aire Acondicionado"]) {
-        img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Aire"]];
-        [img setFrame:CGRectMake(10, 10, 100, 99)];
+        img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"fan-50"]];
     }
     else if ([item isEqualToString:@"Luces"]) {
-        img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Bombilla"]];
-        [img setFrame:CGRectMake(30, 10, 61, 90)];
+        img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"lamp-50"]];
     }
-    else if ([item isEqualToString:@"Calefaccion"]) {
-        img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Pantalla"]];
-        [img setFrame:CGRectMake(10, 10, 100, 90)];
+    else if ([item isEqualToString:@"Enchufes"]) {
+        img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"enchufes"]];
     }
     else if ([item isEqualToString:@"Microhondas"]) {
-        img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Microhondas"]];
-        [img setFrame:CGRectMake(10, 10, 100, 90)];
+        img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"microwave-50"]];
     }
     else if ([item isEqualToString:@"Proyector"]) {
         img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Proyector"]];
-        [img setFrame:CGRectMake(10, 10, 100, 90)];
     }
+    else if ([item isEqualToString:@"Puerta"]) {
+        img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"remote_control-50"]];
+    }
+    else if ([item isEqualToString:@"Temperatura"]){
+        img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"temperature-50"]];
+    }
+    else if ([item isEqualToString:@"Video"]){
+        img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"video_camera-50"]];
+    }
+    else if ([item isEqualToString:@"Lavadora"]){
+        img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"washing_machine-50"]];
+    }
+    else if ([item isEqualToString:@"Telefonillo"]){
+        img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"phone3-50"]];
+    }
+    else if ([item isEqualToString:@"Frigorifico"]){
+        img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"fridge-50"]];
+    }
+    else if ([item isEqualToString:@"Horno"]){
+        img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cooker-50"]];
+    }
+    else if ([item isEqualToString:@"Riego"]){
+        img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"watering_can-50"]];
+    }
+    [img setFrame:CGRectMake(30, 10, 70, 70)];
     
     return img;
 }

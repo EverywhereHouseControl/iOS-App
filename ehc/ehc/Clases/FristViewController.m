@@ -9,6 +9,7 @@
 #import "FristViewController.h"
 #import "SetRoomsViewController.h"
 #import "ProfileViewController.h"
+#import "PrincipalView.h"
 
 @interface FristViewController ()
 
@@ -52,7 +53,7 @@
     [gestionView setBackgroundColor:[UIColor colorWithRed:0.000 green:0.777 blue:0.777 alpha:1.000]];
     [configView setBackgroundColor:[UIColor colorWithRed:0.000 green:0.777 blue:0.777 alpha:1.000]];
     
-    [profileButton setTitle:@"Perfil" forState:UIControlStateNormal];
+    [profileButton setTitle:@"Tareas" forState:UIControlStateNormal];
     [eventButton setTitle:@"Eventos" forState:UIControlStateNormal];
     [gestionButton setTitle:@"Gestión" forState:UIControlStateNormal];
     [configButton setTitle:@"Configuración" forState:UIControlStateNormal];
@@ -62,7 +63,7 @@
     [gestionButton setTitleColor:[UIColor colorWithRed:0.000 green:0.777 blue:0.777 alpha:1.000] forState:UIControlStateNormal];
     [configButton setTitleColor:[UIColor colorWithRed:0.000 green:0.777 blue:0.777 alpha:1.000] forState:UIControlStateNormal];
     
-    [profileButton addTarget:self action:@selector(openProfile:) forControlEvents:UIControlEventTouchUpInside];
+    [profileButton addTarget:self action:@selector(openTareas:) forControlEvents:UIControlEventTouchUpInside];
     [eventButton addTarget:self action:@selector(openEvent:) forControlEvents:UIControlEventTouchUpInside];
     [gestionButton addTarget:self action:@selector(openGestion:) forControlEvents:UIControlEventTouchUpInside];
     [configButton addTarget:self action:@selector(openConfig:) forControlEvents:UIControlEventTouchUpInside];
@@ -85,6 +86,9 @@
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     appDelegate.recienLogeado = NO;
+    
+    PrincipalView* menu = (PrincipalView *) [self parentViewController];
+    [menu setMenubarTitle:@"Home"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -93,9 +97,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void) openProfile:(UIButton*)button{
-    ProfileViewController *roomsController = (ProfileViewController *) [self.storyboard instantiateViewControllerWithIdentifier:@"profileView"];
-    [self.navigationController pushViewController:roomsController animated:YES];
+- (void) openTareas:(UIButton*)button{
+//    ProfileViewController *roomsController = (ProfileViewController *) [self.storyboard instantiateViewControllerWithIdentifier:@"profileView"];
+//    [self.navigationController pushViewController:roomsController animated:YES];
 }
 
 - (void) openEvent:(UIButton*)button{

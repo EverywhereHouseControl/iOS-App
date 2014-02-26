@@ -7,6 +7,7 @@
 //
 
 #import "ProfileViewController.h"
+#import "PrincipalView.h"
 
 @interface ProfileViewController ()
 
@@ -27,7 +28,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Background.png"]]];
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    PrincipalView* menu = (PrincipalView *) [self parentViewController];
+    [menu setMenubarTitle:@"Perfil"];
 }
 
 - (void)didReceiveMemoryWarning

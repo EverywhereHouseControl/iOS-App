@@ -37,7 +37,7 @@
     CGRect frame = CGRectMake(0, STATUSBAR_HEIGHT, self.view.bounds.size.width, TITLE_CONTROL_HEIGHT);
     titleScrollView = [[UIScrollView alloc] initWithFrame:frame];
     titleScrollView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
-    titleScrollView.backgroundColor = [UIColor lightGrayColor];
+    titleScrollView.backgroundColor = [UIColor colorWithRed:0.000 green:0.777 blue:0.777 alpha:1.000];
     [titleScrollView setCanCancelContentTouches:NO];
     titleScrollView.showsHorizontalScrollIndicator = NO;
     titleScrollView.clipsToBounds = YES;
@@ -159,13 +159,14 @@
         CGRect frame = CGRectMake(dx, 0, titleItemWidth, titleScrollView.bounds.size.height);
         UIView *view = [[UIView alloc]initWithFrame:frame];
         view.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-        view.backgroundColor = [UIColor lightGrayColor];
+        view.backgroundColor = [UIColor colorWithRed:0.000 green:0.777 blue:0.777 alpha:1.000];
         UIFont *font = [UIFont boldSystemFontOfSize:15.0];
         CGSize size = [vC.title sizeWithFont:font];
         frame = CGRectMake(0.5*(frame.size.width - size.width),
                            0.5*(frame.size.height - size.height), size.width, size.height);
         UILabel *l = [[UILabel alloc] initWithFrame:frame];
         l.backgroundColor = [UIColor clearColor];
+        [l setTextColor:[UIColor whiteColor]];
         l.font = font;
         l.text = vC.title;
         [view addSubview:l];

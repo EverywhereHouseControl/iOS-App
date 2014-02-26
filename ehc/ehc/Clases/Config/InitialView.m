@@ -12,6 +12,7 @@
 #import "AFHTTPClient.h"
 #import "API.h"
 #import "defs.h"
+#import "PrincipalView.h"
 
 @interface InitialView (){
     AFHTTPClient *_client;
@@ -72,6 +73,7 @@
 }
 
 -(void)viewDidAppear:(BOOL)animated{
+    
     if (appDelegate.recienLogeado) {
         [self entrar];
     }
@@ -91,7 +93,7 @@
     }
     else if (appDelegate.window.frame.size.height == 568){
         LoginScreen *loginController = (LoginScreen *) [self.storyboard instantiateViewControllerWithIdentifier:@"loginViewN"];
-        [self presentViewController:loginController animated:YES completion:nil];
+        [self presentViewController:loginController animated:NO completion:nil];
     }
     else{
         [self performSegueWithIdentifier:@"loginFour" sender:self];
@@ -188,16 +190,16 @@
 - (void)entrar{
     [[self activity] stopAnimating];
     if (appDelegate.window.frame.size.height == 1024){
-        InitViewController *userController = (InitViewController *) [self.storyboard instantiateViewControllerWithIdentifier:@"firstView"];
+        PrincipalView *userController = (PrincipalView *) [self.storyboard instantiateViewControllerWithIdentifier:@"principalView"];
         [self presentViewController:userController animated:YES completion:nil];
     }
     else if (appDelegate.window.frame.size.height == 568){
-        InitViewController *userController = (InitViewController *) [self.storyboard instantiateViewControllerWithIdentifier:@"firstView"];
+        PrincipalView *userController = (PrincipalView *) [self.storyboard instantiateViewControllerWithIdentifier:@"principalView"];
         [self.navigationController pushViewController:userController animated:YES];
         //[self presentViewController:userController animated:YES completion:nil];
     }
     else{
-        InitViewController *userController = (InitViewController *) [self.storyboard instantiateViewControllerWithIdentifier:@"firstView"];
+        PrincipalView *userController = (PrincipalView *) [self.storyboard instantiateViewControllerWithIdentifier:@"principalView"];
         [self presentViewController:userController animated:YES completion:nil];
     }
 }

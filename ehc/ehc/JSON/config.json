@@ -1,8 +1,8 @@
 {"numerosH":"6",
 "Habitaciones":
-{"H1":["Salon",["TV","DVD","Minicadena","Aire Acondicionado", "Luces","Calefaccion"]],
-"H2":["Cocina",["TV","Microhondas","Minicadena","Luces","Calefaccion"]],
-"H3":["Garage",["Minicadena","Puerta", "Luces","Calefaccion"]],
-"H4":["Baño",["Luces","Calefaccion"]],
-"H5":["Habitacion Kinki",["TV","Minicadena","Luces","Calefaccion"]],
-"H6":["Jardín",["Luces","Video"]]}}
+{"H1":["Salon",["TV","DVD","Minicadena","Telefonillo","Aire Acondicionado", "Luces","Enchufes","Temperatura","Video"]],
+"H2":["Cocina",["TV","Microhondas","Frigorifico","Horno","Minicadena","Luces","Enchufes","Temperatura"]],
+"H3":["Garage",["Minicadena","Puerta","Luces","Enchufes","Temperatura"]],
+"H4":["Baño",["Luces","Enchufes","Temperatura"]],
+"H5":["Habitacion Viti",["TV","Minicadena","Luces","Enchufes","Temperatura"]],
+"H6":["Jardín",["Luces","Video","Temperatura","Riego"]]}}

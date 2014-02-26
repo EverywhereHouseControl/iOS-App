@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		08F31C4673B54AB0ABA4F6EE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C35645D3B44615AFD3D970 /* libPods.a */; };
+		BA15ECB518BD79EE00866908 /* PrincipalView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA15ECB418BD79EE00866908 /* PrincipalView.m */; };
 		BA7F31ED188C6A7800E0CC1E /* LightItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7F31EC188C6A7800E0CC1E /* LightItemViewController.m */; };
 		BA7F31F3188C775C00E0CC1E /* BombillaLuz.gif in Resources */ = {isa = PBXBuildFile; fileRef = BA7F31F2188C775C00E0CC1E /* BombillaLuz.gif */; };
 		BA7F31F5188C782000E0CC1E /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = BA7F31F4188C782000E0CC1E /* Background.png */; };
@@ -91,6 +92,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA15ECB318BD79EE00866908 /* PrincipalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrincipalView.h; sourceTree = "<group>"; };
+		BA15ECB418BD79EE00866908 /* PrincipalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrincipalView.m; sourceTree = "<group>"; };
 		BA7F31EB188C6A7800E0CC1E /* LightItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LightItemViewController.h; sourceTree = "<group>"; };
 		BA7F31EC188C6A7800E0CC1E /* LightItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LightItemViewController.m; sourceTree = "<group>"; };
 		BA7F31F2188C775C00E0CC1E /* BombillaLuz.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = BombillaLuz.gif; sourceTree = "<group>"; };
@@ -381,6 +384,8 @@
 		BAA9E9C21846D24100E55969 /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				BA15ECB318BD79EE00866908 /* PrincipalView.h */,
+				BA15ECB418BD79EE00866908 /* PrincipalView.m */,
 				BAA9E9D71846D58E00E55969 /* defs.h */,
 				BAA9E9C31846D24100E55969 /* InitialView.h */,
 				BAA9E9C41846D24100E55969 /* InitialView.m */,
@@ -698,6 +703,7 @@
 				BAA9EFC6185934D2006FD3F8 /* RoomsCell.m in Sources */,
 				BAA9E9D21846D24100E55969 /* LoginScreen.m in Sources */,
 				BA7F31ED188C6A7800E0CC1E /* LightItemViewController.m in Sources */,
+				BA15ECB518BD79EE00866908 /* PrincipalView.m in Sources */,
 				BAA9E9D61846D4FA00E55969 /* API.m in Sources */,
 				BAD46B3E1856B767006F0930 /* SGAnnotatedPagerController.m in Sources */,
 				BA8913A2183D6F3100F97172 /* main.m in Sources */,
