@@ -489,6 +489,18 @@
                                     <action selector="pulsadoBotonBack:" destination="MLs-lu-By9" eventType="touchUpInside" id="m96-xR-cZW"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tq5-yk-ZhF">
+                                <rect key="frame" x="201" y="469" width="109" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="23"/>
+                                <state key="normal" title="Teletexto">
+                                    <color key="titleColor" red="0.0" green="0.77734375" blue="0.77734375" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pulsadoBotonTeletexto:" destination="MLs-lu-By9" eventType="touchUpInside" id="0CG-wT-iWS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>

@@ -7,13 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MDBrowser.h"
 
-@interface TvItemViewController : UIViewController
+@interface TvItemViewController : UIViewController<BrowserViewDelegate>{
+    MDBrowser *browser;
+}
 
 @property (weak, nonatomic) IBOutlet UILabel *labelState;
 
 - (IBAction)pulsadoBoton:(id)sender;
 
 - (IBAction)pulsadoBotonBack:(id)sender;
+
+-(IBAction)pulsadoBotonTeletexto:(id)sender;
 
 @end
