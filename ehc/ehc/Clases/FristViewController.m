@@ -48,20 +48,20 @@
     [gestionButton setBackgroundColor:[UIColor whiteColor]];
     [configButton setBackgroundColor:[UIColor whiteColor]];
     
-    [profileView setBackgroundColor:[UIColor colorWithRed:0.000 green:0.777 blue:0.777 alpha:1.000]];
-    [eventView setBackgroundColor:[UIColor colorWithRed:0.000 green:0.777 blue:0.777 alpha:1.000]];
-    [gestionView setBackgroundColor:[UIColor colorWithRed:0.000 green:0.777 blue:0.777 alpha:1.000]];
-    [configView setBackgroundColor:[UIColor colorWithRed:0.000 green:0.777 blue:0.777 alpha:1.000]];
+    [profileView setBackgroundColor:[UIColor colorWithRed:0.000 green:0.681 blue:0.681 alpha:1.000]];
+    [eventView setBackgroundColor:[UIColor colorWithRed:0.000 green:0.681 blue:0.681 alpha:1.000]];
+    [gestionView setBackgroundColor:[UIColor colorWithRed:0.000 green:0.681 blue:0.681 alpha:1.000]];
+    [configView setBackgroundColor:[UIColor colorWithRed:0.000 green:0.681 blue:0.681 alpha:1.000]];
     
     [profileButton setTitle:@"Tareas" forState:UIControlStateNormal];
     [eventButton setTitle:@"Eventos" forState:UIControlStateNormal];
     [gestionButton setTitle:@"Gestión" forState:UIControlStateNormal];
     [configButton setTitle:@"Configuración" forState:UIControlStateNormal];
     
-    [profileButton setTitleColor:[UIColor colorWithRed:0.000 green:0.777 blue:0.777 alpha:1.000] forState:UIControlStateNormal];
-    [eventButton setTitleColor:[UIColor colorWithRed:0.000 green:0.777 blue:0.777 alpha:1.000] forState:UIControlStateNormal];
-    [gestionButton setTitleColor:[UIColor colorWithRed:0.000 green:0.777 blue:0.777 alpha:1.000] forState:UIControlStateNormal];
-    [configButton setTitleColor:[UIColor colorWithRed:0.000 green:0.777 blue:0.777 alpha:1.000] forState:UIControlStateNormal];
+    [profileButton setTitleColor:[UIColor colorWithRed:0.000 green:0.681 blue:0.681 alpha:1.000] forState:UIControlStateNormal];
+    [eventButton setTitleColor:[UIColor colorWithRed:0.000 green:0.681 blue:0.681 alpha:1.000] forState:UIControlStateNormal];
+    [gestionButton setTitleColor:[UIColor colorWithRed:0.000 green:0.681 blue:0.681 alpha:1.000] forState:UIControlStateNormal];
+    [configButton setTitleColor:[UIColor colorWithRed:0.000 green:0.681 blue:0.681 alpha:1.000] forState:UIControlStateNormal];
     
     [profileButton addTarget:self action:@selector(openTareas:) forControlEvents:UIControlEventTouchUpInside];
     [eventButton addTarget:self action:@selector(openEvent:) forControlEvents:UIControlEventTouchUpInside];

@@ -47,7 +47,7 @@
     [super viewWillAppear:animated];
     
     [self.navigationController.navigationBar setBarStyle:UIBarStyleBlackOpaque];
-    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:0.000 green:0.777 blue:0.777 alpha:1.000]];
+    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:0.000 green:0.681 blue:0.681 alpha:1.000]];
     self.navigationController.navigationBar.tintColor =  [UIColor whiteColor];
     [self.navigationController.navigationBar setTranslucent:YES];
     [self.navigationController.navigationBar setHidden:YES];

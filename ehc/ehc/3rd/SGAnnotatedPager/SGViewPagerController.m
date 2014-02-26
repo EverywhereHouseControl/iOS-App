@@ -31,7 +31,7 @@
 
 - (void)loadView {
     [super loadView];
-    self.view.backgroundColor = [UIColor colorWithRed:0.000 green:0.777 blue:0.777 alpha:1.000];
+    self.view.backgroundColor = [UIColor colorWithRed:0.000 green:0.681 blue:0.681 alpha:1.000];
     
     CGRect frame = CGRectMake(0, self.view.bounds.size.height - PAGE_CONTROL_HEIGHT,
                                      self.view.bounds.size.width, PAGE_CONTROL_HEIGHT);

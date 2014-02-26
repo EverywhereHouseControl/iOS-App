@@ -149,7 +149,7 @@
     
     [labelTitle setText:itemsNamesArray[indexPath.row]];
     [labelTitle setTextAlignment:NSTextAlignmentCenter];
-    [labelTitle setTextColor:[UIColor colorWithRed:0.000 green:0.777 blue:0.777 alpha:1.000]];
+    [labelTitle setTextColor:[UIColor colorWithRed:0.000 green:0.681 blue:0.681 alpha:1.000]];
     [labelTitle setNumberOfLines:3];
     [labelTitle setFont:[UIFont fontWithName:@"Futura-CondensedMedium" size:17]];
     [cell addSubview:labelTitle];

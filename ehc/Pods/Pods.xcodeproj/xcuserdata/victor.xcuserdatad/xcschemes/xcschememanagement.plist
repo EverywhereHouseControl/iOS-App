@@ -9,6 +9,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-DBCamera.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-DropdownMenu.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-ECSlidingViewController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -24,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-ionicons.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,27 +47,42 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>41A01FFDF01E4A65A1D2A801</key>
+		<key>11AADEB7DE144894B57B07D9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>44B6A6F999EF4FEDA77AD800</key>
+		<key>5768A3E3DC464513A7807B5D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5EEDA60A8DA4482EAC24E8A9</key>
+		<key>781F551DA6994D74B24554F4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>61D5514730D54ED190095673</key>
+		<key>B16F894D20A344A2AB66ECF4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9341D193CED347A7BC560A9B</key>
+		<key>B4E11CF9F92F4A18BC563DCC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BE87EB4F22A2470091FE0BDB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E3A0166CCC034A63B4167215</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F8998AA872D6493C8F41CE90</key>
 		<dict>
 			<key>primary</key>
 			<true/>
