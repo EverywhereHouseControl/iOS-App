@@ -1,3 +1,4 @@
+
 //
 //  TvItemViewController.m
 //  ehc
@@ -39,6 +40,11 @@
 	
 	[self.navigationController.navigationBar setHidden:YES];
 	[[UIApplication sharedApplication] setStatusBarHidden:YES];
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+	[super viewWillDisappear:animated];
+	[[UIApplication sharedApplication] setStatusBarHidden:NO];
 }
 
 - (void)didReceiveMemoryWarning
