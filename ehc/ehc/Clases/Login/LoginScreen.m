@@ -144,11 +144,11 @@
                                        [dic writeToFile:[self rutaFicheroVar] atomically:YES];
                                        
                                        //show message to the user
-                                       [[[UIAlertView alloc] initWithTitle:@"Logged in"
-                                                                   message:[NSString stringWithFormat:@"Bienvenido %@",[res objectForKey:@"username"] ]
-                                                                  delegate:nil
-                                                         cancelButtonTitle:@"Cerrar"
-                                                         otherButtonTitles: nil] show];
+//                                       [[[UIAlertView alloc] initWithTitle:@"Logged in"
+//                                                                   message:[NSString stringWithFormat:@"Bienvenido %@",[res objectForKey:@"username"] ]
+//                                                                  delegate:nil
+//                                                         cancelButtonTitle:@"Cerrar"
+//                                                         otherButtonTitles: nil] show];
                                        appDelegate.recienLogeado = YES;
                                        [self dismissViewControllerAnimated:YES completion:nil];
                                        

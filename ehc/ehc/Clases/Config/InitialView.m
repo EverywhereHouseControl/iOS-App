@@ -128,8 +128,23 @@
     else {
         return NO;
     }
+}
+
+- (NSString *) md5:(NSString *) input
+{
+    const char *cStr = [input UTF8String];
+    unsigned char digest[16];
+    CC_MD5( cStr, strlen(cStr), digest ); // This is the md5 call
+    
+    NSMutableString *output = [NSMutableString stringWithCapacity:CC_MD5_DIGEST_LENGTH * 2];
+    
+    for(int i = 0; i < CC_MD5_DIGEST_LENGTH; i++)
+        [output appendFormat:@"%02x", digest[i]];
+    
+    return  output;
     
 }
+
 - (void)loginGame{
     //cargando....
     //[self.cargando setHidden:NO];
@@ -141,7 +156,7 @@
     NSMutableDictionary* params =[NSMutableDictionary dictionaryWithObjectsAndKeys:
                                   command, @"command",
                                   user, @"username",
-                                  pwd, @"password",
+                                  [self md5:pwd], @"password",
                                   nil];
     //make the call to the web API
     [[API sharedInstance] commandWithParams:params
