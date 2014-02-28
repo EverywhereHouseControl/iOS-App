@@ -10,6 +10,8 @@
 	<string>ehc</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>02DCD92A-850C-4035-ABA4-C9AD032FAEFF</key>
+		<string>https://github.com/jaykz52/CKCalendar.git</string>
 		<key>748ED1BD-AFA6-45E5-89D2-F151133BCF5F</key>
 		<string>https://github.com/mohammedDehairy/MDBrowser.git</string>
 		<key>915BE01E-7D92-4344-988B-D2906B678682</key>
@@ -19,6 +21,8 @@
 	<string>ehc/ehc.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>02DCD92A-850C-4035-ABA4-C9AD032FAEFF</key>
+		<string>../ehc/3rd/CKCalendar</string>
 		<key>748ED1BD-AFA6-45E5-89D2-F151133BCF5F</key>
 		<string>../ehc/3rd/MDBrowser</string>
 		<key>915BE01E-7D92-4344-988B-D2906B678682</key>
@@ -32,6 +36,14 @@
 	<string>915BE01E-7D92-4344-988B-D2906B678682</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>02DCD92A-850C-4035-ABA4-C9AD032FAEFF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CKCalendar</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

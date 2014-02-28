@@ -1,3 +1,6 @@
 [submodule "ehc/ehc/3rd/MDBrowser"]
 	path = ehc/ehc/3rd/MDBrowser
 	url = https://kinki@github.com/mohammedDehairy/MDBrowser.git
+[submodule "ehc/ehc/3rd/CKCalendar"]
+	path = ehc/ehc/3rd/CKCalendar
+	url = https://kinki@github.com/jaykz52/CKCalendar.git

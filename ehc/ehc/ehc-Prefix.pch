@@ -19,6 +19,8 @@
 #import "AppDelegate.h"
 #define appDelegate ((AppDelegate *)[[UIApplication sharedApplication] delegate])
 
+#define colorApp [UIColor colorWithRed:0.000 green:0.681 blue:0.681 alpha:1.000]
+
 #define isIOS7	([[UIDevice currentDevice].systemVersion floatValue] >= 7.0)
 
 #define isIpad ([[UIScreen mainScreen] bounds].size.height == 1024)

@@ -323,11 +323,11 @@
                   symbolName = "-[LoginScreen btnLoginRegisterTapped:]"
                   moduleName = "ehc"
                   urlString = "file:///Users/KINKI/Documents/EHControl/iOS/ehc/ehc/Clases/Login/LoginScreen.m"
-                  timestampString = "415216134.68858"
+                  timestampString = "415296586.466945"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "120"
-                  endingLineNumber = "120"
+                  startingLineNumber = "122"
+                  endingLineNumber = "122"
                   offsetFromSymbolStart = "1734">
                </Location>
                <Location
@@ -337,11 +337,11 @@
                   symbolName = "-[LoginScreen btnLoginRegisterTapped:]"
                   moduleName = "ehc"
                   urlString = "file:///Users/KINKI/Documents/EHControl/iOS/ehc/ehc/Clases/Login/LoginScreen.m"
-                  timestampString = "415216134.688708"
+                  timestampString = "415296586.467074"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "120"
-                  endingLineNumber = "120"
+                  startingLineNumber = "122"
+                  endingLineNumber = "122"
                   offsetFromSymbolStart = "1974">
                </Location>
             </Locations>
