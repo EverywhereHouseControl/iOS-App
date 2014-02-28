@@ -10,7 +10,7 @@
 
 //the web location of the service
 #define kAPIHost @"http://ehcontrol.net"
-//#define kAPIHost @"http://192.168.2.13"
+//#define kAPIHost @"http://192.168.2.147"
 #define kAPIPath @"EHControlConnect/"
 
 @implementation API

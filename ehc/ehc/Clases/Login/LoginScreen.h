@@ -25,6 +25,7 @@
 @property(nonatomic,strong)IBOutlet UIView *cargando;
 @property(nonatomic,strong)IBOutlet UIActivityIndicatorView *activity;
 @property(nonatomic,strong)IBOutlet UILabel *labelCargando;
+@property (weak, nonatomic) IBOutlet UIImageView *mundo;
 
 //action for when either button is pressed
 -(IBAction)btnLoginRegisterTapped:(id)sender;

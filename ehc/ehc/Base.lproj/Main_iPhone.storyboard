@@ -86,7 +86,7 @@
                                     <action selector="quitarTeclado:" destination="Ccs-XW-4eR" eventType="editingDidEndOnExit" id="hxw-2r-NsE"/>
                                 </connections>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LogoEHC.png" translatesAutoresizingMaskIntoConstraints="NO" id="5fh-dF-qRW">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="internet_earth_p" translatesAutoresizingMaskIntoConstraints="NO" id="5fh-dF-qRW">
                                 <rect key="frame" x="60" y="20" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -102,12 +102,17 @@
                                     <action selector="btnLoginRegisterTapped:" destination="Ccs-XW-4eR" eventType="touchUpInside" id="Z6Y-hl-RGG"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LogoEHCletras" translatesAutoresizingMaskIntoConstraints="NO" id="2UX-5t-3gu">
+                                <rect key="frame" x="60" y="20" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="fldPassword" destination="0zf-fm-bbo" id="oIx-ag-nR2"/>
                         <outlet property="fldUsername" destination="S9R-nY-lz4" id="Cih-fY-lbn"/>
+                        <outlet property="mundo" destination="5fh-dF-qRW" id="oFn-ar-tGV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X3I-Vq-haw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -915,6 +920,7 @@
         <image name="BombillaLuz.gif" width="61" height="99"/>
         <image name="Estrella.png" width="65" height="65"/>
         <image name="LogoEHC.png" width="200" height="200"/>
+        <image name="LogoEHCletras" width="200" height="200"/>
         <image name="Mute.png" width="55" height="55"/>
         <image name="cero.png" width="55" height="55"/>
         <image name="cinco.png" width="55" height="55"/>
@@ -925,6 +931,7 @@
         <image name="flechaDerecha.png" width="70" height="149"/>
         <image name="flechaIzquierda.png" width="70" height="149"/>
         <image name="fondoMando.png" width="640" height="1136"/>
+        <image name="internet_earth_p" width="200" height="200"/>
         <image name="nueve.png" width="55" height="55"/>
         <image name="ocho.png" width="55" height="55"/>
         <image name="play.png" width="19" height="23"/>
