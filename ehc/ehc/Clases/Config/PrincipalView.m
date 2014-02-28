@@ -93,4 +93,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Methods exit
+
+- (IBAction)buttonExitTouch:(id)sender{
+    [self.navigationController popViewControllerAnimated:YES];
+    appDelegate.exit = YES;
+}
+
 @end

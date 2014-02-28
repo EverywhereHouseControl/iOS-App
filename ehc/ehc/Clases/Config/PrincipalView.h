@@ -10,4 +10,6 @@
 
 @interface PrincipalView : DropdownMenuController
 
+- (IBAction)buttonExitTouch:(id)sender;
+
 @end

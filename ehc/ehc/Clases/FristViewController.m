@@ -10,6 +10,7 @@
 #import "SetRoomsViewController.h"
 #import "ProfileViewController.h"
 #import "PrincipalView.h"
+#import "EventosViewController.h"
 
 @interface FristViewController ()
 
@@ -98,8 +99,8 @@
 }
 
 - (void) openTareas:(UIButton*)button{
-//    ProfileViewController *roomsController = (ProfileViewController *) [self.storyboard instantiateViewControllerWithIdentifier:@"profileView"];
-//    [self.navigationController pushViewController:roomsController animated:YES];
+    EventosViewController *eventsController = (EventosViewController *) [self.storyboard instantiateViewControllerWithIdentifier:@"eventsView"];
+    [self.navigationController pushViewController:eventsController animated:YES];
 }
 
 - (void) openEvent:(UIButton*)button{
@@ -113,13 +114,6 @@
 
 - (void) openConfig:(UIButton*)button{
     
-}
-
-#pragma mark - Methods exit
-
-- (IBAction)buttonExitTouch:(id)sender{
-    [self.navigationController popViewControllerAnimated:YES];
-    appDelegate.exit = YES;
 }
 
 @end

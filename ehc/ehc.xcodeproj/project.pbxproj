@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		08F31C4673B54AB0ABA4F6EE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C35645D3B44615AFD3D970 /* libPods.a */; };
+		BA13995C18C0E0030064EF95 /* EventosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA13995B18C0E0030064EF95 /* EventosViewController.m */; };
 		BA15ECB518BD79EE00866908 /* PrincipalView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA15ECB418BD79EE00866908 /* PrincipalView.m */; };
 		BA7F31ED188C6A7800E0CC1E /* LightItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7F31EC188C6A7800E0CC1E /* LightItemViewController.m */; };
 		BA7F31F3188C775C00E0CC1E /* BombillaLuz.gif in Resources */ = {isa = PBXBuildFile; fileRef = BA7F31F2188C775C00E0CC1E /* BombillaLuz.gif */; };
@@ -109,6 +110,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA13995A18C0E0030064EF95 /* EventosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventosViewController.h; sourceTree = "<group>"; };
+		BA13995B18C0E0030064EF95 /* EventosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventosViewController.m; sourceTree = "<group>"; };
 		BA15ECB318BD79EE00866908 /* PrincipalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrincipalView.h; sourceTree = "<group>"; };
 		BA15ECB418BD79EE00866908 /* PrincipalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrincipalView.m; sourceTree = "<group>"; };
 		BA7F31EB188C6A7800E0CC1E /* LightItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LightItemViewController.h; sourceTree = "<group>"; };
@@ -258,6 +261,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA13995918C0DFF10064EF95 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				BA13995A18C0E0030064EF95 /* EventosViewController.h */,
+				BA13995B18C0E0030064EF95 /* EventosViewController.m */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
 		BA7F31EA188C6A3C00E0CC1E /* LightsItem */ = {
 			isa = PBXGroup;
 			children = (
@@ -410,6 +422,7 @@
 		BAA9E9C11846D24100E55969 /* Clases */ = {
 			isa = PBXGroup;
 			children = (
+				BA13995918C0DFF10064EF95 /* Events */,
 				BA7F31F6188CA1D900E0CC1E /* Perfil */,
 				BA7F31EA188C6A3C00E0CC1E /* LightsItem */,
 				BAA9EFD418593979006FD3F8 /* TVitem */,
@@ -867,6 +880,7 @@
 				BAA9E9DE1846DA4100E55969 /* MenuHeaderCell.m in Sources */,
 				BAA9EFBF185934A8006FD3F8 /* RoomsViewController.m in Sources */,
 				BAA9E9DD1846DA4100E55969 /* MenuCell.m in Sources */,
+				BA13995C18C0E0030064EF95 /* EventosViewController.m in Sources */,
 				BAA9E9E31846DBF300E55969 /* UIAlertView+error.m in Sources */,
 				BAD46B351856AF76006F0930 /* FristViewController.m in Sources */,
 				BAA9EFC6185934D2006FD3F8 /* RoomsCell.m in Sources */,

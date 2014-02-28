@@ -10,6 +10,4 @@
 
 @interface FristViewController : UIViewController
 
-- (IBAction)buttonExitTouch:(id)sender;
-
 @end
