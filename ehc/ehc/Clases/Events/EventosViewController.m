@@ -68,6 +68,15 @@
     
 }
 
+- (void)configureTableEvents{
+    UITableView *tableEvents = [[UITableView alloc] initWithFrame:CGRectMake(0 , self.calendar.frame.size.height + self.calendar.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height - (self.calendar.frame.size.height + self.calendar.frame.origin.y))];
+    [tableEvents setDelegate:self];
+    [tableEvents setDataSource:self];
+    
+    [self.view addSubview:tableEvents];
+    
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

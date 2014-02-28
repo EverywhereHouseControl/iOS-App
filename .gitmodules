@@ -4,3 +4,6 @@
 [submodule "ehc/ehc/3rd/CKCalendar"]
 	path = ehc/ehc/3rd/CKCalendar
 	url = https://kinki@github.com/jaykz52/CKCalendar.git
+[submodule "ehc/ehc/3rd/HAPaperViewController"]
+	path = ehc/ehc/3rd/HAPaperViewController
+	url = https://kinki@github.com/hebertialmeida/HAPaperViewController.git
