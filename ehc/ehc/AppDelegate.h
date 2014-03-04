@@ -15,6 +15,10 @@
 @property (nonatomic)BOOL recienLogeado;
 
 @property (nonatomic)BOOL exit;
+@property (nonatomic)BOOL pinCorrecto;
+
+@property (nonatomic,strong)NSString *pwd;
+@property (nonatomic,strong)NSString *user;
 
 @property (nonatomic, strong) NSDictionary *jsonArray;
 

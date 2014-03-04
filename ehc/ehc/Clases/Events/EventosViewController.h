@@ -6,8 +6,12 @@
 //  Copyright (c) 2014 EHC. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
-@interface EventosViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+#import <UIKit/UIKit.h>
+#import "HAPaperCollectionViewController.h"
+
+@interface EventosViewController : HAPaperCollectionViewController
+
 
 @end

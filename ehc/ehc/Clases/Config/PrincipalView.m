@@ -28,7 +28,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
     
 //    UIBarButtonItem *menuItem = [[UIBarButtonItem alloc] initWithTitle:@"Menu" style:UIBarButtonItemStylePlain target:self action:@selector(menuButtonAction:)];
 //    
@@ -98,6 +98,8 @@
 - (IBAction)buttonExitTouch:(id)sender{
     [self.navigationController popViewControllerAnimated:YES];
     appDelegate.exit = YES;
+    appDelegate.pinCorrecto = NO;
+    appDelegate.recienLogeado = NO;
 }
 
 @end

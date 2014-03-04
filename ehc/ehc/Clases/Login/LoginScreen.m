@@ -87,22 +87,22 @@
     }
     
     //salt the password
-    NSString* saltedPassword = [NSString stringWithFormat:@"%@%@", fldPassword.text, kSalt];
-    
-    //prepare the hashed storage
-    NSString* hashedPassword = nil;
-    unsigned char hashedPasswordData[CC_SHA1_DIGEST_LENGTH];
-    
-    //hash the pass
-    NSData *data = [saltedPassword dataUsingEncoding: NSUTF8StringEncoding];
-    if (CC_SHA1([data bytes], [data length], hashedPasswordData)) {
-        hashedPassword = [[NSString alloc] initWithBytes:hashedPasswordData length:sizeof(hashedPasswordData) encoding:NSASCIIStringEncoding];
-    } else {
-        [UIAlertView error:@"La contraseña no se ha enviado"];
-        return;
-    }
-    pwd = fldPassword.text;
-    pwdHashed = hashedPassword;
+//    NSString* saltedPassword = [NSString stringWithFormat:@"%@%@", fldPassword.text, kSalt];
+//    
+//    //prepare the hashed storage
+//    NSString* hashedPassword = nil;
+//    unsigned char hashedPasswordData[CC_SHA1_DIGEST_LENGTH];
+//    
+//    //hash the pass
+//    NSData *data = [saltedPassword dataUsingEncoding: NSUTF8StringEncoding];
+//    if (CC_SHA1([data bytes], [data length], hashedPasswordData)) {
+//        hashedPassword = [[NSString alloc] initWithBytes:hashedPasswordData length:sizeof(hashedPasswordData) encoding:NSASCIIStringEncoding];
+//    } else {
+//        [UIAlertView error:@"La contraseña no se ha enviado"];
+//        return;
+//    }
+    //pwd = fldPassword.text;
+    //pwdHashed = hashedPassword;
     //check whether it's a login or register
     
     //cargando....
@@ -110,13 +110,15 @@
     self.labelCargando.text = @"Connecting...";
     [self.activity startAnimating];
     //fin cargando
+    pwdHashed = [self md5:fldPassword.text];
+    nameUser = fldUsername.text;
     
     
     NSString* command = @"login";//(sender.tag==1)?@"register":@"login";
     NSMutableDictionary* params =[NSMutableDictionary dictionaryWithObjectsAndKeys:
                                   command, @"command",
-                                  fldUsername.text, @"username",
-                                  [self md5:fldUsername.text], @"password",
+                                  nameUser, @"username",
+                                  pwdHashed, @"password",
                                   nil];
     //make the call to the web API
     [[API sharedInstance] commandWithParams:params
@@ -138,12 +140,14 @@
                                        NSData *data = [NSData dataWithContentsOfFile:filePath];
                                        jsonParse= [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
                                    
-                                       NSString *b = pwdHashed;
-                                       NSString *c = nameUser;
+                                       //NSString *b = pwdHashed;
+                                       //NSString *c = nameUser;
+                                       appDelegate.user = nameUser;
+                                       appDelegate.pwd = pwdHashed;
                                        appDelegate.jsonArray = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
                                        
-                                       NSMutableDictionary *dic = [[NSMutableDictionary alloc] initWithObjectsAndKeys:b,KEY_PWD,c,KEY_USER,nil];
-                                       [dic writeToFile:[self rutaFicheroVar] atomically:YES];
+                                       //NSMutableDictionary *dic = [[NSMutableDictionary alloc] initWithObjectsAndKeys:b,KEY_PWD,c,KEY_USER,nil];
+                                       //[dic writeToFile:[self rutaFicheroVar] atomically:YES];
                                        
                                        //show message to the user
 //                                       [[[UIAlertView alloc] initWithTitle:@"Logged in"

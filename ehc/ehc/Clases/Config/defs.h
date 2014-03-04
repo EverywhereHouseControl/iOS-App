@@ -8,6 +8,7 @@
 #define ficheroVar @"kinkiMola.plist"
 #define KEY_PWD @"pwd"
 #define KEY_USER @"usr"
+#define KEY_PINCODE @"pinCode"
 
 #define kSalt @"adlfu3489tyh2jnkLIUGI&%EV(&0982cbgrykxjnk8855"
 

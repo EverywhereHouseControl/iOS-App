@@ -101,6 +101,9 @@
 - (void) openTareas:(UIButton*)button{
     EventosViewController *eventsController = (EventosViewController *) [self.storyboard instantiateViewControllerWithIdentifier:@"eventsView"];
     [self.navigationController pushViewController:eventsController animated:YES];
+    
+    
+    
 }
 
 - (void) openEvent:(UIButton*)button{

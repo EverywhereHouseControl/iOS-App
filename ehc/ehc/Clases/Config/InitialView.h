@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 #import "AFHTTPClient.h"
+#import "PPPinPadViewController.h"
 
-@interface InitialView : UIViewController
+@interface InitialView : UIViewController<PinPadPasswordProtocol>
 
 @property(nonatomic,strong)IBOutlet UIActivityIndicatorView *activity;
 @property(nonatomic,strong)IBOutlet UILabel *labelCargando;

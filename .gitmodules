@@ -7,3 +7,6 @@
 [submodule "ehc/ehc/3rd/HAPaperViewController"]
 	path = ehc/ehc/3rd/HAPaperViewController
 	url = https://kinki@github.com/hebertialmeida/HAPaperViewController.git
+[submodule "ehc/ehc/3rd/PinPad"]
+	path = ehc/ehc/3rd/PinPad
+	url = https://kinki@github.com/kosyloa/PinPad.git

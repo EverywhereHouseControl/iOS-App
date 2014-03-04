@@ -12,8 +12,12 @@
 	<dict>
 		<key>02DCD92A-850C-4035-ABA4-C9AD032FAEFF</key>
 		<string>https://github.com/jaykz52/CKCalendar.git</string>
+		<key>08A3AA13-E1DE-4C1A-B1C6-6F13C10AEFB5</key>
+		<string>https://github.com/hebertialmeida/HAPaperViewController.git</string>
 		<key>748ED1BD-AFA6-45E5-89D2-F151133BCF5F</key>
 		<string>https://github.com/mohammedDehairy/MDBrowser.git</string>
+		<key>8E26BD20-4FC3-4985-8A6B-75FB0DAA6F25</key>
+		<string>https://github.com/kosyloa/PinPad.git</string>
 		<key>915BE01E-7D92-4344-988B-D2906B678682</key>
 		<string>https://github.com/EverywhereHouseControl/iOS-App.git</string>
 	</dict>
@@ -23,8 +27,12 @@
 	<dict>
 		<key>02DCD92A-850C-4035-ABA4-C9AD032FAEFF</key>
 		<string>../ehc/3rd/CKCalendar</string>
+		<key>08A3AA13-E1DE-4C1A-B1C6-6F13C10AEFB5</key>
+		<string>../ehc/3rd/HAPaperViewController</string>
 		<key>748ED1BD-AFA6-45E5-89D2-F151133BCF5F</key>
 		<string>../ehc/3rd/MDBrowser</string>
+		<key>8E26BD20-4FC3-4985-8A6B-75FB0DAA6F25</key>
+		<string>../ehc/3rd/PinPad</string>
 		<key>915BE01E-7D92-4344-988B-D2906B678682</key>
 		<string>../..</string>
 	</dict>
@@ -48,9 +56,25 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>08A3AA13-E1DE-4C1A-B1C6-6F13C10AEFB5</string>
+			<key>IDESourceControlWCCName</key>
+			<string>HAPaperViewController</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>748ED1BD-AFA6-45E5-89D2-F151133BCF5F</string>
 			<key>IDESourceControlWCCName</key>
 			<string>MDBrowser</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8E26BD20-4FC3-4985-8A6B-75FB0DAA6F25</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PinPad</string>
 		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>

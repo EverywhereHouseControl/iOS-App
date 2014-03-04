@@ -783,21 +783,6 @@
                             <userLayoutGuide location="273" affinity="minY"/>
                             <userLayoutGuide location="159" affinity="minX"/>
                         </userGuides>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxQ-bt-DLd">
-                                <rect key="frame" x="121" y="505" width="80" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="33"/>
-                                <state key="normal" title="Salir">
-                                    <color key="titleColor" red="0.0" green="0.77734375" blue="0.77734375" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonExitTouch:" destination="f2g-yk-FUU" eventType="touchUpInside" id="XNq-Ax-eDn"/>
-                                    <action selector="buttonExitTouch:" destination="HGQ-1S-KXQ" eventType="touchUpInside" id="eAE-vx-C3T"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>

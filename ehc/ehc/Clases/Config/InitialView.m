@@ -13,6 +13,7 @@
 #import "API.h"
 #import "defs.h"
 #import "PrincipalView.h"
+#import "PPPinPadViewController.h"
 
 @interface InitialView (){
     AFHTTPClient *_client;
@@ -20,6 +21,7 @@
     NSString *pwd;
     NSString *nameUser;
     NSString *idUs;
+    NSString *pinCode;
 }
 
 @end
@@ -56,7 +58,7 @@
       // [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Default"]]];
     }
     
-    if ([self comprobarAutoLogin] || [self isUserExit]) {
+    if ([self comprobarAutoLogin] || [self isUserExit]) {//&& pwd) {
         [self loginGame];
     }
     else{
@@ -74,8 +76,11 @@
 
 -(void)viewDidAppear:(BOOL)animated{
     
-    if (appDelegate.recienLogeado) {
+    if (appDelegate.pinCorrecto) {
         [self entrar];
+    }
+    else if (appDelegate.recienLogeado) {
+        [self configurarPin];
     }
     else if ([self isUserExit]){
         [self sacarModalLogin];
@@ -116,8 +121,9 @@
         
         user = [dic objectForKey:KEY_USER];
         
+        pinCode = [dic objectForKey:KEY_PINCODE];
         
-        if (![pwd isEqualToString:@""] && ![user isEqualToString:@""]) {
+        if (![pwd isEqualToString:@""] && ![user isEqualToString:@""] && (pwd) && (user) && (pinCode)) {
             //[self loginGame];
             return YES;
         }
@@ -156,7 +162,7 @@
     NSMutableDictionary* params =[NSMutableDictionary dictionaryWithObjectsAndKeys:
                                   command, @"command",
                                   user, @"username",
-                                  [self md5:pwd], @"password",
+                                  pwd, @"password",
                                   nil];
     //make the call to the web API
     [[API sharedInstance] commandWithParams:params
@@ -177,7 +183,7 @@
                                                                               //success
                                        [[API sharedInstance] setUser: res];
                                        
-                                       [self entrar];
+                                       [self sacarSeguridadConPin];
                                        
                                    } else {
                                        //error
@@ -229,5 +235,45 @@
     return appDelegate.exit;
 }
 
+#pragma mark - Metodos Pin
+- (void)configurarPin{
+    PPPinPadViewController * pinViewController = [[PPPinPadViewController alloc] initWithConfigure:YES];
+    [pinViewController.view setBackgroundColor:colorApp];
+    
+    [self presentViewController:pinViewController animated:YES completion:NULL];
+    pinViewController.delegate = self;
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
+}
+    
+- (BOOL)checkPin:(NSString *)pin {
+    return [pin isEqualToString:pinCode];
+}
+
+- (NSInteger)pinLenght {
+    return 4;
+}
+
+- (NSString*)getInputStringForConfigure:(NSString*)input{
+    pinCode = input;
+    [self entrar];
+    [self guardarPinCode:input];
+    return pinCode;
+}
+
+- (void)sacarSeguridadConPin{
+    
+    PPPinPadViewController * pinViewController = [[PPPinPadViewController alloc] init];
+    [pinViewController.view setBackgroundColor:colorApp];
+    
+    [self presentViewController:pinViewController animated:YES completion:NULL];
+    pinViewController.delegate = self;
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
+}
+
+- (void)guardarPinCode:(NSString*)pinCodes{
+    NSMutableDictionary *dic = [[NSMutableDictionary alloc] initWithObjectsAndKeys:appDelegate.pwd,KEY_PWD,appDelegate.user,KEY_USER,pinCodes,KEY_PINCODE,nil];
+    
+    [dic writeToFile:[self rutaFicheroVar] atomically:YES];
+}
 
 @end

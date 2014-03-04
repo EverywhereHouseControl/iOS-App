@@ -68,11 +68,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ehc/Clases/Config/InitialView.m"
-            timestampString = "415075818.283194"
+            timestampString = "415343571.96443"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "-initWithNibName:bundle:"
             landmarkType = "5">
          </BreakpointContent>
@@ -276,11 +276,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ehc/Clases/Config/InitialView.m"
-            timestampString = "415075818.283194"
+            timestampString = "415343571.96443"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -292,11 +292,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ehc/Clases/Config/InitialView.m"
-            timestampString = "415076520.704526"
+            timestampString = "415380245.778101"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "-viewDidAppear:"
             landmarkType = "5">
          </BreakpointContent>
@@ -308,11 +308,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ehc/Clases/Login/LoginScreen.m"
-            timestampString = "415247718.066966"
+            timestampString = "415593023.540417"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
             landmarkName = "-btnLoginRegisterTapped:"
             landmarkType = "5">
             <Locations>
@@ -323,12 +323,12 @@
                   symbolName = "-[LoginScreen btnLoginRegisterTapped:]"
                   moduleName = "ehc"
                   urlString = "file:///Users/KINKI/Documents/EHControl/iOS/ehc/ehc/Clases/Login/LoginScreen.m"
-                  timestampString = "415296586.466945"
+                  timestampString = "415594118.121701"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "122"
-                  endingLineNumber = "122"
-                  offsetFromSymbolStart = "1734">
+                  startingLineNumber = "124"
+                  endingLineNumber = "124"
+                  offsetFromSymbolStart = "1116">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -337,12 +337,12 @@
                   symbolName = "-[LoginScreen btnLoginRegisterTapped:]"
                   moduleName = "ehc"
                   urlString = "file:///Users/KINKI/Documents/EHControl/iOS/ehc/ehc/Clases/Login/LoginScreen.m"
-                  timestampString = "415296586.467074"
+                  timestampString = "415594118.121826"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "122"
-                  endingLineNumber = "122"
-                  offsetFromSymbolStart = "1974">
+                  startingLineNumber = "124"
+                  endingLineNumber = "124"
+                  offsetFromSymbolStart = "1318">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -354,11 +354,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ehc/Clases/Login/LoginScreen.m"
-            timestampString = "415247718.066966"
+            timestampString = "415593023.540417"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "132"
-            endingLineNumber = "132"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
             landmarkName = "-btnLoginRegisterTapped:"
             landmarkType = "5">
          </BreakpointContent>

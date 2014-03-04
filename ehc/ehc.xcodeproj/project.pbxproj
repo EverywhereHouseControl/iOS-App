@@ -33,6 +33,16 @@
 		BA8913BA183D6F3100F97172 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA891399183D6F3100F97172 /* UIKit.framework */; };
 		BA8913C2183D6F3100F97172 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BA8913C0183D6F3100F97172 /* InfoPlist.strings */; };
 		BA8913C4183D6F3100F97172 /* ehcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA8913C3183D6F3100F97172 /* ehcTests.m */; };
+		BAA22A6D18C127B1007D01A0 /* HAPaperCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA22A6C18C127B1007D01A0 /* HAPaperCollectionViewController.m */; };
+		BAA22A7318C127D0007D01A0 /* HATransitionController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA22A7018C127D0007D01A0 /* HATransitionController.m */; };
+		BAA22A7418C127D0007D01A0 /* HATransitionLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA22A7218C127D0007D01A0 /* HATransitionLayout.m */; };
+		BAA22A7A18C12804007D01A0 /* HACollectionViewLargeLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA22A7718C12804007D01A0 /* HACollectionViewLargeLayout.m */; };
+		BAA22A7B18C12804007D01A0 /* HACollectionViewSmallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA22A7918C12804007D01A0 /* HACollectionViewSmallLayout.m */; };
+		BAA22A7E18C12903007D01A0 /* HASmallCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA22A7D18C12903007D01A0 /* HASmallCollectionViewController.m */; };
+		BAA22A8718C19D7F007D01A0 /* PPCircleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA22A8118C19D7F007D01A0 /* PPCircleButton.m */; };
+		BAA22A8818C19D7F007D01A0 /* PPPinCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA22A8318C19D7F007D01A0 /* PPPinCircleView.m */; };
+		BAA22A8918C19D7F007D01A0 /* PPPinPadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA22A8518C19D7F007D01A0 /* PPPinPadViewController.m */; };
+		BAA22A8A18C19D7F007D01A0 /* PPPinPadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAA22A8618C19D7F007D01A0 /* PPPinPadViewController.xib */; };
 		BAA9A79C185E4D8600DB748B /* Ajustes@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAA9A788185E4D8600DB748B /* Ajustes@2x.png */; };
 		BAA9A79D185E4D8600DB748B /* Apagar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAA9A789185E4D8600DB748B /* Apagar@2x.png */; };
 		BAA9A79E185E4D8600DB748B /* cero@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAA9A78A185E4D8600DB748B /* cero@2x.png */; };
@@ -85,6 +95,7 @@
 		BAD46B381856B4C5006F0930 /* logLogin.png in Resources */ = {isa = PBXBuildFile; fileRef = BAD46B371856B4C5006F0930 /* logLogin.png */; };
 		BAD46B3E1856B767006F0930 /* SGAnnotatedPagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD46B3B1856B767006F0930 /* SGAnnotatedPagerController.m */; };
 		BAD46B3F1856B767006F0930 /* SGViewPagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD46B3D1856B767006F0930 /* SGViewPagerController.m */; };
+		BAE2C91018C5676100080B1A /* kinkiMola.plist in Resources */ = {isa = PBXBuildFile; fileRef = BAE2C90F18C5676100080B1A /* kinkiMola.plist */; };
 		BAE500E218BE429C0069C3ED /* ActivityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAE500C218BE429C0069C3ED /* ActivityView.xib */; };
 		BAE500E318BE429C0069C3ED /* MyActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE500C418BE429C0069C3ED /* MyActivityIndicator.m */; };
 		BAE500E418BE429C0069C3ED /* MDBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE500C718BE429C0069C3ED /* MDBrowser.m */; };
@@ -149,6 +160,25 @@
 		BA8913BF183D6F3100F97172 /* ehcTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ehcTests-Info.plist"; sourceTree = "<group>"; };
 		BA8913C1183D6F3100F97172 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BA8913C3183D6F3100F97172 /* ehcTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ehcTests.m; sourceTree = "<group>"; };
+		BAA22A6B18C127B1007D01A0 /* HAPaperCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HAPaperCollectionViewController.h; path = HAPaperViewController/Paper/HAPaperCollectionViewController.h; sourceTree = "<group>"; };
+		BAA22A6C18C127B1007D01A0 /* HAPaperCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HAPaperCollectionViewController.m; path = HAPaperViewController/Paper/HAPaperCollectionViewController.m; sourceTree = "<group>"; };
+		BAA22A6F18C127D0007D01A0 /* HATransitionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HATransitionController.h; path = HAPaperViewController/Paper/HATransitionController.h; sourceTree = "<group>"; };
+		BAA22A7018C127D0007D01A0 /* HATransitionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HATransitionController.m; path = HAPaperViewController/Paper/HATransitionController.m; sourceTree = "<group>"; };
+		BAA22A7118C127D0007D01A0 /* HATransitionLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HATransitionLayout.h; path = HAPaperViewController/Paper/HATransitionLayout.h; sourceTree = "<group>"; };
+		BAA22A7218C127D0007D01A0 /* HATransitionLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HATransitionLayout.m; path = HAPaperViewController/Paper/HATransitionLayout.m; sourceTree = "<group>"; };
+		BAA22A7618C12804007D01A0 /* HACollectionViewLargeLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HACollectionViewLargeLayout.h; path = HAPaperViewController/Paper/HACollectionViewLargeLayout.h; sourceTree = "<group>"; };
+		BAA22A7718C12804007D01A0 /* HACollectionViewLargeLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HACollectionViewLargeLayout.m; path = HAPaperViewController/Paper/HACollectionViewLargeLayout.m; sourceTree = "<group>"; };
+		BAA22A7818C12804007D01A0 /* HACollectionViewSmallLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HACollectionViewSmallLayout.h; path = HAPaperViewController/Paper/HACollectionViewSmallLayout.h; sourceTree = "<group>"; };
+		BAA22A7918C12804007D01A0 /* HACollectionViewSmallLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HACollectionViewSmallLayout.m; path = HAPaperViewController/Paper/HACollectionViewSmallLayout.m; sourceTree = "<group>"; };
+		BAA22A7C18C12903007D01A0 /* HASmallCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HASmallCollectionViewController.h; path = HAPaperViewController/Paper/HASmallCollectionViewController.h; sourceTree = "<group>"; };
+		BAA22A7D18C12903007D01A0 /* HASmallCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HASmallCollectionViewController.m; path = HAPaperViewController/Paper/HASmallCollectionViewController.m; sourceTree = "<group>"; };
+		BAA22A8018C19D7F007D01A0 /* PPCircleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPCircleButton.h; path = PinPad/PinPadExample/PinPad/PPCircleButton.h; sourceTree = "<group>"; };
+		BAA22A8118C19D7F007D01A0 /* PPCircleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PPCircleButton.m; path = PinPad/PinPadExample/PinPad/PPCircleButton.m; sourceTree = "<group>"; };
+		BAA22A8218C19D7F007D01A0 /* PPPinCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPPinCircleView.h; path = PinPad/PinPadExample/PinPad/PPPinCircleView.h; sourceTree = "<group>"; };
+		BAA22A8318C19D7F007D01A0 /* PPPinCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PPPinCircleView.m; path = PinPad/PinPadExample/PinPad/PPPinCircleView.m; sourceTree = "<group>"; };
+		BAA22A8418C19D7F007D01A0 /* PPPinPadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPPinPadViewController.h; path = PinPad/PinPadExample/PinPad/PPPinPadViewController.h; sourceTree = "<group>"; };
+		BAA22A8518C19D7F007D01A0 /* PPPinPadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PPPinPadViewController.m; path = PinPad/PinPadExample/PinPad/PPPinPadViewController.m; sourceTree = "<group>"; };
+		BAA22A8618C19D7F007D01A0 /* PPPinPadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PPPinPadViewController.xib; path = PinPad/PinPadExample/PinPad/PPPinPadViewController.xib; sourceTree = "<group>"; };
 		BAA9A788185E4D8600DB748B /* Ajustes@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ajustes@2x.png"; sourceTree = "<group>"; };
 		BAA9A789185E4D8600DB748B /* Apagar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Apagar@2x.png"; sourceTree = "<group>"; };
 		BAA9A78A185E4D8600DB748B /* cero@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cero@2x.png"; sourceTree = "<group>"; };
@@ -219,6 +249,7 @@
 		BAD46B3B1856B767006F0930 /* SGAnnotatedPagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGAnnotatedPagerController.m; sourceTree = "<group>"; };
 		BAD46B3C1856B767006F0930 /* SGViewPagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGViewPagerController.h; sourceTree = "<group>"; };
 		BAD46B3D1856B767006F0930 /* SGViewPagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGViewPagerController.m; sourceTree = "<group>"; };
+		BAE2C90F18C5676100080B1A /* kinkiMola.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = kinkiMola.plist; sourceTree = "<group>"; };
 		BAE500C218BE429C0069C3ED /* ActivityView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityView.xib; sourceTree = "<group>"; };
 		BAE500C318BE429C0069C3ED /* MyActivityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyActivityIndicator.h; sourceTree = "<group>"; };
 		BAE500C418BE429C0069C3ED /* MyActivityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyActivityIndicator.m; sourceTree = "<group>"; };
@@ -364,6 +395,7 @@
 		BA89139B183D6F3100F97172 /* ehc */ = {
 			isa = PBXGroup;
 			children = (
+				BAE2C90E18C5674E00080B1A /* Plist */,
 				BAA9A7B3185E7C2900DB748B /* JSON */,
 				BAB0C1DE1846C90500B48692 /* Images */,
 				BAA9E9C11846D24100E55969 /* Clases */,
@@ -407,6 +439,63 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		BAA22A6918C121A5007D01A0 /* HAPaperViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BAA22A7C18C12903007D01A0 /* HASmallCollectionViewController.h */,
+				BAA22A7D18C12903007D01A0 /* HASmallCollectionViewController.m */,
+				BAA22A7518C127D4007D01A0 /* Custom Layout */,
+				BAA22A6E18C127C1007D01A0 /* Transition */,
+				BAA22A6A18C1278E007D01A0 /* Base Colection */,
+			);
+			name = HAPaperViewController;
+			sourceTree = "<group>";
+		};
+		BAA22A6A18C1278E007D01A0 /* Base Colection */ = {
+			isa = PBXGroup;
+			children = (
+				BAA22A6B18C127B1007D01A0 /* HAPaperCollectionViewController.h */,
+				BAA22A6C18C127B1007D01A0 /* HAPaperCollectionViewController.m */,
+			);
+			name = "Base Colection";
+			sourceTree = "<group>";
+		};
+		BAA22A6E18C127C1007D01A0 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				BAA22A6F18C127D0007D01A0 /* HATransitionController.h */,
+				BAA22A7018C127D0007D01A0 /* HATransitionController.m */,
+				BAA22A7118C127D0007D01A0 /* HATransitionLayout.h */,
+				BAA22A7218C127D0007D01A0 /* HATransitionLayout.m */,
+			);
+			name = Transition;
+			sourceTree = "<group>";
+		};
+		BAA22A7518C127D4007D01A0 /* Custom Layout */ = {
+			isa = PBXGroup;
+			children = (
+				BAA22A7618C12804007D01A0 /* HACollectionViewLargeLayout.h */,
+				BAA22A7718C12804007D01A0 /* HACollectionViewLargeLayout.m */,
+				BAA22A7818C12804007D01A0 /* HACollectionViewSmallLayout.h */,
+				BAA22A7918C12804007D01A0 /* HACollectionViewSmallLayout.m */,
+			);
+			name = "Custom Layout";
+			sourceTree = "<group>";
+		};
+		BAA22A7F18C19D49007D01A0 /* PinPad */ = {
+			isa = PBXGroup;
+			children = (
+				BAA22A8018C19D7F007D01A0 /* PPCircleButton.h */,
+				BAA22A8118C19D7F007D01A0 /* PPCircleButton.m */,
+				BAA22A8218C19D7F007D01A0 /* PPPinCircleView.h */,
+				BAA22A8318C19D7F007D01A0 /* PPPinCircleView.m */,
+				BAA22A8418C19D7F007D01A0 /* PPPinPadViewController.h */,
+				BAA22A8518C19D7F007D01A0 /* PPPinPadViewController.m */,
+				BAA22A8618C19D7F007D01A0 /* PPPinPadViewController.xib */,
+			);
+			name = PinPad;
+			sourceTree = "<group>";
+		};
 		BAA9A787185E4D8600DB748B /* Mando */ = {
 			isa = PBXGroup;
 			children = (
@@ -445,6 +534,8 @@
 		BAA9E99C1846D22400E55969 /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				BAA22A7F18C19D49007D01A0 /* PinPad */,
+				BAA22A6918C121A5007D01A0 /* HAPaperViewController */,
 				BA13995D18C0E6990064EF95 /* CKCalendar */,
 				BAE500BF18BE42790069C3ED /* MDBrowser */,
 				BAD46B391856B767006F0930 /* SGAnnotatedPager */,
@@ -600,6 +691,14 @@
 				BAC408021857D8FD00AB189B /* SGAnnotatedPagerController.xib */,
 			);
 			path = SGAnnotatedPager;
+			sourceTree = "<group>";
+		};
+		BAE2C90E18C5674E00080B1A /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+				BAE2C90F18C5676100080B1A /* kinkiMola.plist */,
+			);
+			path = Plist;
 			sourceTree = "<group>";
 		};
 		BAE500BF18BE42790069C3ED /* MDBrowser */ = {
@@ -803,6 +902,7 @@
 				BAA9A7AD185E4D8600DB748B /* siete@2x.png in Resources */,
 				BAA9A7AC185E4D8600DB748B /* seis@2x.png in Resources */,
 				BA8913AC183D6F3100F97172 /* Main_iPad.storyboard in Resources */,
+				BAA22A8A18C19D7F007D01A0 /* PPPinPadViewController.xib in Resources */,
 				BAA9A79D185E4D8600DB748B /* Apagar@2x.png in Resources */,
 				BAE500ED18BE429C0069C3ED /* close.png in Resources */,
 				BAA9A7A2185E4D8600DB748B /* Estrella@2x.png in Resources */,
@@ -832,6 +932,7 @@
 				BAE500EC18BE429C0069C3ED /* back_active@2x.png in Resources */,
 				BAAECBB3185FE37100A0D463 /* Microhondas.png in Resources */,
 				BAA9A79C185E4D8600DB748B /* Ajustes@2x.png in Resources */,
+				BAE2C91018C5676100080B1A /* kinkiMola.plist in Resources */,
 				BA13996618C0E6C00064EF95 /* left_arrow.png in Resources */,
 				BAE500F018BE429C0069C3ED /* next@2x.png in Resources */,
 				BAAECBB2185FE37100A0D463 /* DVD.png in Resources */,
@@ -904,15 +1005,20 @@
 			files = (
 				BA13996518C0E6C00064EF95 /* CKCalendarView.m in Sources */,
 				BAA9EFBD185934A8006FD3F8 /* ItemsCell.m in Sources */,
+				BAA22A7B18C12804007D01A0 /* HACollectionViewSmallLayout.m in Sources */,
 				BA7F31F9188CA1E800E0CC1E /* ProfileViewController.m in Sources */,
 				BAE500E618BE429C0069C3ED /* PopUpBrowserAnimator.m in Sources */,
+				BAA22A8718C19D7F007D01A0 /* PPCircleButton.m in Sources */,
 				BAE500E718BE429C0069C3ED /* SlideFromBottomBrowserAnimator.m in Sources */,
 				BAD46B3F1856B767006F0930 /* SGViewPagerController.m in Sources */,
 				BAA9E9D01846D24100E55969 /* MenuViewController.m in Sources */,
 				BAA9E9D11846D24100E55969 /* MyNavigationController.m in Sources */,
 				BAA9EFD71859398F006FD3F8 /* TvItemViewController.m in Sources */,
 				BAE500E518BE429C0069C3ED /* MDBrowserAnimatorFactory.m in Sources */,
+				BAA22A7E18C12903007D01A0 /* HASmallCollectionViewController.m in Sources */,
 				BAE500E318BE429C0069C3ED /* MyActivityIndicator.m in Sources */,
+				BAA22A7A18C12804007D01A0 /* HACollectionViewLargeLayout.m in Sources */,
+				BAA22A7318C127D0007D01A0 /* HATransitionController.m in Sources */,
 				BAA9E9CF1846D24100E55969 /* InitViewController.m in Sources */,
 				BA8913A6183D6F3100F97172 /* AppDelegate.m in Sources */,
 				BAA9EFC8185934D2006FD3F8 /* SetRoomsViewController.m in Sources */,
@@ -921,15 +1027,19 @@
 				BAA9E9DD1846DA4100E55969 /* MenuCell.m in Sources */,
 				BA13995C18C0E0030064EF95 /* EventosViewController.m in Sources */,
 				BAA9E9E31846DBF300E55969 /* UIAlertView+error.m in Sources */,
+				BAA22A6D18C127B1007D01A0 /* HAPaperCollectionViewController.m in Sources */,
 				BAD46B351856AF76006F0930 /* FristViewController.m in Sources */,
 				BAA9EFC6185934D2006FD3F8 /* RoomsCell.m in Sources */,
 				BAA9E9D21846D24100E55969 /* LoginScreen.m in Sources */,
+				BAA22A8818C19D7F007D01A0 /* PPPinCircleView.m in Sources */,
 				BAE500E818BE429C0069C3ED /* MJPopupBackgroundView.m in Sources */,
+				BAA22A7418C127D0007D01A0 /* HATransitionLayout.m in Sources */,
 				BA7F31ED188C6A7800E0CC1E /* LightItemViewController.m in Sources */,
 				BA15ECB518BD79EE00866908 /* PrincipalView.m in Sources */,
 				BAE500E418BE429C0069C3ED /* MDBrowser.m in Sources */,
 				BAA9E9D61846D4FA00E55969 /* API.m in Sources */,
 				BAD46B3E1856B767006F0930 /* SGAnnotatedPagerController.m in Sources */,
+				BAA22A8918C19D7F007D01A0 /* PPPinPadViewController.m in Sources */,
 				BA8913A2183D6F3100F97172 /* main.m in Sources */,
 				BAA9E9CE1846D24100E55969 /* InitialView.m in Sources */,
 			);
