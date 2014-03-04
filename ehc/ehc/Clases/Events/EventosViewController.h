@@ -9,9 +9,9 @@
 @import UIKit;
 
 #import <UIKit/UIKit.h>
-#import "HAPaperCollectionViewController.h"
 
-@interface EventosViewController : HAPaperCollectionViewController
+@interface EventosViewController : UIViewController<UICollectionViewDataSource,UICollectionViewDelegate>
 
+@property(nonatomic,strong) UICollectionView *collectionViewTareas;
 
 @end

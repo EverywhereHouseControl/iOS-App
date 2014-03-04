@@ -175,6 +175,9 @@
                                    // [self.activity stopAnimating];
                                    //[self.cargando setHidden:YES];
                                    //------------------
+                                   NSString *filePath = [[NSBundle mainBundle] pathForResource:@"config" ofType:@"json"];
+                                   NSData *data = [NSData dataWithContentsOfFile:filePath];
+                                   appDelegate.jsonArray = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
                                    
                                    if ([json objectForKey:@"error"]==nil && [[res objectForKey:@"IdUser"] intValue]>0) {
                                        

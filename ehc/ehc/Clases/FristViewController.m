@@ -11,7 +11,6 @@
 #import "ProfileViewController.h"
 #import "PrincipalView.h"
 #import "EventosViewController.h"
-
 @interface FristViewController ()
 
 @end
@@ -99,10 +98,10 @@
 }
 
 - (void) openTareas:(UIButton*)button{
-    EventosViewController *eventsController = (EventosViewController *) [self.storyboard instantiateViewControllerWithIdentifier:@"eventsView"];
+    //HACollectionViewSmallLayout *smallLayout = [[HACollectionViewSmallLayout alloc] init];
+    
+    EventosViewController *eventsController = [[EventosViewController alloc] init];//initWithCollectionViewLayout:smallLayout];//(EventosViewController *) [self.storyboard instantiateViewControllerWithIdentifier:@"eventsView"];
     [self.navigationController pushViewController:eventsController animated:YES];
-    
-    
     
 }
 
@@ -118,5 +117,9 @@
 - (void) openConfig:(UIButton*)button{
     
 }
+
+#pragma mark -
+
+
 
 @end
