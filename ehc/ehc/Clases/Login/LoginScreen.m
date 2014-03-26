@@ -125,26 +125,30 @@
                                onCompletion:^(NSDictionary *json) {
                                    //handle the response
                                    //result returned
+                                   DLog(@"%@",json);
                                    NSDictionary* res = [[json objectForKey:@"result"] objectAtIndex:0];
                                    
                                    //Finaliza cargando
                                    [self.activity stopAnimating];
                                    [self.cargando setHidden:YES];
                                    //------------------
-                                   if ([json objectForKey:@"error"]==nil && [[res objectForKey:@"IdUser"] intValue]>0) {
+                                   if ([json objectForKey:@"ERROR"]==nil && [[res objectForKey:@"IDUSER"] intValue]>0) {
                                        
-                                       idUs = [res objectForKey:@"IdUser"];
-                                       nameUser = [res objectForKey:@"username"];
+                                       idUs = [res objectForKey:@"IDUSER"];
+                                       nameUser = [res objectForKey:@"USERNAME"];
+                                       NSString *jsonString = [res objectForKey:@"JSON"];
                                        
-                                       NSString *filePath = [[NSBundle mainBundle] pathForResource:@"config" ofType:@"json"];
-                                       NSData *data = [NSData dataWithContentsOfFile:filePath];
-                                       jsonParse= [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-                                   
+                                       //NSString *filePath = [[NSBundle mainBundle] pathForResource:@"config" ofType:@"json"];
+                                       //NSData *data = [NSData dataWithContentsOfFile:filePath];
+                                       NSData *dataBien = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+                                       //jsonParse= [NSJSONSerialization JSONObjectWithData:dataBien options:0 error:nil];
+                                       //DLog(@"%@",jsonParse);
+                                       //DLog(@"%@",jsonString);
                                        //NSString *b = pwdHashed;
                                        //NSString *c = nameUser;
                                        appDelegate.user = nameUser;
                                        appDelegate.pwd = pwdHashed;
-                                       appDelegate.jsonArray = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+                                       appDelegate.jsonArray = [NSJSONSerialization JSONObjectWithData:dataBien options:0 error:nil];
                                        
                                        //NSMutableDictionary *dic = [[NSMutableDictionary alloc] initWithObjectsAndKeys:b,KEY_PWD,c,KEY_USER,nil];
                                        //[dic writeToFile:[self rutaFicheroVar] atomically:YES];

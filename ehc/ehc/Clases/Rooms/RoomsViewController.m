@@ -192,7 +192,7 @@
     if ([itemsNamesArray[indexPath.row] isEqualToString:@"TV"]) {
         [self llamarAsacarTv];
     }
-    else if ([itemsNamesArray[indexPath.row] isEqualToString:@"Luces"]) {
+    else if ([itemsNamesArray[indexPath.row] isEqualToString:@"LIGTHS"]) {
         [self llamarAsacarLuces];
     }
     
@@ -261,7 +261,7 @@
     else if ([item isEqualToString:@"Aire Acondicionado"]) {
         img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"fan-50"]];
     }
-    else if ([item isEqualToString:@"Luces"]) {
+    else if ([item isEqualToString:@"LIGTHS"]) {
         img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"lamp-50"]];
     }
     else if ([item isEqualToString:@"Enchufes"]) {

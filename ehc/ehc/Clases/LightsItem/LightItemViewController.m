@@ -47,11 +47,13 @@
     if (!onOff.on) {
         [onOff setOn:NO];
         [labelOnOff setText:@"OFF"];
+        [lightImage setAlpha:0.0];
         [self sendData:0];//es apagado
     }
     else{
         [onOff setOn:YES];
         [labelOnOff setText:@"ON"];
+        [lightImage setAlpha:1.0];
         [self sendData:1];//es encendido
     }
 }
@@ -64,14 +66,27 @@
     NSString *job = [NSString stringWithFormat:@"%d",button];
     NSString *status = @"1";
     
-    NSString* command = @"sendJob";//(sender.tag==1)?@"register":@"login";
+//    NSString* command = @"sendJob";//(sender.tag==1)?@"register":@"login";
+//    NSMutableDictionary* params =[NSMutableDictionary dictionaryWithObjectsAndKeys:
+//                                  command, @"command",
+//                                  idUser, @"idUser",
+//                                  idRoom, @"idRoom",
+//                                  idItem, @"idItem",
+//                                  job, @"job",
+//                                  status, @"status",
+//                                  nil];
+    NSString* command = @"doaction";//(sender.tag==1)?@"register":@"login";
     NSMutableDictionary* params =[NSMutableDictionary dictionaryWithObjectsAndKeys:
                                   command, @"command",
-                                  idUser, @"idUser",
-                                  idRoom, @"idRoom",
-                                  idItem, @"idItem",
-                                  job, @"job",
-                                  status, @"status",
+                                  //@"1",@"idUser",
+                                  //@"2",@"idMando",
+                                  //@"0132167221351",@"estado",
+                                  @"bertoldo", @"username",
+                                  @"casaBertoldo", @"housename",
+                                  @"cocina", @"roomname",
+                                  @"LIGTHS", @"servicename",
+                                  @"ENVIAR", @"actionname",
+                                  job,@"data",
                                   nil];
     //make the call to the web API
     [[API sharedInstance] commandWithParams:params
@@ -83,12 +98,12 @@
                                    //Finaliza cargando
                                    //------------------
                                    if ([json objectForKey:@"error"]==nil) {
-                                       UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Pulsado" message:[NSString stringWithFormat:@"Enviado pulsación de boton %d",button] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-                                       [alert show];
+//                                       UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Pulsado" message:[NSString stringWithFormat:@"Enviado pulsación de boton %d",button] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+//                                       [alert show];
                                        
                                    } else {
                                        //error
-                                       [UIAlertView error:[json objectForKey:@"error"]];
+                                       //[UIAlertView error:[json objectForKey:@"error"]];
                                    }
                                }];
     

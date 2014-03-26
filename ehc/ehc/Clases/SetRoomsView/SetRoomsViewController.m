@@ -40,8 +40,9 @@
 	// Do any additional setup after loading the view.
     [self.collectionRooms registerNib:[UINib nibWithNibName:@"RoomsCell" bundle:nil] forCellWithReuseIdentifier:@"RoomsCellID"];
     
-    numberOfRooms = ((NSString*)[appDelegate.jsonArray objectForKey:@"numerosH"]).intValue;
-    dictionaryForRooms = [appDelegate.jsonArray objectForKey:@"Habitaciones"];
+    //numberOfRooms = ((NSString*)[appDelegate.jsonArray objectForKey:@"numerosH"]).intValue;
+    numberOfRooms = [[appDelegate.jsonArray objectForKey:@"Rooms"] count];
+    dictionaryForRooms = [appDelegate.jsonArray objectForKey:@"Rooms"];
     
     self.navigationItem.title = @"Rooms";
 }
@@ -78,9 +79,10 @@
         cell = [[RoomsCell alloc] initWithFrame:CGRectMake(0, 0, 130, 130)];
     }
     
-    NSArray *arrayRooms = [dictionaryForRooms objectForKey:[NSString stringWithFormat:@"H%d",indexPath.row+1]];
+    //NSArray *arrayRooms = [dictionaryForRooms objectForKey:[NSString stringWithFormat:@"R%d",indexPath.row+1]];
+    NSDictionary *room = [dictionaryForRooms objectForKey:[NSString stringWithFormat:@"R%d",indexPath.row+1]];
     
-    [cell.roomName setText:[arrayRooms objectAtIndex:0]];
+    [cell.roomName setText:[room objectForKey:@"name"]];
     [cell.roomName setTextColor:[UIColor whiteColor]];
     [cell setBackgroundColor:[UIColor lightGrayColor]];
     [cell.layer setCornerRadius:0.5];
@@ -110,10 +112,11 @@
     
     NSMutableArray *array = [NSMutableArray arrayWithCapacity:5];
     for (int i = 0; i < numberOfRooms; i++) {
-        NSArray *arrayRooms = [dictionaryForRooms objectForKey:[NSString stringWithFormat:@"H%d",i+1]];
-
-        RoomsViewController *room = [[RoomsViewController alloc] initWithFrame:CGRectMake(0, 0, 320, 568) withNameOfRoom:[arrayRooms objectAtIndex:0] numberOfRoom:i andNumberOfItems:[arrayRooms objectAtIndex:1] andDelegate:self];
-        room.title = [arrayRooms objectAtIndex:0];
+        //NSArray *arrayRooms = [dictionaryForRooms objectForKey:[NSString stringWithFormat:@"H%d",i+1]];
+        NSDictionary *dic = [dictionaryForRooms objectForKey:[NSString stringWithFormat:@"R%d",i+1]];
+        
+        RoomsViewController *room = [[RoomsViewController alloc] initWithFrame:CGRectMake(0, 0, 320, 568) withNameOfRoom:[dic objectForKey:@"name"] numberOfRoom:i andNumberOfItems:[dic objectForKey:@"items"] andDelegate:self];
+        room.title = [dic objectForKey:@"name"];
         [array addObject:room];
     }
     [annotatedPager setViewControllers:array animated:NO];

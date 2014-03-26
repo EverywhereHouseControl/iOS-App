@@ -32,6 +32,8 @@
         [buttonLabel setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [buttonLabel addTarget:self action:@selector(closeTarea) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:buttonLabel];
+        
+        
     }
     return self;
 }

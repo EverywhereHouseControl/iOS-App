@@ -10,12 +10,18 @@
 #import "CKCalendarView.h"
 #import "IonIcons.h"
 #import "TareaViewController.h"
+#import "UIView+FrameUtils.h"
 
 #define kTransitionSpeed 0.02f
 #define kLargeLayoutScale 2.5F
 
 #define MAX_COUNT 20
 #define CELL_ID @"CELL_ID"
+
+#define NAME_TAREA @"nameTarea"
+#define DATE_TAREA @"dateTarea"
+#define ACTIONS_TAREA @"actionsTarea"
+#define ADMIN_TAREA @"adminTarea"
 
 @interface EventosViewController ()<CKCalendarDelegate>
 
@@ -24,6 +30,12 @@
 @property(nonatomic, strong) NSDateFormatter *dateFormatter;
 @property(nonatomic, strong) NSDate *minimumDate;
 @property(nonatomic, strong) NSArray *disabledDates;
+
+@property(nonatomic, strong) NSMutableDictionary *allTareas;
+@property(nonatomic, strong) NSMutableArray *tareasFechaPulsada;
+
+@property (nonatomic, strong) UIView *addTareaView;
+@property (nonatomic, strong) UIView *addActionsToEventView;
 
 @end
 
@@ -115,11 +127,44 @@
     [self.view addSubview:tareasLabel];
 }
 
+- (void)configureTareasWithServer{
+    self.allTareas = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *tarea = [[NSMutableDictionary alloc] init];
+    [tarea setObject:@"Encender TV" forKey:NAME_TAREA];
+    [tarea setObject:@"Encender TV" forKey:ADMIN_TAREA];
+    [tarea setObject:@"Encender TV" forKey:DATE_TAREA];
+    [tarea setObject:@"Encender TV" forKey:ACTIONS_TAREA];
+    NSMutableDictionary *tarea1 = [[NSMutableDictionary alloc] init];
+    [tarea1 setObject:@"Encender TV" forKey:NAME_TAREA];
+    [tarea1 setObject:@"Encender TV" forKey:ADMIN_TAREA];
+    [tarea1 setObject:@"Encender TV" forKey:DATE_TAREA];
+    [tarea1 setObject:@"Encender TV" forKey:ACTIONS_TAREA];
+    NSMutableDictionary *tarea2 = [[NSMutableDictionary alloc] init];
+    [tarea2 setObject:@"Encender TV" forKey:NAME_TAREA];
+    [tarea2 setObject:@"Encender TV" forKey:ADMIN_TAREA];
+    [tarea2 setObject:@"Encender TV" forKey:DATE_TAREA];
+    [tarea2 setObject:@"Encender TV" forKey:ACTIONS_TAREA];
+    NSMutableDictionary *tarea3 = [[NSMutableDictionary alloc] init];
+    [tarea3 setObject:@"Encender TV" forKey:NAME_TAREA];
+    [tarea3 setObject:@"Encender TV" forKey:ADMIN_TAREA];
+    [tarea3 setObject:@"Encender TV" forKey:DATE_TAREA];
+    [tarea3 setObject:@"Encender TV" forKey:ACTIONS_TAREA];
+    NSMutableDictionary *tarea4 = [[NSMutableDictionary alloc] init];
+    [tarea4 setObject:@"Encender TV" forKey:NAME_TAREA];
+    [tarea4 setObject:@"Encender TV" forKey:ADMIN_TAREA];
+    [tarea4 setObject:@"Encender TV" forKey:DATE_TAREA];
+    [tarea4 setObject:@"Encender TV" forKey:ACTIONS_TAREA];
+    NSArray *array = [[NSArray alloc] initWithObjects:tarea,tarea1,tarea2,tarea3,tarea4, nil];
+    [self.allTareas setObject:array forKey:@"06/03/2014"];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     [self.navigationController.navigationBar setHidden:NO];
+    
+    [self configureTareasWithServer];
     
     [self configureViewCalendar];
     
@@ -133,6 +178,12 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    
+    [self cancelTareaButton];
 }
 
 - (void)didReceiveMemoryWarning
@@ -170,7 +221,10 @@
 }
 
 - (void)calendar:(CKCalendarView *)calendar didSelectDate:(NSDate *)date {
-    self.dateLabel.text = [self.dateFormatter stringFromDate:date];
+    //self.dateLabel.text = [self.dateFormatter stringFromDate:date];
+    DLog(@"fecha: %@",[self.dateFormatter stringFromDate:date]);
+    self.tareasFechaPulsada = [self.allTareas objectForKey:[self.dateFormatter stringFromDate:date]];
+    [self.collectionViewTareas reloadData];
 }
 
 - (BOOL)calendar:(CKCalendarView *)calendar willChangeToMonth:(NSDate *)date {
@@ -191,8 +245,152 @@
 
 #pragma mark - Methods AddTarea
 
-- (void) addButtonAction{
+-(void)createAddTareaMenu
+{
+ 	if (!self.addTareaView) {
+		self.addTareaView = [[UIView alloc] initWithFrame:CGRectMake(20, -400, 280, 400)];
+		[self.addTareaView setBackgroundColor:[UIColor whiteColor]];
+		
+		UIButton *addButton = [[UIButton alloc] initWithFrame:CGRectMake(self.addTareaView.frame.size.width/2 - 20, self.addTareaView.frame.size.height - 50, 40, 40)];
+		//[exit setImage:[UIImage imageNamed:@"Exit"] forState:UIControlStateNormal];
+        [addButton setTitle:@"Add" forState:UIControlStateNormal];
+        [addButton.titleLabel setFont:[UIFont fontWithName:@"Futura-CondensedMedium" size:22]];
+        [addButton setTitleColor:colorApp forState:UIControlStateNormal];
+		[addButton addTarget:self action:@selector(addTarea) forControlEvents:UIControlEventTouchUpInside];
+        
+        UIButton *cancelButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
+       // [IonIcons label:cancelButton.titleLabel setIcon:icon_close_circled size:15.0f color:[UIColor whiteColor] sizeToFit:YES];
+        [cancelButton setImage:[IonIcons imageWithIcon:icon_close_circled size:20.0f color:[UIColor blackColor]] forState:UIControlStateNormal];
+		//[exit setImage:[UIImage imageNamed:icon_close_circled] forState:UIControlStateNormal];
+        //[cancelButton setTitle:@"Cancel" forState:UIControlStateNormal];
+        //[cancelButton setTitleColor:colorApp forState:UIControlStateNormal];
+		[cancelButton addTarget:self action:@selector(cancelTareaButton) forControlEvents:UIControlEventTouchUpInside];
+		
+		UILabel *titleEventLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.addTareaView.frame.size.width/2 - 70, 30, 140, 40)];
+        //[titleEventLabel setCenter:CGPointMake(self.addTareaView.frame.size.width/2, 30)];
+        [titleEventLabel setTextAlignment:NSTextAlignmentCenter];
+        [titleEventLabel setFont:[UIFont fontWithName:@"Futura-CondensedMedium" size:22]];
+        [titleEventLabel setTextColor:colorApp];
+        [titleEventLabel setText:NSLocalizedString(@"New Event",@"")];
+        
+        UILabel *nameEventLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 80, 140, 40)];
+        //[nameEventLabel setCenter:CGPointMake(40, 80)];
+        [nameEventLabel setTextAlignment:NSTextAlignmentLeft];
+        [nameEventLabel setFont:[UIFont fontWithName:@"Futura-CondensedMedium" size:22]];
+        [nameEventLabel setTextColor:colorApp];
+        [nameEventLabel setText:NSLocalizedString(@"Name:",@"")];
+        
+        UILabel *descriptionEventLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 120, 140, 40)];
+        //[descriptionEventLabel setCenter:CGPointMake(40, 120)];
+        [descriptionEventLabel setTextAlignment:NSTextAlignmentLeft];
+        [descriptionEventLabel setFont:[UIFont fontWithName:@"Futura-CondensedMedium" size:22]];
+        [descriptionEventLabel setTextColor:colorApp];
+        [descriptionEventLabel setText:NSLocalizedString(@"Description:",@"")];
+        
+        UILabel *dateEventLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 200, 140, 40)];
+        //[dateEventLabel setCenter:CGPointMake(40, 200)];
+        [dateEventLabel setTextAlignment:NSTextAlignmentLeft];
+        [dateEventLabel setFont:[UIFont fontWithName:@"Futura-CondensedMedium" size:22]];
+        [dateEventLabel setTextColor:colorApp];
+        [dateEventLabel setText:NSLocalizedString(@"Date:",@"")];
+        
+        UILabel *timeEventLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 240, 140, 40)];
+        //[timeEventLabel setCenter:CGPointMake(40, 240)];
+        [timeEventLabel setTextAlignment:NSTextAlignmentLeft];
+        [timeEventLabel setFont:[UIFont fontWithName:@"Futura-CondensedMedium" size:22]];
+        [timeEventLabel setTextColor:colorApp];
+        [timeEventLabel setText:NSLocalizedString(@"Time::",@"")];
+        
+//        UILabel *actionsEventLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 300, 140, 40)];
+//        //[actionsEventLabel setCenter:CGPointMake(40, 300)];
+//        [actionsEventLabel setTextAlignment:NSTextAlignmentLeft];
+//        [actionsEventLabel setFont:[UIFont fontWithName:@"Futura-CondensedMedium" size:22]];
+//        [actionsEventLabel setTextColor:colorApp];
+//        [actionsEventLabel setText:NSLocalizedString(@"Actions:",@"")];
+        
+        UIButton *actionsEventButton = [[UIButton alloc] initWithFrame:CGRectMake(self.addTareaView.frame.size.width/2 - 50, self.addTareaView.frame.size.height - 100, 100, 40)];
+		//[exit setImage:[UIImage imageNamed:@"Exit"] forState:UIControlStateNormal];
+        [actionsEventButton setTitle:@"Actions" forState:UIControlStateNormal];
+        [actionsEventButton.titleLabel setFont:[UIFont fontWithName:@"Futura-CondensedMedium" size:22]];
+        [actionsEventButton setTitleColor:colorApp forState:UIControlStateNormal];
+		[actionsEventButton addTarget:self action:@selector(showActions) forControlEvents:UIControlEventTouchUpInside];
+        
+        
+		
+        [self.addTareaView addSubview:addButton];
+        [self.addTareaView addSubview:cancelButton];
+        [self.addTareaView addSubview:actionsEventButton];
+        
+        [self.addTareaView addSubview:titleEventLabel];
+        [self.addTareaView addSubview:nameEventLabel];
+        [self.addTareaView addSubview:descriptionEventLabel];
+        [self.addTareaView addSubview:dateEventLabel];
+        [self.addTareaView addSubview:timeEventLabel];
+        //[self.addTareaView addSubview:actionsEventLabel];
+		
+		[appDelegate.window.rootViewController.view addSubview:self.addTareaView];
+        
+       
+	}
+}
+
+-(void)createAddActionsToEventView
+{
+ 	if (!self.addActionsToEventView) {
+		self.addActionsToEventView = [[UIView alloc] initWithFrame:CGRectMake(0, -self.view.frame.size.height, self.view.frame.size.width, self.view.frame.size.height)];
+		[self.addActionsToEventView setBackgroundColor:colorApp];
+        
+        UIView *viewLine = [[UIView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height/2, self.view.frame.size.width, 2)];
+        [viewLine setBackgroundColor:[UIColor whiteColor]];
+        [self.addActionsToEventView addSubview:viewLine];
+        
+        UIView *viewAction = [[UIView alloc] initWithFrame:CGRectMake(50, 50, 75, 60)];
+        [viewAction setTag:0];
+        [viewAction setBackgroundColor:[UIColor whiteColor]];
+        
+        UILabel *titleActionLabel = [[UILabel alloc] initWithFrame:CGRectMake(viewAction.frame.size.width/2 - 20, viewAction.frame.size.height/2 - 20, 40, 40)];
+        //[titleEventLabel setCenter:CGPointMake(self.addTareaView.frame.size.width/2, 30)];
+        [titleActionLabel setTextAlignment:NSTextAlignmentCenter];
+        [titleActionLabel setNumberOfLines:3];
+        [titleActionLabel setFont:[UIFont fontWithName:@"Futura-CondensedMedium" size:14]];
+        [titleActionLabel setTextColor:colorApp];
+        [titleActionLabel setText:NSLocalizedString(@"Encender TV",@"")];
+		
+        [viewAction addSubview:titleActionLabel];
+        [self.addActionsToEventView addSubview:viewAction];
+
+		[appDelegate.window.rootViewController.view addSubview:self.addActionsToEventView];
+        
+	}
+}
+
+- (void)showActions{
+    [self cancelTareaButton];
     
+    [self createAddActionsToEventView];
+    
+    [UIView animateWithDuration:0.8 delay:0 usingSpringWithDamping:0.6 initialSpringVelocity:6 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+		[self.addActionsToEventView frameMoveToY:0];
+	} completion:nil];
+}
+
+- (void)addTarea{
+    
+}
+
+- (void)cancelTareaButton
+{
+    [UIView animateWithDuration:0.4 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+		[self.addTareaView frameMoveToY:-400];
+	} completion:nil];
+}
+
+- (void) addButtonAction{
+    [self createAddTareaMenu];
+	
+    [UIView animateWithDuration:0.8 delay:0 usingSpringWithDamping:0.6 initialSpringVelocity:6 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+		[self.addTareaView frameMoveToY:80];
+	} completion:nil];
 }
 
 #pragma mark - Methos Paper View
@@ -212,7 +410,7 @@
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 3;
+    return [self.tareasFechaPulsada count];
 }
 
 

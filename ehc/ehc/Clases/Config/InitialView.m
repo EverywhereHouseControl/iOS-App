@@ -175,14 +175,20 @@
                                    // [self.activity stopAnimating];
                                    //[self.cargando setHidden:YES];
                                    //------------------
-                                   NSString *filePath = [[NSBundle mainBundle] pathForResource:@"config" ofType:@"json"];
-                                   NSData *data = [NSData dataWithContentsOfFile:filePath];
-                                   appDelegate.jsonArray = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+//                                   NSString *filePath = [[NSBundle mainBundle] pathForResource:@"config" ofType:@"json"];
+//                                   NSData *data = [NSData dataWithContentsOfFile:filePath];
+//                                   appDelegate.jsonArray = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
                                    
-                                   if ([json objectForKey:@"error"]==nil && [[res objectForKey:@"IdUser"] intValue]>0) {
+                                   if ([json objectForKey:@"ERROR"]==nil && [[res objectForKey:@"IDUSER"] intValue]>0) {
                                        
-                                       idUs = [res objectForKey:@"IdUser"];
-                                       nameUser = [res objectForKey:@"username"];
+                                       idUs = [res objectForKey:@"IDUSER"];
+                                       nameUser = [res objectForKey:@"USERNAME"];
+                                       
+                                       NSString *jsonString = [res objectForKey:@"JSON"];
+                                       NSData *dataBien = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+                                       appDelegate.jsonArray = [NSJSONSerialization JSONObjectWithData:dataBien options:0 error:nil];
+                                       //NSDictionary *jsonDinamico =[[res objectForKey:@"JSON"] objectForKey:@"Rooms"];
+                                       //appDelegate.jsonArray = jsonDinamico;
                                                                               //success
                                        [[API sharedInstance] setUser: res];
                                        

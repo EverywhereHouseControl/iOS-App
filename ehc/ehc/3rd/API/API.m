@@ -9,9 +9,10 @@
 #import "API.h"
 
 //the web location of the service
-#define kAPIHost @"http://ehcontrol.net"
+//#define kAPIHost @"http://ehcontrol.net"
 //#define kAPIHost @"http://192.168.2.147"
-#define kAPIPath @"EHControlConnect/"
+#define kAPIHost @"http://192.168.2.13"
+#define kAPIPath @"EHControlConnectkinki/"
 
 @implementation API
 @synthesize idUs;
@@ -55,7 +56,7 @@
 
 -(BOOL)isAuthorized
 {
-    return [[user objectForKey:@"IdUser"] intValue]>0;
+    return [[user objectForKey:@"IDUSER"] intValue]>0;
 }
 
 -(void)commandWithParams:(NSMutableDictionary*)params onCompletion:(JSONResponseBlock)completionBlock
