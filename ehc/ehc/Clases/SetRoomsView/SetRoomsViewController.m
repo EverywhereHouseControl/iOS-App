@@ -114,7 +114,7 @@
     for (int i = 0; i < numberOfRooms; i++) {
         //NSArray *arrayRooms = [dictionaryForRooms objectForKey:[NSString stringWithFormat:@"H%d",i+1]];
         NSDictionary *dic = [dictionaryForRooms objectForKey:[NSString stringWithFormat:@"R%d",i+1]];
-        
+        appDelegate.nameRoom = [dic objectForKey:@"name"];
         RoomsViewController *room = [[RoomsViewController alloc] initWithFrame:CGRectMake(0, 0, 320, 568) withNameOfRoom:[dic objectForKey:@"name"] numberOfRoom:i andNumberOfItems:[dic objectForKey:@"items"] andDelegate:self];
         room.title = [dic objectForKey:@"name"];
         [array addObject:room];

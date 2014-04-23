@@ -14,6 +14,7 @@
 #import "defs.h"
 #import "PrincipalView.h"
 #import "PPPinPadViewController.h"
+#import "HousesViewController.h"
 
 @interface InitialView (){
     AFHTTPClient *_client;
@@ -96,12 +97,9 @@
     if (appDelegate.window.frame.size.height == 1024){
         [self performSegueWithIdentifier:@"ipad" sender:self];
     }
-    else if (appDelegate.window.frame.size.height == 568){
+    else {
         LoginScreen *loginController = (LoginScreen *) [self.storyboard instantiateViewControllerWithIdentifier:@"loginViewN"];
         [self presentViewController:loginController animated:NO completion:nil];
-    }
-    else{
-        [self performSegueWithIdentifier:@"loginFour" sender:self];
     }
 }
 
@@ -157,8 +155,9 @@
     //self.labelCargando.text = @"Connecting...";
     //[self.activity startAnimating];
     //fin cargando
+    appDelegate.nameUser = user;
     
-    NSString* command = @"login";//(sender.tag==1)?@"register":@"login";
+    NSString* command = @"login2";//(sender.tag==1)?@"register":@"login";
     NSMutableDictionary* params =[NSMutableDictionary dictionaryWithObjectsAndKeys:
                                   command, @"command",
                                   user, @"username",
@@ -169,7 +168,7 @@
                                onCompletion:^(NSDictionary *json) {
                                    //handle the response
                                    //result returned
-                                   NSDictionary* res = [[json objectForKey:@"result"] objectAtIndex:0];
+                                   NSDictionary* res = [json objectForKey:@"result"];
                                    
                                    //Finaliza cargando
                                    // [self.activity stopAnimating];
@@ -179,7 +178,7 @@
 //                                   NSData *data = [NSData dataWithContentsOfFile:filePath];
 //                                   appDelegate.jsonArray = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
                                    
-                                   if ([json objectForKey:@"ERROR"]==nil && [[res objectForKey:@"IDUSER"] intValue]>0) {
+                                   if ([[json objectForKey:@"error"] objectForKey:@"ERROR"]==0 && [[res objectForKey:@"IDUSER"] intValue]>0) {
                                        
                                        idUs = [res objectForKey:@"IDUSER"];
                                        nameUser = [res objectForKey:@"USERNAME"];
@@ -187,6 +186,8 @@
                                        NSString *jsonString = [res objectForKey:@"JSON"];
                                        NSData *dataBien = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
                                        appDelegate.jsonArray = [NSJSONSerialization JSONObjectWithData:dataBien options:0 error:nil];
+                                       DLog(@"%@ kkkk %@",appDelegate.jsonArray,[appDelegate.jsonArray objectForKey:@"House"]);
+                                       appDelegate.nameHouse = [appDelegate.jsonArray objectForKey:@"House"];
                                        //NSDictionary *jsonDinamico =[[res objectForKey:@"JSON"] objectForKey:@"Rooms"];
                                        //appDelegate.jsonArray = jsonDinamico;
                                                                               //success
@@ -220,18 +221,24 @@
 - (void)entrar{
     [[self activity] stopAnimating];
     if (appDelegate.window.frame.size.height == 1024){
-        PrincipalView *userController = (PrincipalView *) [self.storyboard instantiateViewControllerWithIdentifier:@"principalView"];
-        [self presentViewController:userController animated:YES completion:nil];
+        //PrincipalView *userController = (PrincipalView *) [self.storyboard instantiateViewControllerWithIdentifier:@"principalView"];
+        //[self presentViewController:userController animated:YES completion:nil];
+        HousesViewController *houseController = (HousesViewController *) [self.storyboard instantiateViewControllerWithIdentifier:@"HousesView"];
+        [self presentViewController:houseController animated:YES completion:nil];
     }
-    else if (appDelegate.window.frame.size.height == 568){
-        PrincipalView *userController = (PrincipalView *) [self.storyboard instantiateViewControllerWithIdentifier:@"principalView"];
-        [self.navigationController pushViewController:userController animated:YES];
+    else {//if (appDelegate.window.frame.size.height == 568){
+//        PrincipalView *userController = (PrincipalView *) [self.storyboard instantiateViewControllerWithIdentifier:@"principalView"];
+//        [self.navigationController pushViewController:userController animated:YES];
+        HousesViewController *houseController = (HousesViewController *) [self.storyboard instantiateViewControllerWithIdentifier:@"HousesView"];
+        [self.navigationController pushViewController:houseController animated:YES];
+        
+        //[self presentViewController:houseController animated:YES completion:nil];
         //[self presentViewController:userController animated:YES completion:nil];
     }
-    else{
-        PrincipalView *userController = (PrincipalView *) [self.storyboard instantiateViewControllerWithIdentifier:@"principalView"];
-        [self presentViewController:userController animated:YES completion:nil];
-    }
+//    else{
+//        PrincipalView *userController = (PrincipalView *) [self.storyboard instantiateViewControllerWithIdentifier:@"principalView"];
+//        [self presentViewController:userController animated:YES completion:nil];
+//    }
 }
 
 #pragma mark - Metodos de delegado

@@ -7,17 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Social/Social.h>
+#define KEY_PWD @"pwd"
+#define KEY_PWD_MD5 @"pwdMd5"
+#define KEY_USER @"usr"
+#define ficheroVar @"kinkiMola.plist"
 #import "AppDelegate.h"
 
-@interface MenuViewController : UITableViewController<UIActionSheetDelegate>{
-    //AppDelegate *appDelegate;
-}
+@protocol ContentUserScreenDelegate <NSObject>
 
--(void)llamarAperfil;
--(void)llamarAdetallesCuenta;
--(void)llamarAajustes;
--(void)llamarAinicio;
+-(void)cambiarDeVista:(NSString*)newView;
 
+@end
 
+@interface MenuViewController : UITableViewController<UIActionSheetDelegate>
+
+@property (nonatomic,strong)id<ContentUserScreenDelegate> delegateActions;
 
 @end

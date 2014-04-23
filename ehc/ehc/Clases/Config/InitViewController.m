@@ -42,15 +42,15 @@
 -(void)userDidJoin{
     if (appDelegate.window.frame.size.height == 1024){
         
-        self.topViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"UserIpad"];
+        self.topViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"principalView"];
     }
-    else if (appDelegate.window.frame.size.height == 568){
+    else {//if (appDelegate.window.frame.size.height == 568){
         
-        self.topViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"User5"];
+        self.topViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"principalView"];
     }
-    else {
-        self.topViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"User"];
-    }
+//    else {
+//        self.topViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"User"];
+//    }
     //self.slidingViewController.shouldAllowUserInteractionsWhenAnchored =YES;
     [[self activity] stopAnimating];
     [[self activity] setHidden:YES];

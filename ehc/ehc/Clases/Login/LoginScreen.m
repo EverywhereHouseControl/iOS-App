@@ -113,8 +113,8 @@
     pwdHashed = [self md5:fldPassword.text];
     nameUser = fldUsername.text;
     
-    
-    NSString* command = @"login";//(sender.tag==1)?@"register":@"login";
+    appDelegate.nameUser = nameUser;
+    NSString* command = @"login2";//(sender.tag==1)?@"register":@"login";
     NSMutableDictionary* params =[NSMutableDictionary dictionaryWithObjectsAndKeys:
                                   command, @"command",
                                   nameUser, @"username",
@@ -126,21 +126,21 @@
                                    //handle the response
                                    //result returned
                                    DLog(@"%@",json);
-                                   NSDictionary* res = [[json objectForKey:@"result"] objectAtIndex:0];
+                                   NSDictionary* res = [json objectForKey:@"result"];
                                    
                                    //Finaliza cargando
                                    [self.activity stopAnimating];
                                    [self.cargando setHidden:YES];
                                    //------------------
-                                   if ([json objectForKey:@"ERROR"]==nil && [[res objectForKey:@"IDUSER"] intValue]>0) {
+                                   if ([[[json objectForKey:@"error"] objectForKey:@"ERROR"]intValue] == 0 && [[res objectForKey:@"IDUSER"] intValue]>0){
                                        
                                        idUs = [res objectForKey:@"IDUSER"];
                                        nameUser = [res objectForKey:@"USERNAME"];
-                                       NSString *jsonString = [res objectForKey:@"JSON"];
+                                       NSDictionary *jsonString = [res objectForKey:@"JSON"];
                                        
                                        //NSString *filePath = [[NSBundle mainBundle] pathForResource:@"config" ofType:@"json"];
                                        //NSData *data = [NSData dataWithContentsOfFile:filePath];
-                                       NSData *dataBien = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+                                       //NSData *dataBien;// = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
                                        //jsonParse= [NSJSONSerialization JSONObjectWithData:dataBien options:0 error:nil];
                                        //DLog(@"%@",jsonParse);
                                        //DLog(@"%@",jsonString);
@@ -148,7 +148,7 @@
                                        //NSString *c = nameUser;
                                        appDelegate.user = nameUser;
                                        appDelegate.pwd = pwdHashed;
-                                       appDelegate.jsonArray = [NSJSONSerialization JSONObjectWithData:dataBien options:0 error:nil];
+                                       appDelegate.jsonArray = jsonString;//[NSJSONSerialization JSONObjectWithData:dataBien options:0 error:nil];
                                        
                                        //NSMutableDictionary *dic = [[NSMutableDictionary alloc] initWithObjectsAndKeys:b,KEY_PWD,c,KEY_USER,nil];
                                        //[dic writeToFile:[self rutaFicheroVar] atomically:YES];
@@ -164,7 +164,8 @@
                                        
                                    } else {
                                        //error
-                                       [UIAlertView error:[json objectForKey:@"error"]];
+                                       NSString *s = [NSString stringWithFormat:@"%@",[[json objectForKey:@"error"] objectForKey:@"ENGLISH"]];
+                                       [UIAlertView error:s];
                                    }
                                }];
     
@@ -199,13 +200,13 @@
     if (appDelegate.window.frame.size.height == 1024){
         movementDistance = 0;
     }
-    else if (appDelegate.window.frame.size.height == 568){
+    else{ //if (appDelegate.window.frame.size.height == 568){
         movementDistance = 20;
     }
-    else{
-        movementDistance = 120;
-    }
-    
+//    else{
+//        movementDistance = 120;
+//    }
+
     const float movementDuration = 0.3f; // lo que sea necesario
     
     int movement = (up ? -movementDistance : movementDistance);

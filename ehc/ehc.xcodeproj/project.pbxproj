@@ -111,6 +111,9 @@
 		BAE500F018BE429C0069C3ED /* next@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAE500DF18BE429C0069C3ED /* next@2x.png */; };
 		BAE500F118BE429C0069C3ED /* next_active.png in Resources */ = {isa = PBXBuildFile; fileRef = BAE500E018BE429C0069C3ED /* next_active.png */; };
 		BAE500F218BE429C0069C3ED /* next_active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAE500E118BE429C0069C3ED /* next_active@2x.png */; };
+		BAFAC1A719080F8600559C21 /* HousesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFAC1A619080F8600559C21 /* HousesViewController.m */; };
+		BAFAC1AB190811B500559C21 /* HousesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFAC1AA190811B500559C21 /* HousesCell.m */; };
+		BAFAC1AD190811CC00559C21 /* HousesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAFAC1AC190811CC00559C21 /* HousesCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -267,6 +270,11 @@
 		BAE500DF18BE429C0069C3ED /* next@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "next@2x.png"; sourceTree = "<group>"; };
 		BAE500E018BE429C0069C3ED /* next_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next_active.png; sourceTree = "<group>"; };
 		BAE500E118BE429C0069C3ED /* next_active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "next_active@2x.png"; sourceTree = "<group>"; };
+		BAFAC1A519080F8600559C21 /* HousesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HousesViewController.h; path = ../Config/HousesViewController.h; sourceTree = "<group>"; };
+		BAFAC1A619080F8600559C21 /* HousesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HousesViewController.m; path = ../Config/HousesViewController.m; sourceTree = "<group>"; };
+		BAFAC1A9190811B500559C21 /* HousesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HousesCell.h; sourceTree = "<group>"; };
+		BAFAC1AA190811B500559C21 /* HousesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HousesCell.m; sourceTree = "<group>"; };
+		BAFAC1AC190811CC00559C21 /* HousesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HousesCell.xib; sourceTree = "<group>"; };
 		C85B6E0A46AA43878517A8A6 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		F6C35645D3B44615AFD3D970 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -506,6 +514,7 @@
 				BAA9EFB7185934A8006FD3F8 /* Rooms */,
 				BAA9EFC0185934D2006FD3F8 /* SetRoomsView */,
 				BAD46B361856AF7E006F0930 /* FirstView */,
+				BAFAC1A81908117400559C21 /* HousesView */,
 				BAA9E9D81846D9FF00E55969 /* Menu */,
 				BAA9E9C21846D24100E55969 /* Config */,
 				BAA9E9CB1846D24100E55969 /* Login */,
@@ -785,6 +794,18 @@
 			path = UIImages;
 			sourceTree = "<group>";
 		};
+		BAFAC1A81908117400559C21 /* HousesView */ = {
+			isa = PBXGroup;
+			children = (
+				BAFAC1A519080F8600559C21 /* HousesViewController.h */,
+				BAFAC1A619080F8600559C21 /* HousesViewController.m */,
+				BAFAC1A9190811B500559C21 /* HousesCell.h */,
+				BAFAC1AA190811B500559C21 /* HousesCell.m */,
+				BAFAC1AC190811CC00559C21 /* HousesCell.xib */,
+			);
+			path = HousesView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -908,6 +929,7 @@
 				BAE2C91018C5676100080B1A /* kinkiMola.plist in Resources */,
 				BA13996618C0E6C00064EF95 /* left_arrow.png in Resources */,
 				BAE500F018BE429C0069C3ED /* next@2x.png in Resources */,
+				BAFAC1AD190811CC00559C21 /* HousesCell.xib in Resources */,
 				BAAECBB2185FE37100A0D463 /* DVD.png in Resources */,
 				BAAECBB6185FE37100A0D463 /* Proyector.png in Resources */,
 				BAD46B381856B4C5006F0930 /* logLogin.png in Resources */,
@@ -992,12 +1014,14 @@
 				BAE500E318BE429C0069C3ED /* MyActivityIndicator.m in Sources */,
 				BAD4DE8F18C7795A00CE9806 /* FrameUtils.m in Sources */,
 				BAA9E9CF1846D24100E55969 /* InitViewController.m in Sources */,
+				BAFAC1AB190811B500559C21 /* HousesCell.m in Sources */,
 				BA8913A6183D6F3100F97172 /* AppDelegate.m in Sources */,
 				BAA9EFC8185934D2006FD3F8 /* SetRoomsViewController.m in Sources */,
 				BAA9E9DE1846DA4100E55969 /* MenuHeaderCell.m in Sources */,
 				BAA9EFBF185934A8006FD3F8 /* RoomsViewController.m in Sources */,
 				BAA9E9DD1846DA4100E55969 /* MenuCell.m in Sources */,
 				BA13995C18C0E0030064EF95 /* EventosViewController.m in Sources */,
+				BAFAC1A719080F8600559C21 /* HousesViewController.m in Sources */,
 				BAA9E9E31846DBF300E55969 /* UIAlertView+error.m in Sources */,
 				BAD46B351856AF76006F0930 /* FristViewController.m in Sources */,
 				BAA9EFC6185934D2006FD3F8 /* RoomsCell.m in Sources */,
@@ -1153,6 +1177,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ehc/ehc-Prefix.pch";
 				INFOPLIST_FILE = "ehc/ehc-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1168,6 +1193,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ehc/ehc-Prefix.pch";
 				INFOPLIST_FILE = "ehc/ehc-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

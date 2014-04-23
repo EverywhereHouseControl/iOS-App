@@ -7,8 +7,9 @@
 //
 
 #import "DropdownMenuController.h"
+#import "MenuViewController.h"
 
-@interface PrincipalView : DropdownMenuController
+@interface PrincipalView : DropdownMenuController<UIGestureRecognizerDelegate,ContentUserScreenDelegate>
 
 - (IBAction)buttonExitTouch:(id)sender;
 

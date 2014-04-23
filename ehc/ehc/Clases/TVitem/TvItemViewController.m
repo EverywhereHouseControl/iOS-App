@@ -62,16 +62,105 @@
     [self sendData:buttonTouch];
 }
 
+- (NSString*)dameStringPorNumero:(int)button{
+    NSString *st;
+    switch (button) {
+        case 0:
+            //return @"16730295";
+            return @"ZERO";
+            break;
+        case 1:
+            //return @"16748655";
+            return @"ONE";
+            break;
+        case 2:
+            //return @"16758855";
+            return @"TWO";
+            break;
+        case 3:
+//            return @"16775175";
+            return @"THREE";
+            break;
+        case 4:
+            //return @"16756815";
+            
+            return @"FOUR";
+            break;
+        case 5:
+  //return @"16750695";
+            return @"FIVE";
+            break;
+        case 6:
+  //return @"16767015";
+            return @"SIX";
+            break;
+        case 7:
+  //return @"716746615";
+                      return @"SEVEN";
+            break;
+        case 8:
+            //return @"16754775";
+            return @"EIGHT";
+            break;
+        case 9:
+//  return @"16771095";
+            return @"NINE";
+            break;
+        case 10:
+            
+            return @"FAV";
+            break;
+        case 11:
+            return @"SETUP";
+            break;
+        case 12:
+            //return @"16722135";
+            return @"POWER";
+            break;
+        case 14:
+            return @"UP";
+            break;
+        case 15:
+            return @"RIGHT";
+            break;
+        case 16:
+            return @"DOWN";
+            break;
+        case 17:
+            return @"LEFT";
+            break;
+        case 18:
+            return @"PLAY";
+            break;
+        case 19:
+            return @"16745085";
+            //return @"MUTE";
+            break;
+        case 20:
+            return @"VOLUMEUP";
+            break;
+        case 21:
+            return @"VOLUMEDOWN";
+            //return @"MUTE";
+            break;
+            
+        default:
+            break;
+    }
+    return @"00";
+}
+
 -(void)sendData:(int)button
 {
-    NSString *idUser = @"1";
-    NSString *idRoom = @"1";
-    NSString *idItem = @"1";
-    NSString *job = [NSString stringWithFormat:@"%d",button];
+    NSString *data = [self dameStringPorNumero:button];
     
-    
-    
-    NSString *status = @"1";
+    NSString *nameUser = appDelegate.nameUser;
+    NSString *nameHouse = appDelegate.nameHouse;
+    NSString *nameRoom = appDelegate.nameRoom;
+    NSString *nameService = @"TV";//appDelegate.nameService;
+    NSString *nameAction = @"SEND";//appDelegate.nameAction;
+    //[NSString stringWithFormat:@"%d",button];
+    //NSString *status = @"1";
     
     NSString* command = @"doaction";//(sender.tag==1)?@"register":@"login";
     NSMutableDictionary* params =[NSMutableDictionary dictionaryWithObjectsAndKeys:
@@ -79,12 +168,12 @@
                                   //@"1",@"idUser",
                                   //@"2",@"idMando",
                                   //@"0132167221351",@"estado",
-                                  @"bertoldo", @"username",
-                                  @"casaBertoldo", @"housename",
-                                  @"cocina", @"roomname",
-                                  @"TV", @"servicename",
-                                  @"ENVIAR", @"actionname",
-                                  job,@"data",
+                                  nameUser, @"username",
+                                  nameHouse, @"housename",
+                                  nameRoom, @"roomname",
+                                  nameService, @"servicename",
+                                  nameAction, @"actionname",
+                                  data,@"data",
                                   nil];
     //make the call to the web API
     [[API sharedInstance] commandWithParams:params

@@ -20,6 +20,13 @@
 @property (nonatomic,strong)NSString *pwd;
 @property (nonatomic,strong)NSString *user;
 
+@property (nonatomic,strong)NSString *nameUser;
+@property (nonatomic,strong)NSString *nameHouse;
+@property (nonatomic,strong)NSString *nameRoom;
+@property (nonatomic,strong)NSString *nameService;
+@property (nonatomic,strong)NSString *nameAction;
+@property (nonatomic,strong)NSString *data;
+
 @property (nonatomic, strong) NSDictionary *jsonArray;
 
 @end

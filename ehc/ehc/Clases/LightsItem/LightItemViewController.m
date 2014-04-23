@@ -60,33 +60,34 @@
 
 -(void)sendData:(int)button
 {
-    NSString *idUser = @"1";
-    NSString *idRoom = @"1";
-    NSString *idItem = @"2";
-    NSString *job = [NSString stringWithFormat:@"%d",button];
-    NSString *status = @"1";
+    NSString *data;
+    if (button == 1) {
+        data = @"";
+    }
+    else{
+        data = @"";
+    }
     
-//    NSString* command = @"sendJob";//(sender.tag==1)?@"register":@"login";
-//    NSMutableDictionary* params =[NSMutableDictionary dictionaryWithObjectsAndKeys:
-//                                  command, @"command",
-//                                  idUser, @"idUser",
-//                                  idRoom, @"idRoom",
-//                                  idItem, @"idItem",
-//                                  job, @"job",
-//                                  status, @"status",
-//                                  nil];
+    NSString *nameUser = appDelegate.nameUser;
+    NSString *nameHouse = appDelegate.nameHouse;
+    NSString *nameRoom = appDelegate.nameRoom;
+    NSString *nameService = @"LIGHTS";//nil;//appDelegate.nameService;
+    NSString *nameAction = @"SEND";//appDelegate.nameAction;
+    //[NSString stringWithFormat:@"%d",button];
+    //NSString *status = @"1";
+    
     NSString* command = @"doaction";//(sender.tag==1)?@"register":@"login";
     NSMutableDictionary* params =[NSMutableDictionary dictionaryWithObjectsAndKeys:
                                   command, @"command",
                                   //@"1",@"idUser",
                                   //@"2",@"idMando",
                                   //@"0132167221351",@"estado",
-                                  @"bertoldo", @"username",
-                                  @"casaBertoldo", @"housename",
-                                  @"cocina", @"roomname",
-                                  @"LIGTHS", @"servicename",
-                                  @"ENVIAR", @"actionname",
-                                  job,@"data",
+                                  nameUser, @"username",
+                                  nameHouse, @"housename",
+                                  nameRoom, @"roomname",
+                                  nameService, @"servicename",
+                                  nameAction, @"actionname",
+                                  data,@"data",
                                   nil];
     //make the call to the web API
     [[API sharedInstance] commandWithParams:params
@@ -97,10 +98,10 @@
                                    
                                    //Finaliza cargando
                                    //------------------
-                                   if ([json objectForKey:@"error"]==nil) {
-//                                       UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Pulsado" message:[NSString stringWithFormat:@"Enviado pulsación de boton %d",button] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-//                                       [alert show];
-                                       
+                                   if ([json objectForKey:@"ERROR"]==0) {
+                                       // UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Pulsado" message:[NSString stringWithFormat:@"Enviado pulsación de boton %d",button] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                                       //[alert show];
+                                      // [self updateLabelState:[NSString stringWithFormat:@"%d",button]];
                                    } else {
                                        //error
                                        //[UIAlertView error:[json objectForKey:@"error"]];
