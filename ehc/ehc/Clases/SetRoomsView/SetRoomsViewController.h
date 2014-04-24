@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "RoomsViewController.h"
+#import "MenuViewController.h"
 
-@interface SetRoomsViewController : UIViewController<UICollectionViewDataSource,UICollectionViewDelegate,UIScrollViewDelegate,protocolItemsDelegate>
+@interface SetRoomsViewController : UIViewController<UICollectionViewDataSource,UICollectionViewDelegate,UIScrollViewDelegate,protocolItemsDelegate,UIGestureRecognizerDelegate,ContentUserScreenDelegate>
 
 @property (nonatomic, strong)IBOutlet UICollectionView *collectionRooms;
 

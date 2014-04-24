@@ -14,10 +14,14 @@
 #import "AppDelegate.h"
 #import "TvItemViewController.h"
 #import "LightItemViewController.h"
+#import "ECSlidingViewController.h"
+#import "IonIcons.h"
+#import "ProfileViewController.h"
+#import "EventosViewController.h"
 
 @interface SetRoomsViewController (){
     int numberOfRooms;
-    NSDictionary *dictionaryForRooms;
+    NSArray *arrayForRooms;
 }
 
 @end
@@ -37,12 +41,39 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
+    
+    [self.navigationController.navigationBar setBarStyle:UIBarStyleBlackOpaque];
+    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:0.000 green:0.681 blue:0.681 alpha:1.000]];
+    self.navigationController.navigationBar.tintColor =  [UIColor whiteColor];
+    [self.navigationController.navigationBar setTranslucent:YES];
+    [self.navigationItem setHidesBackButton:YES];
+    
+    [self.navigationItem setLeftBarButtonItem: [[UIBarButtonItem alloc] initWithImage:[IonIcons imageWithIcon:icon_navicon size:28.0f color:[UIColor whiteColor]] style:UIBarButtonItemStylePlain target:self action:@selector(menuButton:)]];
+    
+    if (![self.slidingViewController.underLeftViewController isKindOfClass:[MenuViewController class]]) {
+        
+        //        if (isIpad){
+        //            self.slidingViewController.underLeftViewController  = [self.storyboard instantiateViewControllerWithIdentifier:@"MenuIpad"];
+        //        }
+        //        else {
+        self.slidingViewController.underLeftViewController  = [self.storyboard instantiateViewControllerWithIdentifier:@"Menu5"];
+        ((MenuViewController*)self.slidingViewController.underLeftViewController).delegateActions = self;
+    }
+    //        else{
+    //            self.slidingViewController.underLeftViewController  = [self.storyboard instantiateViewControllerWithIdentifier:@"Menu"];
+    //        }
+    //    }
+    [self.view addGestureRecognizer:self.slidingViewController.panGesture];
 	// Do any additional setup after loading the view.
     [self.collectionRooms registerNib:[UINib nibWithNibName:@"RoomsCell" bundle:nil] forCellWithReuseIdentifier:@"RoomsCellID"];
     
     //numberOfRooms = ((NSString*)[appDelegate.jsonArray objectForKey:@"numerosH"]).intValue;
-    numberOfRooms = [[appDelegate.jsonArray objectForKey:@"Rooms"] count];
-    dictionaryForRooms = [appDelegate.jsonArray objectForKey:@"Rooms"];
+    
+    
+    numberOfRooms = [[appDelegate.currentHouseDic objectForKey:@"rooms"] count];
+    arrayForRooms = [appDelegate.currentHouseDic objectForKey:@"rooms"];
     
     self.navigationItem.title = @"Rooms";
 }
@@ -80,7 +111,7 @@
     }
     
     //NSArray *arrayRooms = [dictionaryForRooms objectForKey:[NSString stringWithFormat:@"R%d",indexPath.row+1]];
-    NSDictionary *room = [dictionaryForRooms objectForKey:[NSString stringWithFormat:@"R%d",indexPath.row+1]];
+    NSDictionary *room = [arrayForRooms objectAtIndex:indexPath.row];
     
     [cell.roomName setText:[room objectForKey:@"name"]];
     [cell.roomName setTextColor:[UIColor whiteColor]];
@@ -113,9 +144,10 @@
     NSMutableArray *array = [NSMutableArray arrayWithCapacity:5];
     for (int i = 0; i < numberOfRooms; i++) {
         //NSArray *arrayRooms = [dictionaryForRooms objectForKey:[NSString stringWithFormat:@"H%d",i+1]];
-        NSDictionary *dic = [dictionaryForRooms objectForKey:[NSString stringWithFormat:@"R%d",i+1]];
+        NSDictionary *dic = [arrayForRooms objectAtIndex:i];
         appDelegate.nameRoom = [dic objectForKey:@"name"];
-        RoomsViewController *room = [[RoomsViewController alloc] initWithFrame:CGRectMake(0, 0, 320, 568) withNameOfRoom:[dic objectForKey:@"name"] numberOfRoom:i andNumberOfItems:[dic objectForKey:@"items"] andDelegate:self];
+        NSLog(@"%@",dic);
+        RoomsViewController *room = [[RoomsViewController alloc] initWithFrame:CGRectMake(0, 0, 320, 568) withNameOfRoom:[dic objectForKey:@"name"] numberOfRoom:i andNumberOfItems:[dic objectForKey:@"services"] andDelegate:self];
         room.title = [dic objectForKey:@"name"];
         [array addObject:room];
     }
@@ -160,6 +192,66 @@
 - (void)sacarLight{
     LightItemViewController *roomsController = (LightItemViewController *) [self.storyboard instantiateViewControllerWithIdentifier:@"lightController"];
     [self.navigationController pushViewController:roomsController animated:YES];
+}
+
+- (void)menuButton:(id)sender{
+        [self.slidingViewController anchorTopViewTo:ECRight];
+}
+
+#pragma mark - Metodos de protocolo
+
+-(void)cambiarDeVista:(NSString*)newView{
+    if ([newView isEqualToString:@"Profile5"]) {
+        [self llamarAperfil:newView];
+    }
+    else if ([newView isEqualToString:@"Settings5"]){
+        [self llamarAajustes:newView];
+    }
+    else if ([newView isEqualToString:@"Control5"]){
+        [self llamarAcontrol:newView];
+    }
+    else if ([newView isEqualToString:@"Tasks5"]){
+        [self llamarAtasks:newView];
+    }
+    else if ([newView isEqualToString:@"Intranet5"]){
+        [self llamarAintranet:newView];
+    }
+    else if ([newView isEqualToString:@"Help5"]){
+        [self llamarAayuda:newView];
+    }
+}
+
+-(void)llamarAperfil:(NSString*)identifier{
+        ProfileViewController* perfilView = [self.storyboard instantiateViewControllerWithIdentifier:identifier];
+        [self.navigationController pushViewController:perfilView animated:NO];
+}
+
+-(void)llamarAajustes:(NSString*)identifier{
+    //    AjustesViewController *ajustesView = [self.storyboard instantiateViewControllerWithIdentifier:identifier];
+    //    [self.navigationController pushViewController:ajustesView animated:NO];
+    //    voyAjugar = NO;
+}
+
+-(void)llamarAcontrol:(NSString*)identifier{
+        SetRoomsViewController *marketView = [self.storyboard instantiateViewControllerWithIdentifier:@"HousesView"];
+        [self.navigationController pushViewController:marketView animated:NO];
+}
+
+-(void)llamarAtasks:(NSString*)identifier{
+        EventosViewController *rankingView = [self.storyboard instantiateViewControllerWithIdentifier:@"eventsView"];
+        [self.navigationController pushViewController:rankingView animated:NO];
+}
+
+-(void)llamarAintranet:(NSString*)identifier{
+    //    RankingViewController *rankingView = [self.storyboard instantiateViewControllerWithIdentifier:identifier];
+    //    [self.navigationController pushViewController:rankingView animated:NO];
+    //    voyAjugar = NO;
+}
+
+-(void)llamarAayuda:(NSString*)identifier{
+    //    AyudaViewController *ayudaView = [self.storyboard instantiateViewControllerWithIdentifier:identifier];
+    //    [self.navigationController pushViewController:ayudaView animated:NO];
+    //    voyAjugar = NO;
 }
 
 @end

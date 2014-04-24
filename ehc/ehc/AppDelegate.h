@@ -28,5 +28,6 @@
 @property (nonatomic,strong)NSString *data;
 
 @property (nonatomic, strong) NSDictionary *jsonArray;
+@property (nonatomic, strong) NSDictionary *currentHouseDic;
 
 @end

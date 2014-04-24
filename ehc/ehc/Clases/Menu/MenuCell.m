@@ -7,6 +7,7 @@
 //
 
 #import "MenuCell.h"
+#import "IonIcons.h"
 
 @implementation MenuCell
 - (id)init
@@ -23,7 +24,7 @@
     CGRect icoRect = CGRectMake(11, 7, 30, 30);
     CGRect lblRect = CGRectMake(49, 4, 230, 36);
     UIImage *source = [[UIImage alloc]init];
-    source = [UIImage imageNamed:_icono];
+    source = [IonIcons imageWithIcon:_icono iconColor:[UIColor whiteColor] iconSize:22 imageSize:CGSizeMake(22, 22)];
     
     UIImage *fondo = [[UIImage alloc]init];
     fondo = [UIImage imageNamed:@"celdaMenuiPh.png"];
@@ -32,7 +33,7 @@
     //CGContextSetFillColorWithColor(context,[UIColor grayColor].CGColor);
     //CGContextFillRect(context,rectang);
     _titleLabel.textAlignment = NSTextAlignmentLeft;
-    [_titleLabel setFont:[UIFont fontWithName:@"Noteworthy" size:14]];
+    [_titleLabel setFont:[UIFont fontWithName:@"Futura-CondensedMedium" size:17]];
     _titleLabel.textColor = [UIColor whiteColor];
     [source drawInRect:icoRect];
     [_titleLabel drawTextInRect:lblRect];

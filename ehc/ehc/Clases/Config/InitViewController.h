@@ -16,4 +16,6 @@
 @property(nonatomic,strong)IBOutlet UIActivityIndicatorView *activity;
 @property(nonatomic,strong)IBOutlet UILabel *labelCargando;
 
+@property (weak, nonatomic) IBOutlet UIImageView *mundo;
+
 @end

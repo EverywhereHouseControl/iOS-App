@@ -52,20 +52,7 @@
 	// Do any additional setup after loading the view.
     appDelegate.recienLogeado = NO;
     appDelegate.exit = NO;
-    if (appDelegate.window.frame.size.height == 568) {
-       //[self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Default-568h@2x"]]];
-    }
-    else{
-      // [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Default"]]];
-    }
     
-    if ([self comprobarAutoLogin] || [self isUserExit]) {//&& pwd) {
-        [self loginGame];
-    }
-    else{
-//        [self entrar];
-        [self sacarModalLogin];
-    }
 
 }
 
@@ -88,6 +75,21 @@
     }
     [[self activity] startAnimating];
     [[self labelCargando] setText:@"Cargando..."];
+    
+    if (appDelegate.window.frame.size.height == 568) {
+        //[self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Default-568h@2x"]]];
+    }
+    else{
+        // [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Default"]]];
+    }
+    
+    if ([self comprobarAutoLogin] || [self isUserExit]) {//&& pwd) {
+        [self loginGame];
+    }
+    else{
+        //        [self entrar];
+        [self sacarModalLogin];
+    }
 }
 
 #pragma mark - Metodos Login
@@ -178,16 +180,16 @@
 //                                   NSData *data = [NSData dataWithContentsOfFile:filePath];
 //                                   appDelegate.jsonArray = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
                                    
-                                   if ([[json objectForKey:@"error"] objectForKey:@"ERROR"]==0 && [[res objectForKey:@"IDUSER"] intValue]>0) {
+                                   if ([[[json objectForKey:@"error"] objectForKey:@"ERROR"]intValue] == 0 && [[res objectForKey:@"IDUSER"] intValue]>0){
                                        
                                        idUs = [res objectForKey:@"IDUSER"];
                                        nameUser = [res objectForKey:@"USERNAME"];
                                        
-                                       NSString *jsonString = [res objectForKey:@"JSON"];
-                                       NSData *dataBien = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
-                                       appDelegate.jsonArray = [NSJSONSerialization JSONObjectWithData:dataBien options:0 error:nil];
+                                       NSDictionary *jsonString = [res objectForKey:@"JSON"];
+                                      // NSData *dataBien = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+                                       appDelegate.jsonArray = jsonString;//[NSJSONSerialization JSONObjectWithData:dataBien options:0 error:nil];
                                        DLog(@"%@ kkkk %@",appDelegate.jsonArray,[appDelegate.jsonArray objectForKey:@"House"]);
-                                       appDelegate.nameHouse = [appDelegate.jsonArray objectForKey:@"House"];
+                                       //appDelegate.nameHouse = [appDelegate.gui objectForKey:@"House"];
                                        //NSDictionary *jsonDinamico =[[res objectForKey:@"JSON"] objectForKey:@"Rooms"];
                                        //appDelegate.jsonArray = jsonDinamico;
                                                                               //success
@@ -230,7 +232,7 @@
 //        PrincipalView *userController = (PrincipalView *) [self.storyboard instantiateViewControllerWithIdentifier:@"principalView"];
 //        [self.navigationController pushViewController:userController animated:YES];
         HousesViewController *houseController = (HousesViewController *) [self.storyboard instantiateViewControllerWithIdentifier:@"HousesView"];
-        [self.navigationController pushViewController:houseController animated:YES];
+        [self presentViewController:houseController animated:YES completion:nil];
         
         //[self presentViewController:houseController animated:YES completion:nil];
         //[self presentViewController:userController animated:YES completion:nil];

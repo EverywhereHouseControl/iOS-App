@@ -24,7 +24,7 @@
     CGContextSetFillColorWithColor(context,[UIColor blackColor].CGColor);
     CGContextFillRect(context,rectang);
     _titleLabel.textAlignment = NSTextAlignmentLeft;
-    [_titleLabel setFont:[UIFont fontWithName:@"Noteworthy" size:14]];
+    [_titleLabel setFont:[UIFont fontWithName:@"Futura-CondensedMedium" size:17]];
     _titleLabel.textColor = [UIColor whiteColor];
     
     //[source drawInRect:rectang blendMode:kCGBlendModeLuminosity alpha:1.0];

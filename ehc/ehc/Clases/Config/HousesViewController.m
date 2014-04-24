@@ -47,10 +47,10 @@
     
     [[UIApplication sharedApplication] setStatusBarHidden:NO];
 
-    [self.navigationController.navigationBar setBarStyle:UIBarStyleBlackOpaque];
-    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:0.000 green:0.681 blue:0.681 alpha:1.000]];
-    self.navigationController.navigationBar.tintColor =  [UIColor whiteColor];
-    [self.navigationController.navigationBar setTranslucent:YES];
+//    [self.navigationController.navigationBar setBarStyle:UIBarStyleBlackOpaque];
+//    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:0.000 green:0.681 blue:0.681 alpha:1.000]];
+//    self.navigationController.navigationBar.tintColor =  [UIColor whiteColor];
+//    [self.navigationController.navigationBar setTranslucent:YES];
     [self.navigationItem setHidesBackButton:YES];
     //[self.navigationController.navigationBar setHidden:YES];
 }
@@ -98,8 +98,11 @@
     // TODO: Select Item
     int houseSelected = indexPath.row;
     
+    appDelegate.nameHouse = [[dictionaryForHouses objectAtIndex:houseSelected] objectForKey:@"name"];
+    appDelegate.currentHouseDic = [dictionaryForHouses objectAtIndex:houseSelected];
+    
     InitViewController *initController = (InitViewController *) [self.storyboard instantiateViewControllerWithIdentifier:@"initView"];
-    [self.navigationController pushViewController:initController animated:YES];
+    [self presentViewController:initController animated:YES completion:nil];
     /*    SGViewPagerController *pager = [[SGViewPagerController alloc] initWithNibName:@"SGViewPagerController" bundle:nil];
      pager.title = @"UIPageControl";
      

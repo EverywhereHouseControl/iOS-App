@@ -142,12 +142,12 @@
     }
     
     [cell setBackgroundColor:[UIColor clearColor]];
-    UIImageView *img = [self devolverImagenItem:itemsNamesArray[indexPath.row]];
+    UIImageView *img = [self devolverImagenItem:[itemsNamesArray[indexPath.row] objectForKey:@"name"]];
     [cell addSubview:img];
     
     UILabel *labelTitle = [[UILabel alloc] initWithFrame:CGRectMake(0, 70, 130, 60)];
     
-    [labelTitle setText:itemsNamesArray[indexPath.row]];
+    [labelTitle setText:[itemsNamesArray[indexPath.row] objectForKey:@"name"]];
     [labelTitle setTextAlignment:NSTextAlignmentCenter];
     [labelTitle setTextColor:[UIColor colorWithRed:0.000 green:0.681 blue:0.681 alpha:1.000]];
     [labelTitle setNumberOfLines:3];
@@ -189,10 +189,10 @@
     //    UITabBarController *tabC = [[UITabBarController alloc] init];
     //    [tabC setViewControllers:[NSArray arrayWithObjects:pager, annotatedPager, nil] animated:NO];
     
-    if ([itemsNamesArray[indexPath.row] isEqualToString:@"TV"]) {
+    if ([[itemsNamesArray[indexPath.row] objectForKey:@"name"] isEqualToString:@"TV"]) {
         [self llamarAsacarTv];
     }
-    else if ([itemsNamesArray[indexPath.row] isEqualToString:@"LIGHTS"]) {
+    else if ([[itemsNamesArray[indexPath.row] objectForKey:@"name"] isEqualToString:@"LIGHTS"]) {
         [self llamarAsacarLuces];
     }
     

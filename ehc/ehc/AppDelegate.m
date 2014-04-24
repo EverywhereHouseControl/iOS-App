@@ -16,7 +16,7 @@
 @end
 
 @implementation AppDelegate
-@synthesize recienLogeado,jsonArray,pwd,user;
+@synthesize recienLogeado,jsonArray,pwd,user,currentHouseDic;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

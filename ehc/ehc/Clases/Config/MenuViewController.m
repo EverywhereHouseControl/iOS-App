@@ -11,6 +11,7 @@
 #import "AppDelegate.h"
 #import "MenuHeaderCell.h"
 #import "MenuCell.h"
+#import "IonIcons.h"
 
 @interface MenuViewController ()
 
@@ -45,14 +46,16 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    self.section1 = [NSArray arrayWithObjects:@"Perfil", @"Ajustes",@"Fotos", @"Intranet", @"Ayuda", nil];
+    self.section1 = [NSArray arrayWithObjects:@"Profile", @"Settings", @"Control", @"Tasks", @"Intranet", @"Help", nil];
     
-    self.section2 = [NSArray arrayWithObjects:@"Salir", nil];
+    self.section2 = [NSArray arrayWithObjects:@"Log Out", nil];
     
     self.menu = [NSArray arrayWithObjects:@"Espacio",self.section1, self.section2, nil];
     
     [self.slidingViewController setAnchorRightRevealAmount:200.0f];
     self.slidingViewController.underLeftWidthLayout = ECFullWidth;
+    
+    [self.tableView setFrame:CGRectMake(self.tableView.frame.origin.x, 64, self.tableView.frame.size.width, self.tableView.frame.size.height-64)];
 }
 
 - (void)didReceiveMemoryWarning
@@ -142,28 +145,33 @@
     if (section == 1) {
         
         if (fila == 0) {
-            celda.titleLabel.text = @" Perfil";
-            celda.icono = @"icoPerfil.png";
+            celda.titleLabel.text = @" Profile";
+            celda.icono = icon_ios7_person;
         }
         else if (fila == 1){
-            celda.titleLabel.text = @" Ajustes";
-            celda.icono = @"icoAjustes.png";
+            celda.titleLabel.text = @" Settings";
+            celda.icono = icon_ios7_gear;
         }
         else if (fila == 2){
-            celda.titleLabel.text = @" Fotos";
-            celda.icono = @"icoMarket.png";
+            celda.titleLabel.text = @" Control";
+            celda.icono = icon_earth;
         }
         else if (fila == 3){
+            celda.titleLabel.text = @" Task";
+            celda.icono = icon_earth;
+        }
+        else if (fila == 4){
             celda.titleLabel.text = @" Intranet";
-            celda.icono = @"icoRanking.png";
+            celda.icono = icon_ios7_people;
         }
         else{
-            celda.titleLabel.text = @" Ayuda";
-            celda.icono = @"icoAyuda.png";
+            celda.titleLabel.text = @" Help";
+            celda.icono = icon_ios7_help;
         }
         
     } else if (section == 2) {
-        celda.titleLabel.text = @"Salir";
+        celda.titleLabel.text = @" Log Out";
+        celda.icono = icon_log_out;
     }
     cell.backgroundView = celda;
     UIView *v = [[UIView alloc] initWithFrame:CGRectMake(cell.frame.origin.x, cell.frame.origin.y, cell.frame.size.width, cell.frame.size.height)];
