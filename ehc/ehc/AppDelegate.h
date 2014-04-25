@@ -30,4 +30,6 @@
 @property (nonatomic, strong) NSDictionary *jsonArray;
 @property (nonatomic, strong) NSDictionary *currentHouseDic;
 
+@property (nonatomic, strong) NSMutableArray *tasks;
+
 @end

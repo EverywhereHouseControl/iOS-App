@@ -62,9 +62,9 @@
     self.minimumDate = [self.dateFormatter dateFromString:@"20/09/2012"];
     
     self.disabledDates = @[
-                           [self.dateFormatter dateFromString:@"05/01/2013"],
-                           [self.dateFormatter dateFromString:@"06/01/2013"],
-                           [self.dateFormatter dateFromString:@"07/01/2013"]
+                           [self.dateFormatter dateFromString:@"9/04/2013"],
+                           [self.dateFormatter dateFromString:@"10/04/2013"],
+                           [self.dateFormatter dateFromString:@"12/04/2013"]
                            ];
     
     calendar.onlyShowCurrentMonth = NO;
@@ -129,6 +129,18 @@
 
 - (void)configureTareasWithServer{
     self.allTareas = [[NSMutableDictionary alloc] init];
+    int tasksNumber = [appDelegate.tasks count];
+    for (int i = 0; i < tasksNumber; i++) {
+        NSDictionary *dicTask = [appDelegate.tasks objectAtIndex:i];
+        NSMutableDictionary *tarea = [[NSMutableDictionary alloc] init];
+        [tarea setObject:@"Encender TV" forKey:NAME_TAREA];
+        [tarea setObject:@"Encender TV" forKey:ADMIN_TAREA];
+        [tarea setObject:@"Encender TV" forKey:DATE_TAREA];
+        [tarea setObject:@"Encender TV" forKey:ACTIONS_TAREA];
+    }
+    
+    
+    
     NSMutableDictionary *tarea = [[NSMutableDictionary alloc] init];
     [tarea setObject:@"Encender TV" forKey:NAME_TAREA];
     [tarea setObject:@"Encender TV" forKey:ADMIN_TAREA];
@@ -155,7 +167,7 @@
     [tarea4 setObject:@"Encender TV" forKey:DATE_TAREA];
     [tarea4 setObject:@"Encender TV" forKey:ACTIONS_TAREA];
     NSArray *array = [[NSArray alloc] initWithObjects:tarea,tarea1,tarea2,tarea3,tarea4, nil];
-    [self.allTareas setObject:array forKey:@"06/03/2014"];
+    [self.allTareas setObject:array forKey:@"06/04/2014"];
 }
 
 - (void)viewDidLoad
@@ -328,7 +340,7 @@
         [self.addTareaView addSubview:timeEventLabel];
         //[self.addTareaView addSubview:actionsEventLabel];
 		
-		[appDelegate.window.rootViewController.view addSubview:self.addTareaView];
+		[self.parentViewController.view addSubview:self.addTareaView];
         
        
 	}

@@ -62,10 +62,10 @@
 {
     NSString *data;
     if (button == 1) {
-        data = @"";
+        data = @"ON";
     }
     else{
-        data = @"";
+        data = @"OFF";
     }
     
     NSString *nameUser = appDelegate.nameUser;

@@ -11,5 +11,9 @@
 @interface ProfileViewController : UIViewController{
     
 }
+@property (weak, nonatomic) IBOutlet UIImageView *imageUser;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *countryLabel;
+@property (weak, nonatomic) IBOutlet UILabel *cityLabel;
 
 @end

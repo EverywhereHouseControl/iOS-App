@@ -171,7 +171,12 @@
                                    //handle the response
                                    //result returned
                                    NSDictionary* res = [json objectForKey:@"result"];
-                                   
+                                   if (res == nil) {
+                                       UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"ERROR" message:[json objectForKey:@"error"] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+                                       [alert show];
+                                       [self sacarModalLogin];
+                                   }
+                                   else{
                                    //Finaliza cargando
                                    // [self.activity stopAnimating];
                                    //[self.cargando setHidden:YES];
@@ -184,6 +189,8 @@
                                        
                                        idUs = [res objectForKey:@"IDUSER"];
                                        nameUser = [res objectForKey:@"USERNAME"];
+                                       
+                                       appDelegate.tasks = [res objectForKey:@"TASKS"];
                                        
                                        NSDictionary *jsonString = [res objectForKey:@"JSON"];
                                       // NSData *dataBien = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
@@ -200,6 +207,7 @@
                                    } else {
                                        //error
                                         [self sacarModalLogin];
+                                   }
                                    }
                                }];
 }

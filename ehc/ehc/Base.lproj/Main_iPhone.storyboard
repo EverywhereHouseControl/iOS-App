@@ -708,7 +708,6 @@
                                         </state>
                                         <connections>
                                             <action selector="listButtonAction:" destination="ZIb-36-Jig" eventType="touchUpInside" id="sgX-wB-D5f"/>
-                                            <segue destination="hQn-lO-NrF" kind="custom" identifier="viewController2" customClass="DropdownMenuSegue" id="bRF-IT-hOq"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x5D-PZ-15R" userLabel="Button - Photos">
@@ -843,7 +842,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LogoEHC.png" translatesAutoresizingMaskIntoConstraints="NO" id="7YG-pR-DOC">
-                                <rect key="frame" x="20" y="78" width="70" height="70"/>
+                                <rect key="frame" x="20" y="76" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8IP-xB-xW2">
@@ -888,10 +887,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="cityLabel" destination="pq2-Ay-0uj" id="gHr-1k-9BG"/>
+                        <outlet property="countryLabel" destination="5MW-f7-MBd" id="6xB-cj-i7W"/>
+                        <outlet property="imageUser" destination="7YG-pR-DOC" id="9s2-Lb-KMH"/>
+                        <outlet property="nameLabel" destination="M5D-SO-iwc" id="cLY-Tu-vWe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ka-83-4xJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1949" y="-2631"/>
+            <point key="canvasLocation" x="-445" y="-2683"/>
         </scene>
         <!--Init View Controller-->
         <scene sceneID="0nZ-Pm-fQV">
@@ -1032,6 +1037,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="vBv-Ky-qqn"/>
+        <segue reference="tfS-Hc-VbP"/>
     </inferredMetricsTieBreakers>
 </document>

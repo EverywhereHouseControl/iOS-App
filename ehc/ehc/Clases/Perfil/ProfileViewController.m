@@ -31,14 +31,22 @@
 }
 
 -(void)viewDidAppear:(BOOL)animated{
-    PrincipalView* menu = (PrincipalView *) [self parentViewController];
-    [menu setMenubarTitle:@"Perfil"];
+    //PrincipalView* menu = (PrincipalView *) [self parentViewController];
+    //[menu setMenubarTitle:@"Perfil"];
+    [self cargarDatos];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)cargarDatos{
+    [self.nameLabel setText:appDelegate.nameUser];
+    DLog(@"JSON; %@",appDelegate.jsonArray);
+    [self.countryLabel setText:[[[appDelegate.jsonArray objectForKey:@"houses"] objectAtIndex:0] objectForKey:@"country"]];
+    [self.cityLabel setText:[[[appDelegate.jsonArray objectForKey:@"houses"] objectAtIndex:0] objectForKey:@"city"]];
 }
 
 @end

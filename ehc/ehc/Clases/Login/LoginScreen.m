@@ -138,6 +138,8 @@
                                        nameUser = [res objectForKey:@"USERNAME"];
                                        NSDictionary *jsonString = [res objectForKey:@"JSON"];
                                        
+                                       appDelegate.tasks = [res objectForKey:@"TASKS"];
+                                       
                                        //NSString *filePath = [[NSBundle mainBundle] pathForResource:@"config" ofType:@"json"];
                                        //NSData *data = [NSData dataWithContentsOfFile:filePath];
                                        //NSData *dataBien;// = [jsonString dataUsingEncoding:NSUTF8StringEncoding];

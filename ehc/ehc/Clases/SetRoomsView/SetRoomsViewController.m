@@ -233,7 +233,7 @@
 }
 
 -(void)llamarAcontrol:(NSString*)identifier{
-        SetRoomsViewController *marketView = [self.storyboard instantiateViewControllerWithIdentifier:@"HousesView"];
+        SetRoomsViewController *marketView = [self.storyboard instantiateViewControllerWithIdentifier:@"roomsView"];
         [self.navigationController pushViewController:marketView animated:NO];
 }
 
