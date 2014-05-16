@@ -184,14 +184,14 @@
 //                                   NSString *filePath = [[NSBundle mainBundle] pathForResource:@"config" ofType:@"json"];
 //                                   NSData *data = [NSData dataWithContentsOfFile:filePath];
 //                                   appDelegate.jsonArray = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-                                   
+                                       DLog(@"JSON: %@",json);
                                    if ([[[json objectForKey:@"error"] objectForKey:@"ERROR"]intValue] == 0 && [[res objectForKey:@"IDUSER"] intValue]>0){
                                        
                                        idUs = [res objectForKey:@"IDUSER"];
                                        nameUser = [res objectForKey:@"USERNAME"];
                                        
-                                       appDelegate.tasks = [res objectForKey:@"TASKS"];
-                                       
+                                       appDelegate.tasks = [[[[res objectForKey:@"JSON"] objectForKey:@"houses"] objectAtIndex:0] objectForKey:@"events"];
+                                       DLog(@"Tasks: %@",appDelegate.tasks);
                                        NSDictionary *jsonString = [res objectForKey:@"JSON"];
                                       // NSData *dataBien = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
                                        appDelegate.jsonArray = jsonString;//[NSJSONSerialization JSONObjectWithData:dataBien options:0 error:nil];

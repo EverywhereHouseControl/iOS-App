@@ -111,6 +111,7 @@
 		BAE500F018BE429C0069C3ED /* next@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAE500DF18BE429C0069C3ED /* next@2x.png */; };
 		BAE500F118BE429C0069C3ED /* next_active.png in Resources */ = {isa = PBXBuildFile; fileRef = BAE500E018BE429C0069C3ED /* next_active.png */; };
 		BAE500F218BE429C0069C3ED /* next_active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAE500E118BE429C0069C3ED /* next_active@2x.png */; };
+		BAEDB88F190AB5A10045E03E /* BlindsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEDB88E190AB5A10045E03E /* BlindsViewController.m */; };
 		BAFAC1A719080F8600559C21 /* HousesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFAC1A619080F8600559C21 /* HousesViewController.m */; };
 		BAFAC1AB190811B500559C21 /* HousesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFAC1AA190811B500559C21 /* HousesCell.m */; };
 		BAFAC1AD190811CC00559C21 /* HousesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAFAC1AC190811CC00559C21 /* HousesCell.xib */; };
@@ -270,6 +271,8 @@
 		BAE500DF18BE429C0069C3ED /* next@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "next@2x.png"; sourceTree = "<group>"; };
 		BAE500E018BE429C0069C3ED /* next_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next_active.png; sourceTree = "<group>"; };
 		BAE500E118BE429C0069C3ED /* next_active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "next_active@2x.png"; sourceTree = "<group>"; };
+		BAEDB88D190AB5A10045E03E /* BlindsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlindsViewController.h; sourceTree = "<group>"; };
+		BAEDB88E190AB5A10045E03E /* BlindsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlindsViewController.m; sourceTree = "<group>"; };
 		BAFAC1A519080F8600559C21 /* HousesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HousesViewController.h; path = ../Config/HousesViewController.h; sourceTree = "<group>"; };
 		BAFAC1A619080F8600559C21 /* HousesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HousesViewController.m; path = ../Config/HousesViewController.m; sourceTree = "<group>"; };
 		BAFAC1A9190811B500559C21 /* HousesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HousesCell.h; sourceTree = "<group>"; };
@@ -508,6 +511,7 @@
 			isa = PBXGroup;
 			children = (
 				BA13995918C0DFF10064EF95 /* Events */,
+				BAEDB88C190AB58B0045E03E /* BlindsItem */,
 				BA7F31F6188CA1D900E0CC1E /* Perfil */,
 				BA7F31EA188C6A3C00E0CC1E /* LightsItem */,
 				BAA9EFD418593979006FD3F8 /* TVitem */,
@@ -794,6 +798,15 @@
 			path = UIImages;
 			sourceTree = "<group>";
 		};
+		BAEDB88C190AB58B0045E03E /* BlindsItem */ = {
+			isa = PBXGroup;
+			children = (
+				BAEDB88D190AB5A10045E03E /* BlindsViewController.h */,
+				BAEDB88E190AB5A10045E03E /* BlindsViewController.m */,
+			);
+			path = BlindsItem;
+			sourceTree = "<group>";
+		};
 		BAFAC1A81908117400559C21 /* HousesView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1005,6 +1018,7 @@
 				BAA22A8718C19D7F007D01A0 /* PPCircleButton.m in Sources */,
 				BAE500E718BE429C0069C3ED /* SlideFromBottomBrowserAnimator.m in Sources */,
 				BAD4DE9018C7795A00CE9806 /* UIView+FrameUtils.m in Sources */,
+				BAEDB88F190AB5A10045E03E /* BlindsViewController.m in Sources */,
 				BAD46B3F1856B767006F0930 /* SGViewPagerController.m in Sources */,
 				BAA9E9D01846D24100E55969 /* MenuViewController.m in Sources */,
 				BAA9E9D11846D24100E55969 /* MyNavigationController.m in Sources */,

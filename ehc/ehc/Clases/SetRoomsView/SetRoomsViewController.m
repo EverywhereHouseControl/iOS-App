@@ -18,6 +18,7 @@
 #import "IonIcons.h"
 #import "ProfileViewController.h"
 #import "EventosViewController.h"
+#import "BlindsViewController.h"
 
 @interface SetRoomsViewController (){
     int numberOfRooms;
@@ -145,7 +146,9 @@
     for (int i = 0; i < numberOfRooms; i++) {
         //NSArray *arrayRooms = [dictionaryForRooms objectForKey:[NSString stringWithFormat:@"H%d",i+1]];
         NSDictionary *dic = [arrayForRooms objectAtIndex:i];
-        appDelegate.nameRoom = [dic objectForKey:@"name"];
+        if (indexPath.row == i) {
+            appDelegate.nameRoom = [dic objectForKey:@"name"];
+        }
         NSLog(@"%@",dic);
         RoomsViewController *room = [[RoomsViewController alloc] initWithFrame:CGRectMake(0, 0, 320, 568) withNameOfRoom:[dic objectForKey:@"name"] numberOfRoom:i andNumberOfItems:[dic objectForKey:@"services"] andDelegate:self];
         room.title = [dic objectForKey:@"name"];
@@ -191,6 +194,11 @@
 
 - (void)sacarLight{
     LightItemViewController *roomsController = (LightItemViewController *) [self.storyboard instantiateViewControllerWithIdentifier:@"lightController"];
+    [self.navigationController pushViewController:roomsController animated:YES];
+}
+
+- (void)sacarBlinds{
+    BlindsViewController *roomsController = (BlindsViewController *) [self.storyboard instantiateViewControllerWithIdentifier:@"blindsController"];
     [self.navigationController pushViewController:roomsController animated:YES];
 }
 

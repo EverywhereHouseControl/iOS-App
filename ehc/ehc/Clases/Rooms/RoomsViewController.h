@@ -12,6 +12,7 @@
 
 - (void)sacarTV;
 - (void)sacarLight;
+- (void)sacarBlinds;
 
 @end
 

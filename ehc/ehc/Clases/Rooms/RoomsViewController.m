@@ -195,6 +195,9 @@
     else if ([[itemsNamesArray[indexPath.row] objectForKey:@"name"] isEqualToString:@"LIGHTS"]) {
         [self llamarAsacarLuces];
     }
+    else if ([[itemsNamesArray[indexPath.row] objectForKey:@"name"] isEqualToString:@"BLINDS"]) {
+        [self llamarAsacarBlinds];
+    }
     
 }
 - (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -241,6 +244,12 @@
 - (void)llamarAsacarLuces{
     if ([_delegate conformsToProtocol:@protocol(protocolItemsDelegate)] && [_delegate respondsToSelector:@selector(sacarLight)]) {
         [_delegate sacarLight];
+    }
+}
+
+- (void)llamarAsacarBlinds{
+    if ([_delegate conformsToProtocol:@protocol(protocolItemsDelegate)] && [_delegate respondsToSelector:@selector(sacarBlinds)]) {
+        [_delegate sacarBlinds];
     }
 }
 

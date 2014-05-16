@@ -18,9 +18,19 @@
 #define MAX_COUNT 20
 #define CELL_ID @"CELL_ID"
 
-#define NAME_TAREA @"nameTarea"
-#define DATE_TAREA @"dateTarea"
-#define ACTIONS_TAREA @"actionsTarea"
+#define MINUTE_TASK @"Minute"
+#define NAME_TASK @"Name"
+#define DAY_TASK @"Day"
+#define ITEM_TASK @"item"
+#define ACTION_TASK @"action"
+#define HOUSE_TASK @"house"
+#define ROOM_TASK @"romm"
+#define YEAR_TASK @"Year"
+#define SERVICE_TAKS @"service"
+#define HOUR_TASK @"hour"
+#define MONTH_TASK @"month"
+#define SECOND_TASK @"Second"
+#define DATA_TASK @"data"
 #define ADMIN_TAREA @"adminTarea"
 
 @interface EventosViewController ()<CKCalendarDelegate>
@@ -58,14 +68,15 @@
     calendar.delegate = self;
     self.calendar.backgroundColor = colorApp;
     self.dateFormatter = [[NSDateFormatter alloc] init];
+    NSDate *now = [NSDate date];
     [self.dateFormatter setDateFormat:@"dd/MM/yyyy"];
-    self.minimumDate = [self.dateFormatter dateFromString:@"20/09/2012"];
+    self.minimumDate = now;//[self.dateFormatter dateFromString:@"20/09/2012"];
     
-    self.disabledDates = @[
-                           [self.dateFormatter dateFromString:@"9/04/2013"],
-                           [self.dateFormatter dateFromString:@"10/04/2013"],
-                           [self.dateFormatter dateFromString:@"12/04/2013"]
-                           ];
+    self.disabledDates = nil;//@[
+//                           [self.dateFormatter dateFromString:@"9/04/2013"],
+//                           [self.dateFormatter dateFromString:@"10/04/2013"],
+//                           [self.dateFormatter dateFromString:@"12/04/2013"]
+//                           ];
     
     calendar.onlyShowCurrentMonth = NO;
     calendar.adaptHeightToNumberOfWeeksInMonth = YES;
@@ -130,44 +141,18 @@
 - (void)configureTareasWithServer{
     self.allTareas = [[NSMutableDictionary alloc] init];
     int tasksNumber = [appDelegate.tasks count];
+    NSArray *namesEvents = [appDelegate.tasks allKeys];
+    NSMutableArray *array = [[NSMutableArray alloc] init];
     for (int i = 0; i < tasksNumber; i++) {
-        NSDictionary *dicTask = [appDelegate.tasks objectAtIndex:i];
+        
+        NSDictionary *dicTask = [appDelegate.tasks objectForKey:[namesEvents objectAtIndex:i]];
         NSMutableDictionary *tarea = [[NSMutableDictionary alloc] init];
-        [tarea setObject:@"Encender TV" forKey:NAME_TAREA];
-        [tarea setObject:@"Encender TV" forKey:ADMIN_TAREA];
-        [tarea setObject:@"Encender TV" forKey:DATE_TAREA];
-        [tarea setObject:@"Encender TV" forKey:ACTIONS_TAREA];
+        DLog(@"%@",dicTask);
+        tarea = [[NSMutableDictionary alloc] initWithDictionary:dicTask];
+        [array addObject:tarea];
     }
-    
-    
-    
-    NSMutableDictionary *tarea = [[NSMutableDictionary alloc] init];
-    [tarea setObject:@"Encender TV" forKey:NAME_TAREA];
-    [tarea setObject:@"Encender TV" forKey:ADMIN_TAREA];
-    [tarea setObject:@"Encender TV" forKey:DATE_TAREA];
-    [tarea setObject:@"Encender TV" forKey:ACTIONS_TAREA];
-    NSMutableDictionary *tarea1 = [[NSMutableDictionary alloc] init];
-    [tarea1 setObject:@"Encender TV" forKey:NAME_TAREA];
-    [tarea1 setObject:@"Encender TV" forKey:ADMIN_TAREA];
-    [tarea1 setObject:@"Encender TV" forKey:DATE_TAREA];
-    [tarea1 setObject:@"Encender TV" forKey:ACTIONS_TAREA];
-    NSMutableDictionary *tarea2 = [[NSMutableDictionary alloc] init];
-    [tarea2 setObject:@"Encender TV" forKey:NAME_TAREA];
-    [tarea2 setObject:@"Encender TV" forKey:ADMIN_TAREA];
-    [tarea2 setObject:@"Encender TV" forKey:DATE_TAREA];
-    [tarea2 setObject:@"Encender TV" forKey:ACTIONS_TAREA];
-    NSMutableDictionary *tarea3 = [[NSMutableDictionary alloc] init];
-    [tarea3 setObject:@"Encender TV" forKey:NAME_TAREA];
-    [tarea3 setObject:@"Encender TV" forKey:ADMIN_TAREA];
-    [tarea3 setObject:@"Encender TV" forKey:DATE_TAREA];
-    [tarea3 setObject:@"Encender TV" forKey:ACTIONS_TAREA];
-    NSMutableDictionary *tarea4 = [[NSMutableDictionary alloc] init];
-    [tarea4 setObject:@"Encender TV" forKey:NAME_TAREA];
-    [tarea4 setObject:@"Encender TV" forKey:ADMIN_TAREA];
-    [tarea4 setObject:@"Encender TV" forKey:DATE_TAREA];
-    [tarea4 setObject:@"Encender TV" forKey:ACTIONS_TAREA];
     NSArray *array = [[NSArray alloc] initWithObjects:tarea,tarea1,tarea2,tarea3,tarea4, nil];
-    [self.allTareas setObject:array forKey:@"06/04/2014"];
+    [self.allTareas setObject:array forKey:@"06/05/2014"];
 }
 
 - (void)viewDidLoad

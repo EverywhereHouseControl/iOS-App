@@ -9,7 +9,8 @@
 #import "API.h"
 
 //the web location of the service
-#define kAPIHost @"http://ehcontrol.net"
+//#define kAPIHost @"http://ehcontrol.net"
+#define kAPIHost @"http://192.168.2.207"
 //#define kAPIHost @"http://192.168.2.147"
 //#define kAPIHost @"http://192.168.2.13"
 //#define kAPIHost @"http://mykelly.sytes.net"
@@ -51,6 +52,7 @@
         
         // Accept HTTP Header; see http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.1
         [self setDefaultHeader:@"Accept" value:@"application/json"];
+        [self setDefaultHeader:@"Accept" value:@"text/html"];
     }
     
     return self;

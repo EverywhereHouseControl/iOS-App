@@ -524,6 +524,47 @@
             </objects>
             <point key="canvasLocation" x="1119" y="-1930"/>
         </scene>
+        <!--Blinds View Controller-->
+        <scene sceneID="Whb-et-Zmo">
+            <objects>
+                <viewController storyboardIdentifier="blindsController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ehQ-fy-CSD" customClass="BlindsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MQu-sV-oUH"/>
+                        <viewControllerLayoutGuide type="bottom" id="ONw-Qo-oHa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="R26-0z-i2h">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mHR-bc-NJM">
+                                <rect key="frame" x="173" y="200" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="onTintColor" red="0.0" green="0.77734375" blue="0.77734375" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="changeButtonPressed:" destination="ehQ-fy-CSD" eventType="touchUpInside" id="WZo-eK-TbW"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="UP" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWR-uc-JNh">
+                                <rect key="frame" x="99" y="195" width="99" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="28"/>
+                                <color key="textColor" red="0.0" green="0.77734375" blue="0.77734375" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="labelOnOff" destination="OWR-uc-JNh" id="8LP-gq-u34"/>
+                        <outlet property="onOff" destination="mHR-bc-NJM" id="Wbz-WB-abh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rlU-9v-cN3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1653" y="-1938"/>
+        </scene>
         <!--Light Item View Controller-->
         <scene sceneID="1VA-sB-dSg">
             <objects>
