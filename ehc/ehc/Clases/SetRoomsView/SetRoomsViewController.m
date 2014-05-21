@@ -55,6 +55,7 @@
     [self.navigationItem setHidesBackButton:YES];
     
     [self.navigationItem setLeftBarButtonItem: [[UIBarButtonItem alloc] initWithImage:[IonIcons imageWithIcon:icon_navicon size:28.0f color:[UIColor whiteColor]] style:UIBarButtonItemStylePlain target:self action:@selector(menuButton:)]];
+    [self.navigationItem setRightBarButtonItem: [[UIBarButtonItem alloc] initWithImage:[IonIcons imageWithIcon:icon_home size:28.0f color:[UIColor whiteColor]] style:UIBarButtonItemStylePlain target:self action:@selector(goHouses:)]];
     
     if (![self.slidingViewController.underLeftViewController isKindOfClass:[MenuViewController class]]) {
         
@@ -207,6 +208,19 @@
 
 - (void)menuButton:(id)sender{
         [self.slidingViewController anchorTopViewTo:ECRight];
+}
+
+- (void)goHouses:(id)sender{
+    
+    appDelegate.pinCorrecto = YES;
+    UIViewController *newTopViewController = [self.storyboard instantiateViewControllerWithIdentifier:[NSString stringWithFormat:@"InitViewController"]];
+    
+    [self.slidingViewController anchorTopViewOffScreenTo:ECRight animations:nil onComplete:^{
+        CGRect frame = self.slidingViewController.topViewController.view.frame;
+        self.slidingViewController.topViewController = newTopViewController;
+        self.slidingViewController.topViewController.view.frame = frame;
+        [self.slidingViewController resetTopView];
+    }];
 }
 
 #pragma mark - Metodos de protocolo
