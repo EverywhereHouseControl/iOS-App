@@ -273,7 +273,7 @@
     else if ([item isEqualToString:@"LIGHTS"]) {
         img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"lamp-50"]];
     }
-    else if ([item isEqualToString:@"Enchufes"]) {
+    else if ([item isEqualToString:@"LIGHTSENSOR"]) {
         img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"enchufes"]];
     }
     else if ([item isEqualToString:@"Microhondas"]) {
@@ -285,7 +285,7 @@
     else if ([item isEqualToString:@"Puerta"]) {
         img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"remote_control-50"]];
     }
-    else if ([item isEqualToString:@"Temperatura"]){
+    else if ([item isEqualToString:@"TEMP"]){
         img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"temperature-50"]];
     }
     else if ([item isEqualToString:@"Video"]){
@@ -294,17 +294,20 @@
     else if ([item isEqualToString:@"Lavadora"]){
         img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"washing_machine-50"]];
     }
-    else if ([item isEqualToString:@"Telefonillo"]){
+    else if ([item isEqualToString:@"INTERCOM"]){
         img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"phone3-50"]];
     }
-    else if ([item isEqualToString:@"Frigorifico"]){
-        img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"fridge-50"]];
+    else if ([item isEqualToString:@"RAIN"]){
+        img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"rain_sensor"]];
     }
-    else if ([item isEqualToString:@"Horno"]){
-        img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cooker-50"]];
+    else if ([item isEqualToString:@"MOTION"]){
+        img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"motion"]];
     }
     else if ([item isEqualToString:@"Riego"]){
         img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"watering_can-50"]];
+    }
+    else if ([item isEqualToString:@"BLINDS"]){
+        img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"terrace"]];
     }
     [img setFrame:CGRectMake(30, 10, 70, 70)];
     
