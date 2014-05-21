@@ -32,6 +32,14 @@
 #define bloquearPantalla [self.view setUserInteractionEnabled:NO];
 #define desbloquearPantalla [self.view setUserInteractionEnabled:YES];
 
+#define MY_FONT_WORDS_34 [UIFont fontWithName:@"Futura-CondensedMedium" size:34]
+#define MY_FONT_WORDS [UIFont fontWithName:@"Futura-CondensedMedium" size:17]
+#define MY_FONT_NUMBERS [UIFont fontWithName:@"Futura-CondensedMedium" size:20]
+
+#define MY_COLOR_APP_DARK [UIColor colorWithRed:0.000 green:0.620 blue:0.620 alpha:1.000]
+#define MY_COLOR_APP_LIGHT [UIColor colorWithRed:0.000 green:0.777 blue:0.777 alpha:1.000]
+
+
 /*NSLog le aparece al usuario si lo mira en consola, DLog no*/
 #ifdef DEBUG
 #define DLog(s, ...)            NSLog(@"%@", [NSString stringWithFormat:@"[%@] %@", NSStringFromClass([self class]), [NSString stringWithFormat:s, ##__VA_ARGS__]]);

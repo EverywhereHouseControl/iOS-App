@@ -97,6 +97,7 @@
     
     NSArray *actionButtonItems = @[addItem];
     self.navigationItem.rightBarButtonItems = actionButtonItems;
+    [self.navigationItem setTitle:@"Tasks"];
     
 }
 
@@ -151,7 +152,7 @@
         tarea = [[NSMutableDictionary alloc] initWithDictionary:dicTask];
         [array addObject:tarea];
     }
-    NSArray *array = [[NSArray alloc] initWithObjects:tarea,tarea1,tarea2,tarea3,tarea4, nil];
+    //NSArray *array = [[NSArray alloc] initWithObjects:tarea,tarea1,tarea2,tarea3,tarea4, nil];
     [self.allTareas setObject:array forKey:@"06/05/2014"];
 }
 

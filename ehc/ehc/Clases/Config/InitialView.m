@@ -68,6 +68,8 @@
         [self entrar];
     }
     else if (appDelegate.recienLogeado) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Welcome!!" message:@"For your safety and comfort \n You should set a safety pin to enter EHC" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [alert show];
         [self configurarPin];
     }
     else if ([self isUserExit]){
@@ -190,7 +192,11 @@
                                        idUs = [res objectForKey:@"IDUSER"];
                                        nameUser = [res objectForKey:@"USERNAME"];
                                        
-                                       appDelegate.tasks = [[[[res objectForKey:@"JSON"] objectForKey:@"houses"] objectAtIndex:0] objectForKey:@"events"];
+                                       appDelegate.tasks = [[[[res objectForKey:@"JSON"] objectForKey:@"houses"] objectAtIndex:0] objectForKey:@"SINGLES"];
+                                       DLog(@"Tasks: %@",appDelegate.tasks);
+                                       if (appDelegate.tasks == nil) {
+                                           appDelegate.tasks = [[NSMutableDictionary alloc] init];
+                                       }
                                        DLog(@"Tasks: %@",appDelegate.tasks);
                                        NSDictionary *jsonString = [res objectForKey:@"JSON"];
                                       // NSData *dataBien = [jsonString dataUsingEncoding:NSUTF8StringEncoding];

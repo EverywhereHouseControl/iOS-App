@@ -118,6 +118,10 @@
     
 }
 
+- (void) openCam:(UIButton*)button{
+    
+}
+
 #pragma mark -
 
 

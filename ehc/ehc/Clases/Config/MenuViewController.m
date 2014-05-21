@@ -46,7 +46,7 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    self.section1 = [NSArray arrayWithObjects:@"Profile", @"Settings", @"Control", @"Tasks", @"Intranet", @"Help", nil];
+    self.section1 = [NSArray arrayWithObjects:@"Profile", @"Settings", @"Tasks", @"Camera", @"Help", nil];
     
     self.section2 = [NSArray arrayWithObjects:@"Log Out", nil];
     
@@ -153,16 +153,12 @@
             celda.icono = icon_ios7_gear;
         }
         else if (fila == 2){
-            celda.titleLabel.text = @" Control";
-            celda.icono = icon_earth;
-        }
-        else if (fila == 3){
             celda.titleLabel.text = @" Task";
             celda.icono = icon_earth;
         }
-        else if (fila == 4){
-            celda.titleLabel.text = @" Intranet";
-            celda.icono = icon_ios7_people;
+        else if (fila == 3){
+            celda.titleLabel.text = @" Camera";
+            celda.icono = icon_videocamera;
         }
         else{
             celda.titleLabel.text = @" Help";
@@ -281,6 +277,7 @@
         [dic writeToFile:[self rutaFicheroVar] atomically:YES];
         //[self postLeaveRequest];
         appDelegate.recienLogeado = NO;
+        appDelegate.pinCorrecto = NO;
         newTopViewController = [self.storyboard instantiateViewControllerWithIdentifier:[NSString stringWithFormat:@"InitViewController"]];
         
         [self.slidingViewController anchorTopViewOffScreenTo:ECRight animations:nil onComplete:^{

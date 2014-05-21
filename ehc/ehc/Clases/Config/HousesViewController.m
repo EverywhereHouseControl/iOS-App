@@ -33,6 +33,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
     [self.collectionHouses registerNib:[UINib nibWithNibName:@"HousesCell" bundle:nil] forCellWithReuseIdentifier:@"HousesCellID"];
     
     //numberOfRooms = ((NSString*)[appDelegate.jsonArray objectForKey:@"numerosH"]).intValue;

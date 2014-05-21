@@ -19,6 +19,9 @@
 #import "ProfileViewController.h"
 #import "EventosViewController.h"
 #import "BlindsViewController.h"
+#import "CamViewController.h"
+#import "SettingsViewController.h"
+#import "HelpViewController.h"
 
 @interface SetRoomsViewController (){
     int numberOfRooms;
@@ -221,8 +224,8 @@
     else if ([newView isEqualToString:@"Tasks5"]){
         [self llamarAtasks:newView];
     }
-    else if ([newView isEqualToString:@"Intranet5"]){
-        [self llamarAintranet:newView];
+    else if ([newView isEqualToString:@"Camera5"]){
+        [self llamarACamera:newView];
     }
     else if ([newView isEqualToString:@"Help5"]){
         [self llamarAayuda:newView];
@@ -235,9 +238,8 @@
 }
 
 -(void)llamarAajustes:(NSString*)identifier{
-    //    AjustesViewController *ajustesView = [self.storyboard instantiateViewControllerWithIdentifier:identifier];
-    //    [self.navigationController pushViewController:ajustesView animated:NO];
-    //    voyAjugar = NO;
+    SettingsViewController *setView = [self.storyboard instantiateViewControllerWithIdentifier:@"setView"];
+    [self.navigationController pushViewController:setView animated:NO];
 }
 
 -(void)llamarAcontrol:(NSString*)identifier{
@@ -250,16 +252,18 @@
         [self.navigationController pushViewController:rankingView animated:NO];
 }
 
--(void)llamarAintranet:(NSString*)identifier{
+-(void)llamarACamera:(NSString*)identifier{
     //    RankingViewController *rankingView = [self.storyboard instantiateViewControllerWithIdentifier:identifier];
     //    [self.navigationController pushViewController:rankingView animated:NO];
     //    voyAjugar = NO;
+    CamViewController *camView = [self.storyboard instantiateViewControllerWithIdentifier:@"camView"];
+    [self.navigationController pushViewController:camView animated:NO];
+    
 }
 
 -(void)llamarAayuda:(NSString*)identifier{
-    //    AyudaViewController *ayudaView = [self.storyboard instantiateViewControllerWithIdentifier:identifier];
-    //    [self.navigationController pushViewController:ayudaView animated:NO];
-    //    voyAjugar = NO;
+    HelpViewController *helpView = [self.storyboard instantiateViewControllerWithIdentifier:@"helpView"];
+    [self.navigationController pushViewController:helpView animated:NO];
 }
 
 @end
