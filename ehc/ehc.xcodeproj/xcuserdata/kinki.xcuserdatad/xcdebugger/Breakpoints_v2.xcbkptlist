@@ -148,11 +148,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ehc/Clases/LightsItem/LightItemViewController.m"
-            timestampString = "411869547.362681"
+            timestampString = "422466708.945714"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "-sliderValueChanged:"
             landmarkType = "5">
          </BreakpointContent>

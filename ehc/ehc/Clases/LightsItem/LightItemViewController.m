@@ -30,6 +30,15 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    DLog(@"JSON %@",appDelegate.jsonArray);
+    appDelegate.nameHouse;
+    appDelegate.nameRoom;
+    
+    NSArray *array = [appDelegate.jsonArray objectForKey:@"houses"];
+    for (int i = 0; i < [array count]; i++) {
+        
+    }
 }
 
 - (void)didReceiveMemoryWarning

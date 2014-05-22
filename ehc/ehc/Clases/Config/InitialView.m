@@ -192,11 +192,6 @@
                                        idUs = [res objectForKey:@"IDUSER"];
                                        nameUser = [res objectForKey:@"USERNAME"];
                                        
-                                       appDelegate.tasks = [[[[res objectForKey:@"JSON"] objectForKey:@"houses"] objectAtIndex:0] objectForKey:@"SINGLES"];
-                                       DLog(@"Tasks: %@",appDelegate.tasks);
-                                       if (appDelegate.tasks == nil) {
-                                           appDelegate.tasks = [[NSMutableDictionary alloc] init];
-                                       }
                                        DLog(@"Tasks: %@",appDelegate.tasks);
                                        NSDictionary *jsonString = [res objectForKey:@"JSON"];
                                       // NSData *dataBien = [jsonString dataUsingEncoding:NSUTF8StringEncoding];

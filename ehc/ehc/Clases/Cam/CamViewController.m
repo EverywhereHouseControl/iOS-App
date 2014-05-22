@@ -31,7 +31,7 @@
 }
 
 - (void)configureWebView{
-    NSString *fullURL = [NSString stringWithFormat:@"http://192.168.2.24:8080/stream320.html"];
+    NSString *fullURL = [NSString stringWithFormat:@"http://192.168.2.117:8080/stream320.html"];
     NSURL *url = [NSURL URLWithString:fullURL];
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     [self.cameraWebView loadRequest:requestObj];

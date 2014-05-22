@@ -49,7 +49,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1836" y="-1636"/>
+            <point key="canvasLocation" x="-1788" y="-1244"/>
         </scene>
         <!--Login Screen-->
         <scene sceneID="mzg-Su-i3J">
@@ -1220,6 +1220,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="tfS-Hc-VbP"/>
+        <segue reference="vBv-Ky-qqn"/>
     </inferredMetricsTieBreakers>
 </document>

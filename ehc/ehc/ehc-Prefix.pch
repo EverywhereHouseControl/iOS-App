@@ -34,6 +34,7 @@
 
 #define MY_FONT_WORDS_34 [UIFont fontWithName:@"Futura-CondensedMedium" size:34]
 #define MY_FONT_WORDS [UIFont fontWithName:@"Futura-CondensedMedium" size:17]
+#define MY_FONT_WORDS_24 [UIFont fontWithName:@"Futura-CondensedMedium" size:24]
 #define MY_FONT_NUMBERS [UIFont fontWithName:@"Futura-CondensedMedium" size:20]
 
 #define MY_COLOR_APP_DARK [UIColor colorWithRed:0.000 green:0.620 blue:0.620 alpha:1.000]

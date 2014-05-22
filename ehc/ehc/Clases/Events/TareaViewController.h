@@ -10,6 +10,6 @@
 
 @interface TareaViewController : UIViewController
 
-- (id)initWithConfig;
+- (id)initWithConfig:(NSDictionary*)dic;
 
 @end

@@ -42,7 +42,7 @@
 @property(nonatomic, strong) NSArray *disabledDates;
 
 @property(nonatomic, strong) NSMutableDictionary *allTareas;
-@property(nonatomic, strong) NSMutableArray *tareasFechaPulsada;
+@property(nonatomic, strong) NSMutableDictionary *tareasFechaPulsada;
 
 @property (nonatomic, strong) UIView *addTareaView;
 @property (nonatomic, strong) UIView *addActionsToEventView;
@@ -142,18 +142,23 @@
 - (void)configureTareasWithServer{
     self.allTareas = [[NSMutableDictionary alloc] init];
     int tasksNumber = [appDelegate.tasks count];
-    NSArray *namesEvents = [appDelegate.tasks allKeys];
+    
+    NSDictionary *tasks = appDelegate.tasks;
+    
+    NSArray *namesEvents = [tasks allKeys];
     NSMutableArray *array = [[NSMutableArray alloc] init];
     for (int i = 0; i < tasksNumber; i++) {
         
-        NSDictionary *dicTask = [appDelegate.tasks objectForKey:[namesEvents objectAtIndex:i]];
+        NSDictionary *dicTask = [tasks objectForKey:[namesEvents objectAtIndex:i]];
         NSMutableDictionary *tarea = [[NSMutableDictionary alloc] init];
         DLog(@"%@",dicTask);
         tarea = [[NSMutableDictionary alloc] initWithDictionary:dicTask];
         [array addObject:tarea];
+        [self.allTareas setObject:tarea forKey:[NSString stringWithFormat:@"%@/%@/%@",[tarea objectForKey:@"Day"],[tarea objectForKey:@"Month"],[tarea objectForKey:@"Year"]]];
     }
     //NSArray *array = [[NSArray alloc] initWithObjects:tarea,tarea1,tarea2,tarea3,tarea4, nil];
-    [self.allTareas setObject:array forKey:@"06/05/2014"];
+    //[self.allTareas setObject:array forKey:@"06/05/2014"];
+    DLog(@"self.allTareas %@",self.allTareas);
 }
 
 - (void)viewDidLoad
@@ -222,6 +227,7 @@
     //self.dateLabel.text = [self.dateFormatter stringFromDate:date];
     DLog(@"fecha: %@",[self.dateFormatter stringFromDate:date]);
     self.tareasFechaPulsada = [self.allTareas objectForKey:[self.dateFormatter stringFromDate:date]];
+    DLog(@"tareasFechaPulsada %@",self.tareasFechaPulsada);
     [self.collectionViewTareas reloadData];
 }
 
@@ -408,7 +414,11 @@
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return [self.tareasFechaPulsada count];
+    if (self.tareasFechaPulsada != nil) {
+        return 1;
+    }
+    else
+        return 0;
 }
 
 
@@ -421,7 +431,7 @@
 {
    // UIViewController *vc = [self nextViewControllerAtPoint:CGPointZero];
    // [self.navigationController pushViewController:vc animated:YES];
-    TareaViewController *vc = [[TareaViewController alloc] initWithConfig];
+    TareaViewController *vc = [[TareaViewController alloc] initWithConfig:self.tareasFechaPulsada];
     //[self.navigationController pushViewController:vc animated:YES];
     [self presentViewController:vc animated:YES completion:nil];
 }

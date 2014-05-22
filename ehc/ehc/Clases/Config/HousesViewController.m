@@ -101,6 +101,7 @@
     
     appDelegate.nameHouse = [[dictionaryForHouses objectAtIndex:houseSelected] objectForKey:@"name"];
     appDelegate.currentHouseDic = [dictionaryForHouses objectAtIndex:houseSelected];
+    appDelegate.tasks = [[dictionaryForHouses objectAtIndex:houseSelected] objectForKey:@"events"];
     
     InitViewController *initController = (InitViewController *) [self.storyboard instantiateViewControllerWithIdentifier:@"initView"];
     [self presentViewController:initController animated:YES completion:nil];
