@@ -13,6 +13,8 @@
 - (void)sacarTV;
 - (void)sacarLight;
 - (void)sacarBlinds;
+- (void)sacarIntercom;
+- (void)mostrarTemperatura;
 
 @end
 

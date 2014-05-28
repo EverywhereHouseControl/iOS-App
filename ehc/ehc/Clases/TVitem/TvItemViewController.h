@@ -21,4 +21,6 @@
 
 -(IBAction)pulsadoBotonTeletexto:(id)sender;
 
+- (void)setModeTVItem:(BOOL)isForEvents;
+
 @end

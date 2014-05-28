@@ -188,8 +188,9 @@
     [self presentViewController:annotatedPager animated:YES completion:nil];*/
     //    UITabBarController *tabC = [[UITabBarController alloc] init];
     //    [tabC setViewControllers:[NSArray arrayWithObjects:pager, annotatedPager, nil] animated:NO];
+    appDelegate.state = [itemsNamesArray[indexPath.row] objectForKey:@"state"];
     
-    if ([[itemsNamesArray[indexPath.row] objectForKey:@"name"] isEqualToString:@"TV"]) {
+    if ([[itemsNamesArray[indexPath.row] objectForKey:@"name"] isEqualToString:@"TV"]){
         [self llamarAsacarTv];
     }
     else if ([[itemsNamesArray[indexPath.row] objectForKey:@"name"] isEqualToString:@"LIGHTS"]) {
@@ -197,6 +198,12 @@
     }
     else if ([[itemsNamesArray[indexPath.row] objectForKey:@"name"] isEqualToString:@"BLINDS"]) {
         [self llamarAsacarBlinds];
+    }
+    else if ([[itemsNamesArray[indexPath.row] objectForKey:@"name"] isEqualToString:@"INTERCOM"]) {
+        [self llamarAabrirPuerta];
+    }
+    else if ([[itemsNamesArray[indexPath.row] objectForKey:@"name"] isEqualToString:@"TEMP"]) {
+        [self llamarAsacarTemperatura];
     }
     
 }
@@ -250,6 +257,18 @@
 - (void)llamarAsacarBlinds{
     if ([_delegate conformsToProtocol:@protocol(protocolItemsDelegate)] && [_delegate respondsToSelector:@selector(sacarBlinds)]) {
         [_delegate sacarBlinds];
+    }
+}
+
+- (void)llamarAabrirPuerta{
+    if ([_delegate conformsToProtocol:@protocol(protocolItemsDelegate)] && [_delegate respondsToSelector:@selector(sacarIntercom)]) {
+        [_delegate sacarIntercom];
+    }
+}
+
+- (void)llamarAsacarTemperatura{
+    if ([_delegate conformsToProtocol:@protocol(protocolItemsDelegate)] && [_delegate respondsToSelector:@selector(mostrarTemperatura)]) {
+        [_delegate mostrarTemperatura];
     }
 }
 

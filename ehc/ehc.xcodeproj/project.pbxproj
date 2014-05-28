@@ -19,6 +19,8 @@
 		BA7F31F3188C775C00E0CC1E /* BombillaLuz.gif in Resources */ = {isa = PBXBuildFile; fileRef = BA7F31F2188C775C00E0CC1E /* BombillaLuz.gif */; };
 		BA7F31F5188C782000E0CC1E /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = BA7F31F4188C782000E0CC1E /* Background.png */; };
 		BA7F31F9188CA1E800E0CC1E /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7F31F8188CA1E800E0CC1E /* ProfileViewController.m */; };
+		BA815678192F8D5C007E4634 /* IntercomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA815677192F8D5C007E4634 /* IntercomViewController.m */; };
+		BA81567C192F9200007E4634 /* TemperatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA81567B192F9200007E4634 /* TemperatureViewController.m */; };
 		BA891396183D6F3100F97172 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA891395183D6F3100F97172 /* Foundation.framework */; };
 		BA891398183D6F3100F97172 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA891397183D6F3100F97172 /* CoreGraphics.framework */; };
 		BA89139A183D6F3100F97172 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA891399183D6F3100F97172 /* UIKit.framework */; };
@@ -147,6 +149,10 @@
 		BA7F31F4188C782000E0CC1E /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Background.png; path = ehc/Images/Background.png; sourceTree = SOURCE_ROOT; };
 		BA7F31F7188CA1E800E0CC1E /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		BA7F31F8188CA1E800E0CC1E /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		BA815676192F8D5C007E4634 /* IntercomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntercomViewController.h; sourceTree = "<group>"; };
+		BA815677192F8D5C007E4634 /* IntercomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntercomViewController.m; sourceTree = "<group>"; };
+		BA81567A192F9200007E4634 /* TemperatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemperatureViewController.h; sourceTree = "<group>"; };
+		BA81567B192F9200007E4634 /* TemperatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemperatureViewController.m; sourceTree = "<group>"; };
 		BA891392183D6F3100F97172 /* ehc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ehc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA891395183D6F3100F97172 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BA891397183D6F3100F97172 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -375,6 +381,24 @@
 			path = Perfil;
 			sourceTree = "<group>";
 		};
+		BA815675192F8D4B007E4634 /* Intercom */ = {
+			isa = PBXGroup;
+			children = (
+				BA815676192F8D5C007E4634 /* IntercomViewController.h */,
+				BA815677192F8D5C007E4634 /* IntercomViewController.m */,
+			);
+			path = Intercom;
+			sourceTree = "<group>";
+		};
+		BA815679192F91F5007E4634 /* Temperature */ = {
+			isa = PBXGroup;
+			children = (
+				BA81567A192F9200007E4634 /* TemperatureViewController.h */,
+				BA81567B192F9200007E4634 /* TemperatureViewController.m */,
+			);
+			path = Temperature;
+			sourceTree = "<group>";
+		};
 		BA891389183D6F3100F97172 = {
 			isa = PBXGroup;
 			children = (
@@ -549,7 +573,9 @@
 				BA977652192C376900712291 /* Help */,
 				BA977651192C376000712291 /* Settings */,
 				BA97764D192C183300712291 /* Cam */,
+				BA815679192F91F5007E4634 /* Temperature */,
 				BA13995918C0DFF10064EF95 /* Events */,
+				BA815675192F8D4B007E4634 /* Intercom */,
 				BAEDB88C190AB58B0045E03E /* BlindsItem */,
 				BA7F31F6188CA1D900E0CC1E /* Perfil */,
 				BA7F31EA188C6A3C00E0CC1E /* LightsItem */,
@@ -1057,8 +1083,10 @@
 				BAA22A8718C19D7F007D01A0 /* PPCircleButton.m in Sources */,
 				BAE500E718BE429C0069C3ED /* SlideFromBottomBrowserAnimator.m in Sources */,
 				BAD4DE9018C7795A00CE9806 /* UIView+FrameUtils.m in Sources */,
+				BA81567C192F9200007E4634 /* TemperatureViewController.m in Sources */,
 				BAEDB88F190AB5A10045E03E /* BlindsViewController.m in Sources */,
 				BAD46B3F1856B767006F0930 /* SGViewPagerController.m in Sources */,
+				BA815678192F8D5C007E4634 /* IntercomViewController.m in Sources */,
 				BAA9E9D01846D24100E55969 /* MenuViewController.m in Sources */,
 				BAA9E9D11846D24100E55969 /* MyNavigationController.m in Sources */,
 				BAA9EFD71859398F006FD3F8 /* TvItemViewController.m in Sources */,
@@ -1230,11 +1258,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ehc/ehc-Prefix.pch";
 				INFOPLIST_FILE = "ehc/ehc-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1246,11 +1276,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ehc/ehc-Prefix.pch";
 				INFOPLIST_FILE = "ehc/ehc-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

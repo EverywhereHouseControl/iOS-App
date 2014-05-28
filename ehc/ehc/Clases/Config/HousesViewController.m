@@ -100,6 +100,8 @@
     int houseSelected = indexPath.row;
     
     appDelegate.nameHouse = [[dictionaryForHouses objectAtIndex:houseSelected] objectForKey:@"name"];
+    appDelegate.nameCountry = [[dictionaryForHouses objectAtIndex:houseSelected] objectForKey:@"country"];
+    appDelegate.nameCity = [[dictionaryForHouses objectAtIndex:houseSelected] objectForKey:@"city"];
     appDelegate.currentHouseDic = [dictionaryForHouses objectAtIndex:houseSelected];
     appDelegate.tasks = [[dictionaryForHouses objectAtIndex:houseSelected] objectForKey:@"events"];
     

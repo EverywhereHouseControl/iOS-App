@@ -22,6 +22,8 @@
 #import "CamViewController.h"
 #import "SettingsViewController.h"
 #import "HelpViewController.h"
+#import "IntercomViewController.h"
+#import "TemperatureViewController.h"
 
 @interface SetRoomsViewController (){
     int numberOfRooms;
@@ -193,6 +195,7 @@
 
 - (void)sacarTV{
     TvItemViewController *roomsController = (TvItemViewController *) [self.storyboard instantiateViewControllerWithIdentifier:@"tvController"];
+    [roomsController setModeTVItem:NO];
     [self.navigationController pushViewController:roomsController animated:YES];
 }
 
@@ -203,6 +206,16 @@
 
 - (void)sacarBlinds{
     BlindsViewController *roomsController = (BlindsViewController *) [self.storyboard instantiateViewControllerWithIdentifier:@"blindsController"];
+    [self.navigationController pushViewController:roomsController animated:YES];
+}
+
+- (void)sacarIntercom{
+    IntercomViewController *roomsController = (IntercomViewController *) [self.storyboard instantiateViewControllerWithIdentifier:@"intercomController"];
+    [self.navigationController pushViewController:roomsController animated:YES];
+}
+
+- (void)mostrarTemperatura{
+     TemperatureViewController *roomsController = (TemperatureViewController *) [self.storyboard instantiateViewControllerWithIdentifier:@"tempController"];
     [self.navigationController pushViewController:roomsController animated:YES];
 }
 

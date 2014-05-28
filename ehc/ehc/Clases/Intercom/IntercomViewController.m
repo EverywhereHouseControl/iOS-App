@@ -1,20 +1,21 @@
 //
-//  LightItemViewController.m
+//  IntercomViewController.m
 //  ehc
 //
-//  Created by Víctor Vicente on 19/01/14.
+//  Created by Víctor Vicente on 23/05/14.
 //  Copyright (c) 2014 EHC. All rights reserved.
 //
 
-#import "LightItemViewController.h"
+#import "IntercomViewController.h"
 #import "API.h"
 #import "UIAlertView+error.h"
 
-@interface LightItemViewController ()
+@interface IntercomViewController ()
 
 @end
 
-@implementation LightItemViewController
+@implementation IntercomViewController
+
 @synthesize lightImage,sliderOpacity,onOff,labelOnOff;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -31,27 +32,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    [self setTitle:@"Lights"];
-    
-    if ([appDelegate.state isEqualToString:@"ON"]) {
-        [onOff setOn:YES];
-        [labelOnOff setText:@"ON"];
-        [lightImage setAlpha:1.0];
-    }
-    else{
-        [onOff setOn:NO];
-        [labelOnOff setText:@"OFF"];
-        [lightImage setAlpha:0.0];
-    }
-    
-    DLog(@"JSON %@",appDelegate.jsonArray);
-    appDelegate.nameHouse;
-    appDelegate.nameRoom;
-    
-    NSArray *array = [appDelegate.jsonArray objectForKey:@"houses"];
-    for (int i = 0; i < [array count]; i++) {
-        
-    }
+    [self setTitle:@"Intercom"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -66,34 +47,23 @@
 }
 
 -(void)changeButtonPressed:(id)sender{
-    if (!onOff.on) {
-        [onOff setOn:NO];
-        [labelOnOff setText:@"OFF"];
-        [lightImage setAlpha:0.0];
-        [self sendData:0];//es apagado
-    }
-    else{
-        [onOff setOn:YES];
-        [labelOnOff setText:@"ON"];
-        [lightImage setAlpha:1.0];
-        [self sendData:1];//es encendido
-    }
+    [self sendData:1];
 }
 
 -(void)sendData:(int)button
 {
     NSString *data;
     if (button == 1) {
-        data = @"ON";
+        data = @"OPEN";
     }
     else{
-        data = @"OFF";
+        data = @"OPEN";
     }
     
     NSString *nameUser = appDelegate.nameUser;
     NSString *nameHouse = appDelegate.nameHouse;
     NSString *nameRoom = appDelegate.nameRoom;
-    NSString *nameService = @"LIGHTS";//nil;//appDelegate.nameService;
+    NSString *nameService = @"INTERCOM";//nil;//appDelegate.nameService;
     NSString *nameAction = @"SEND";//appDelegate.nameAction;
     //[NSString stringWithFormat:@"%d",button];
     //NSString *status = @"1";
@@ -123,8 +93,10 @@
                                    if ([json objectForKey:@"ERROR"]==0) {
                                        // UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Pulsado" message:[NSString stringWithFormat:@"Enviado pulsación de boton %d",button] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
                                        //[alert show];
-                                      // [self updateLabelState:[NSString stringWithFormat:@"%d",button]];
+                                       // [self updateLabelState:[NSString stringWithFormat:@"%d",button]];
+                                       DLog(@"Open door");
                                    } else {
+                                       DLog(@"Dont Open door");
                                        //error
                                        //[UIAlertView error:[json objectForKey:@"error"]];
                                    }

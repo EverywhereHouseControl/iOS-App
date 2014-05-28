@@ -10,7 +10,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EventosViewController : UIViewController<UICollectionViewDataSource,UICollectionViewDelegate>
+@interface EventosViewController : UIViewController<UICollectionViewDataSource,UICollectionViewDelegate,UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate>
 
 @property(nonatomic,strong) UICollectionView *collectionViewTareas;
 

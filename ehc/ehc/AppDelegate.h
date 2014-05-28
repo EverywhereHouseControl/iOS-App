@@ -25,11 +25,16 @@
 @property (nonatomic,strong)NSString *nameRoom;
 @property (nonatomic,strong)NSString *nameService;
 @property (nonatomic,strong)NSString *nameAction;
+@property (nonatomic,strong)NSString *nameCity;
+@property (nonatomic,strong)NSString *nameCountry;
+@property (nonatomic,strong)NSString *state;
 @property (nonatomic,strong)NSString *data;
 
 @property (nonatomic, strong) NSDictionary *jsonArray;
 @property (nonatomic, strong) NSDictionary *currentHouseDic;
 
 @property (nonatomic, strong) NSMutableDictionary *tasks;
+
+@property (nonatomic, strong) NSString *dataForEvents;
 
 @end

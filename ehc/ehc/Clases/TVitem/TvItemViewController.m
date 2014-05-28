@@ -14,6 +14,8 @@
 @interface TvItemViewController (){
     BOOL isTVon;
     BOOL isSoundOn;
+    
+    BOOL isTVForEvents;
 }
 
 @end
@@ -33,9 +35,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    [self updateLabelState:appDelegate.state];
     
     isTVon = NO;
     isSoundOn = NO;
+    //isTVForEvents = NO;
     [self.navigationItem setTitle:@"TV"];
 	
 	[self.navigationController.navigationBar setHidden:YES];
@@ -51,6 +55,10 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)setModeTVItem:(BOOL)isForEvents{
+    isTVForEvents = isForEvents;
 }
 
 - (IBAction)pulsadoBoton:(id)sender{
@@ -154,47 +162,54 @@
 {
     NSString *data = [self dameStringPorNumero:button];
     
-    NSString *nameUser = appDelegate.nameUser;
-    NSString *nameHouse = appDelegate.nameHouse;
-    NSString *nameRoom = appDelegate.nameRoom;
-    NSString *nameService = @"TV";//appDelegate.nameService;
-    NSString *nameAction = @"SEND";//appDelegate.nameAction;
-    //[NSString stringWithFormat:@"%d",button];
-    //NSString *status = @"1";
-    
-    NSString* command = @"doaction";//(sender.tag==1)?@"register":@"login";
-    NSMutableDictionary* params =[NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                  command, @"command",
-                                  //@"1",@"idUser",
-                                  //@"2",@"idMando",
-                                  //@"0132167221351",@"estado",
-                                  nameUser, @"username",
-                                  nameHouse, @"housename",
-                                  nameRoom, @"roomname",
-                                  nameService, @"servicename",
-                                  nameAction, @"actionname",
-                                  data,@"data",
-                                  nil];
-    //make the call to the web API
-    [[API sharedInstance] commandWithParams:params
-                               onCompletion:^(NSDictionary *json) {
-                                   //handle the response
-                                   //result returned
-                                   //NSDictionary* res = [[json objectForKey:@"result"] objectAtIndex:0];
-                                   
-                                   //Finaliza cargando
-                                   //------------------
-                                   if ([json objectForKey:@"error"]==nil) {
-                                      // UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Pulsado" message:[NSString stringWithFormat:@"Enviado pulsación de boton %d",button] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-                                       //[alert show];
-                                       [self updateLabelState:[NSString stringWithFormat:@"%d",button]];
-                                   } else {
-                                       //error
-                                       //[UIAlertView error:[json objectForKey:@"error"]];
-                                   }
-                               }];
-    
-    
+    if (isTVForEvents) {
+        appDelegate.dataForEvents = data;
+        [self dismissViewControllerAnimated:YES completion:nil];
+//        [self.navigationController popViewControllerAnimated:YES];
+    }
+    else{
+        NSString *nameUser = appDelegate.nameUser;
+        NSString *nameHouse = appDelegate.nameHouse;
+        NSString *nameRoom = appDelegate.nameRoom;
+        NSString *nameService = @"TV";//appDelegate.nameService;
+        NSString *nameAction = @"SEND";//appDelegate.nameAction;
+        //[NSString stringWithFormat:@"%d",button];
+        //NSString *status = @"1";
+        
+        NSString* command = @"doaction";//(sender.tag==1)?@"register":@"login";
+        NSMutableDictionary* params =[NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                      command, @"command",
+                                      //@"1",@"idUser",
+                                      //@"2",@"idMando",
+                                      //@"0132167221351",@"estado",
+                                      nameUser, @"username",
+                                      nameHouse, @"housename",
+                                      nameRoom, @"roomname",
+                                      nameService, @"servicename",
+                                      nameAction, @"actionname",
+                                      data,@"data",
+                                      nil];
+        //make the call to the web API
+        [[API sharedInstance] commandWithParams:params
+                                   onCompletion:^(NSDictionary *json) {
+                                       //handle the response
+                                       //result returned
+                                       //NSDictionary* res = [[json objectForKey:@"result"] objectAtIndex:0];
+                                       
+                                       //Finaliza cargando
+                                       //------------------
+                                       if ([json objectForKey:@"ERROR"]==0) {
+                                           // UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Pulsado" message:[NSString stringWithFormat:@"Enviado pulsación de boton %d",button] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                                           //[alert show];
+                                           DLog(@"TV ok");
+                                           [self updateLabelState:[NSString stringWithFormat:@"%d",button]];
+                                       } else {
+                                           DLog(@"error tv");
+                                           //error
+                                           //[UIAlertView error:[json objectForKey:@"error"]];
+                                       }
+                                   }];
+    }
 }
 
 -(void)updateLabelState:(NSString*)textoLabel{

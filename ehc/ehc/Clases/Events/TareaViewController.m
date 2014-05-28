@@ -29,9 +29,12 @@
         // Custom initialization
         [self.view setBackgroundColor:[UIColor whiteColor]];
         
-        UIButton *buttonLabel = [[UIButton alloc] initWithFrame:CGRectMake(50, 20, 100, 50)];
+        UIButton *buttonLabel = [[UIButton alloc] initWithFrame:CGRectMake(0, 20, 100, 50)];
+        [buttonLabel setCenter:CGPointMake(self.view.frame.size.width/2, buttonLabel.center.y)];
         [buttonLabel setTitle:@"Close" forState:UIControlStateNormal];
         [[buttonLabel titleLabel] setFont:MY_FONT_WORDS_34];
+        [buttonLabel.layer setBorderColor:MY_COLOR_APP_DARK.CGColor];
+        [buttonLabel.layer setBorderWidth:1];
         [buttonLabel setTitleColor:MY_COLOR_APP_DARK forState:UIControlStateNormal];
         [buttonLabel addTarget:self action:@selector(closeTarea) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:buttonLabel];
@@ -117,7 +120,7 @@
         [self.view addSubview:labelDateHour];
         UILabel *labelDateHourInfo = [[UILabel alloc] initWithFrame:CGRectMake(150, 380, 100, 30)];
         [labelDateHourInfo setFont:MY_FONT_WORDS];
-        [labelDateHourInfo setText:[NSString stringWithFormat:@"%@/%@/%@",[dic objectForKey:@"Hour"],[dic objectForKey:@"Minute"],[dic objectForKey:@"Second"]]];
+        [labelDateHourInfo setText:[NSString stringWithFormat:@"%@:%@:%@",[dic objectForKey:@"Hour"],[dic objectForKey:@"Minute"],[dic objectForKey:@"Second"]]];
         [labelDateHourInfo setTextAlignment:NSTextAlignmentLeft];
         [self.view addSubview:labelDateHourInfo];
         

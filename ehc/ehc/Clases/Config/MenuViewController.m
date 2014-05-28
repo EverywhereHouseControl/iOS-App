@@ -46,7 +46,7 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    self.section1 = [NSArray arrayWithObjects:@"Profile", @"Settings", @"Tasks", @"Camera", @"Help", nil];
+    self.section1 = [NSArray arrayWithObjects:@"Profile",/* @"Settings",*/ @"Tasks", @"Camera", @"Help", nil];
     
     self.section2 = [NSArray arrayWithObjects:@"Log Out", nil];
     
@@ -148,15 +148,15 @@
             celda.titleLabel.text = @" Profile";
             celda.icono = icon_ios7_person;
         }
+//        else if (fila == 1){
+//            celda.titleLabel.text = @" Settings";
+//            celda.icono = icon_ios7_gear;
+//        }
         else if (fila == 1){
-            celda.titleLabel.text = @" Settings";
-            celda.icono = icon_ios7_gear;
-        }
-        else if (fila == 2){
             celda.titleLabel.text = @" Task";
             celda.icono = icon_earth;
         }
-        else if (fila == 3){
+        else if (fila == 2){
             celda.titleLabel.text = @" Camera";
             celda.icono = icon_videocamera;
         }
