@@ -9,8 +9,8 @@
 #import "API.h"
 
 //the web location of the service
-#define kAPIHost @"http://ehcontrol.net"
-//#define kAPIHost @"http://192.168.2.207"
+//#define kAPIHost @"http://ehcontrol.net"
+#define kAPIHost @"http://192.168.2.207"
 //#define kAPIHost @"http://192.168.2.147"
 //#define kAPIHost @"http://192.168.2.13"
 //#define kAPIHost @"http://mykelly.sytes.net"

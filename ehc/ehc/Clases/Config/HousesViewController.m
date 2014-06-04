@@ -98,6 +98,7 @@
 {
     // TODO: Select Item
     int houseSelected = indexPath.row;
+    appDelegate.houseSelected = indexPath.row;
     
     appDelegate.nameHouse = [[dictionaryForHouses objectAtIndex:houseSelected] objectForKey:@"name"];
     appDelegate.nameCountry = [[dictionaryForHouses objectAtIndex:houseSelected] objectForKey:@"country"];

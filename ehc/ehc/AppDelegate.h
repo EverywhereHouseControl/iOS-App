@@ -29,6 +29,7 @@
 @property (nonatomic,strong)NSString *nameCountry;
 @property (nonatomic,strong)NSString *state;
 @property (nonatomic,strong)NSString *data;
+@property (nonatomic)int houseSelected;
 
 @property (nonatomic, strong) NSDictionary *jsonArray;
 @property (nonatomic, strong) NSDictionary *currentHouseDic;

@@ -160,7 +160,7 @@
     //[self.activity startAnimating];
     //fin cargando
     appDelegate.nameUser = user;
-    
+    appDelegate.pwd = pwd;
     NSString* command = @"login2";//(sender.tag==1)?@"register":@"login";
     NSMutableDictionary* params =[NSMutableDictionary dictionaryWithObjectsAndKeys:
                                   command, @"command",
@@ -191,7 +191,7 @@
                                        
                                        idUs = [res objectForKey:@"IDUSER"];
                                        nameUser = [res objectForKey:@"USERNAME"];
-                                       
+                                       appDelegate.user = nameUser;
                                        DLog(@"Tasks: %@",appDelegate.tasks);
                                        NSDictionary *jsonString = [res objectForKey:@"JSON"];
                                       // NSData *dataBien = [jsonString dataUsingEncoding:NSUTF8StringEncoding];

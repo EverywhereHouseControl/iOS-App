@@ -197,6 +197,9 @@
 
 - (void)configureTareasWithServer{
     self.allTareas = [[NSMutableDictionary alloc] init];
+    if (appDelegate.tasks == nil) {
+        appDelegate.tasks = [[NSMutableDictionary alloc] init];
+    }
     int tasksNumber = [appDelegate.tasks count];
     
     NSDictionary *tasks = appDelegate.tasks;
@@ -972,11 +975,46 @@
                                        // UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Pulsado" message:[NSString stringWithFormat:@"Enviado pulsación de boton %d",button] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
                                        //[alert show];
                                        DLog(@"Event has been created");
-                                       
+                                       [self refreshTareas];
                                    } else {
                                        DLog(@"error to save event");
                                        //error
                                        //[UIAlertView error:[json objectForKey:@"error"]];
+                                   }
+                               }];
+}
+
+-(void)refreshTareas{
+    DLog(@"%@ %@",appDelegate.pwd,appDelegate.user);
+    NSString* command = @"login2";//(sender.tag==1)?@"register":@"login";
+    NSMutableDictionary* params =[NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                  command, @"command",
+                                  appDelegate.user, @"username",
+                                  appDelegate.pwd, @"password",
+                                  nil];
+    //make the call to the web API
+    [[API sharedInstance] commandWithParams:params
+                               onCompletion:^(NSDictionary *json) {
+                                   //handle the response
+                                   //result returned
+                                   NSDictionary* res = [json objectForKey:@"result"];
+                                   if (res == nil) {
+                                       
+                                   }
+                                   else{
+                                       DLog(@"JSON: %@",json);
+                                       if ([[[json objectForKey:@"error"] objectForKey:@"ERROR"]intValue] == 0 && [[res objectForKey:@"IDUSER"] intValue]>0){
+                                           
+                                           DLog(@"Tasks: %@",appDelegate.tasks);
+                                           NSDictionary *jsonString = [res objectForKey:@"JSON"];
+                                           appDelegate.jsonArray = jsonString;
+                                           DLog(@"%@ kkkk %@",appDelegate.jsonArray,[appDelegate.jsonArray objectForKey:@"House"]);
+                                           appDelegate.tasks = [[[appDelegate.jsonArray objectForKey:@"houses"] objectAtIndex:appDelegate.houseSelected] objectForKey:@"events"];
+                                           [self configureTareasWithServer];
+                                           [self.collectionViewTareas reloadData];
+                                       } else {
+                                           //error
+                                       }
                                    }
                                }];
 }
